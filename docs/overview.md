@@ -10,6 +10,6 @@ This table will be updated weekly with links to course materials (lecture handou
 
 | Week | Lecture material | Other material | Deadlines |
 |:-----|:-----------------|:---------------|:----------|
-| 1    |  ML systems | Hello, Chameleon and Hello, Linux <br> (if you haven't done these already) | Complete by 1/30; no submission required |
+| 1    |  ML systems | <ul><li>Hello, Chameleon</li><li>Hello, Linux</li><ul> (if you haven't done these already) | Complete by 1/30; no submission required |
 
 
