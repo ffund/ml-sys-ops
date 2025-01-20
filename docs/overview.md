@@ -1,3 +1,8 @@
+---
+title: Overview
+layout: page
+---
+
 # Overview
 
 This table will be updated weekly as we progress through the course.

@@ -3,3 +3,13 @@ description: Course website for ML Systems Engineering and Operations at NYU
 theme: just-the-docs
 
 url: https://ffund.github.io/ml-sys-ops/
+
+heading_anchors: true
+
+defaults:
+  - scope:
+      path: "docs" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: "default"
+
