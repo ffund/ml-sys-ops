@@ -52,4 +52,4 @@ as well as some time for project development and implementation. (Toward the end
 
 **Compute resources**: For most lab assignments and the project, students will use storage, network, and compute resources on [ChameleonCloud](https://chameleoncloud.org/), including bare metal GPU instances, virtual machines, and containers on edge devices. We will also use [GCP](https://cloud.google.com/gcp) for one lab assignment (coupons will be available for GCP credit; you will not need a credit card to sign up).
 
-**Final project**: The final project will be a group project, completed in groups of 3 or 4. Refer to the [Project](project) page for more details on specific requirements.
+**Final project**: The final project will be a group project, completed in groups of 3 or 4. Refer to the [Project](docs/project) page for more details on specific requirements.
