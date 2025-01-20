@@ -48,3 +48,5 @@ The remaining lecture sessions will be used for case studies, additional topics,
 - lab assignment: 4-5 hours
 
 as well as some time for project development and implementation. (Toward the end of the semester, the lab workload will decrease somewhat to allow more time for project work.) A student who is not very comfortable with computer systems may have to spend more time than the estimate above in order to do well. 
+
+**Compute resources**: For most lab assignments and the project, students will use storage, network, and compute resources on [ChameleonCloud](https://chameleoncloud.org/), including bare metal GPU instances, virtual machines, and containers on edge devices. We will also use [GCP](https://cloud.google.com/gcp) for one lab assignment (coupons will be available for GCP credit; you will not need a credit card to sign up).
