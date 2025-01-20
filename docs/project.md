@@ -28,5 +28,5 @@ For each unit of the course,
 * we will identify specific requirements that your project *must* satisfy, related to that unit
 * and we will identify some requirements that your project *may* satisfy, for "difficulty points". Your project is required to meet an overall "difficulty threshold".
 
-The unit requirements will be posted after the lecture each week.
+The per-unit project requirements will be posted after the lecture each week.
 
