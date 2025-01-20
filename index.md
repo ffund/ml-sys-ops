@@ -1,6 +1,7 @@
 ---
 title: Machine Learning Systems Engineering and Operations
 layout: home
+nav_order: 1
 ---
 
 # ECE-GY 9183 Machine Learning Systems Engineering and Operations - Spring 2025
@@ -17,7 +18,7 @@ _Fraida Fund_
 
 **Approach**: students will learn through a combination of lectures, case studies, guided lab assignments on the [ChameleonCloud](https://chameleoncloud.org/) research infrastructure and on commercial clouds (GCP, AWS), and a final project.
 
-**Grading**: 60% lab assignments; 40% final project
+**Grading**: 60% lab assignments (weekly); 40% final project.
 
 **Relationship to other ECE courses**: Although only Intro ML is required as a prerequisite, this course will complement existing ECE courses at NYU Tandon (for students who have taken/will take them), including 
 
@@ -50,3 +51,5 @@ The remaining lecture sessions will be used for case studies, additional topics,
 as well as some time for project development and implementation. (Toward the end of the semester, the lab workload will decrease somewhat to allow more time for project work.) A student who is not very comfortable with computer systems may have to spend more time than the estimate above in order to do well. 
 
 **Compute resources**: For most lab assignments and the project, students will use storage, network, and compute resources on [ChameleonCloud](https://chameleoncloud.org/), including bare metal GPU instances, virtual machines, and containers on edge devices. We will also use [GCP](https://cloud.google.com/gcp) for one lab assignment (coupons will be available for GCP credit; you will not need a credit card to sign up).
+
+**Final project**: The final project will be a group project, completed in groups of 3 or 4. Refer to the Project section for more details.
