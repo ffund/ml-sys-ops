@@ -1,35 +1,50 @@
 ---
-title: Home
+title: Machine Learning Systems Engineering and Operations
 layout: home
 ---
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+# ECE-GY 9183 Machine Learning Systems Engineering and Operations - Spring 2025
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+_Fraida Fund_ 
 
-More specifically, the created site:
+**Description**: Building deployable, reliable, and scalable machine learning systems involves a lot more than just training a model. In this graduate course on machine learning systems engineering and machine learning operations (MLOps), students will learn techniques for designing, developing, evaluating, deploying, monitoring, and updating production-ready machine learning systems at scale. 
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+**Instructor**: Fraida Fund (ffund@nyu.edu) (370 Jay St, Room 936). The best way to reach me is to post on Ed or to visit my office hour (see Brightspace calendar for dates and Zoom links).
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+**Instruction mode**: In person. We will meet on Thursdays at 2PM in 370 Jay Street, Room 202.
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+**Prerequisites**: ECE-GY 6143 Intro ML or equivalent.
 
-To get started with creating a site, simply:
+**Approach**: students will learn through a combination of lectures, case studies, guided lab assignments on the [ChameleonCloud](https://chameleoncloud.org/) research infrastructure and on commercial clouds (GCP, AWS), and a final project.
 
-1. click "[use this template]" to create a GitHub repository
-2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
+**Grading**: 60% lab assignments; 40% final project
 
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
+**Relationship to other ECE courses**: Although only Intro ML is required as a prerequisite, this course will complement existing ECE courses at NYU Tandon (for students who have taken/will take them), including 
 
-----
+* ML courses such as ECE-GY 6143 Intro to Machine Learning, ECE-GY 7123 Deep Learning, and ECE-GY 9143 Intro to High Performance Machine Learning
+* and networking/systems courses such as ECE-GY 6353 Internet Architecture and Protocols and ECE-GY 6363 Data Center and Cloud Computing.
 
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+Prior/future experience in any of the above is helpful, although not necessary (except for Intro ML). Students will gain a big-picture view and hands-on experience integrating concepts from all of these courses into the development of a production-ready machine learning system. 
 
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+**Topics**: This course will cover the following topics (tentative plan/subject to change):
+
+1. Challenges and basic principles of machine learning systems engineering and operations.
+2. Overview of cloud computing.
+3. DevOps and continuous X for ML systems (integration, training, deployment, testing, monitoring).
+4. Model training at scale.
+5. Model tuning and scheduling.
+5. Versioning and reproducibility.
+6. Model serving.
+7. Monitoring and evaluating ML systems.
+8. Large scale data systems.
+9. Using commercial clouds (GCP, AWS).
+
+The remaining lecture sessions will be used for case studies, additional topics, and project presentations.
+
+**Time commitment**: This is a 3-credit course. The average student should spend at least 3 hours/week/credit → 9 hours/week for a 3 credit course. A typical week will include:
+
+- lecture: 2-2.5 hours
+- reading for additional depth (case study/academic paper): 1 hour
+- lab assignment: 4-5 hours
+
+as well as some time for project development and implementation. (Toward the end of the semester, the lab workload will decrease somewhat to allow more time for project work.) A student who is not very comfortable with computer systems may have to spend more time than the estimate above in order to do well. 
