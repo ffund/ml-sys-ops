@@ -1,6 +1,8 @@
 ---
 title: Units
 layout: page
+has_children: true
+permalink: /docs/units
 nav_order: 4
 ---
 

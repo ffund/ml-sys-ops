@@ -8,6 +8,8 @@ nav_order: 3
 
 For your course project, you will design and implement a medium-scale ML system. In your project, you must use the techniques discussed in our lectures to address some of the challenges *also* discussed in those lectures.
 
+## Group work expectations
+
 You will complete these projects in groups of 3 or 4, where:
 
 * certain elements of the project are going to be "owned" by all group members: the idea and the value proposition, the basic setup of the ML problem (what is the data, what is the target variable, etc.), the approach that the group will take for each part, and the overall integration of all of the parts.
@@ -19,7 +21,27 @@ You will complete these projects in groups of 3 or 4, where:
 
 Part of your project grade will be common to the entire group, based on the "jointly owned" elements; part of your project grade will be individual, based on the work you have produced in your personal role.
 
-You will submit a project proposal midway through the course, detailing how your project meets the requirements; and then you will present your final project and submit a report either in the last class session of the semester, or during finals week.
+## Project deliverables and deadlines
+
+You will submit project deliverables in two stages:
+
+Due 3/20 
+{: .label .label-yellow}
+
+Midway through the course, you will submit a project proposal, including:
+
+* a "lightning" presentation describing the system you will build
+* a document detailing how your project meets the requirements
+
+Due 5/1
+{: .label .label-yellow}
+
+At the end of the course, your final submission will include:
+
+* a Git repository with all of the materials necessary to reproduce your work
+* a document describing the details of your system
+* and a presentation
+
 
 ## Project requirements
 

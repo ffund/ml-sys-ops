@@ -13,3 +13,12 @@ defaults:
     values:
       layout: "default"
 
+
+callouts:
+  important:
+    title: Important
+    color: yellow
+  warning:
+    title: Warning
+    color: red
+
