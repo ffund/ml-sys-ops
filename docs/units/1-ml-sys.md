@@ -76,7 +76,7 @@ If you have done "Hello, Chameleon" already in a previous course, you will just 
 
 {:.important }
 > Resource usage notes for this lab assignment:
-> * You should plan to start and finish the assignment within a six-hour period - so plan accordingly. Your resource may not be "active" for more than six hours. It may be deleted by course staff if it is active for longer than six hours.
+> * You should plan to start and finish the assignment within a six-hour period - so block some time accordingly. Your resource may not be "active" for more than six hours. It may be deleted by course staff if it is active for longer than six hours.
 > * Delete your compute instance as soon as you are done with the experiment, to free the resources for other students.
 
 
