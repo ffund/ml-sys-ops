@@ -19,12 +19,12 @@ This table will be updated weekly with links to course materials (lecture handou
   <tr>
     <td>1</td>
     <td><a href="https://link.excalidraw.com/p/readonly/UV8Ez1d9Tc1wLE5vIsLY">ML systems</a></td>
-    <td><a href="https://teaching-on-testbeds.github.io/hello-chameleon">Hello, Chameleon</a></td>
+    <td><a href="https://teaching-on-testbeds.github.io/hello-chameleon">Hello, Chameleon</a> <br> <a href="https://teaching-on-testbeds.github.io/hello-linux/index-chi">Hello, Linux</a></td>
     <td>Due by 1/30; no submission required</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
+    <td>2</td>
+    <td>Cloud computing</td>
     <td></td>
     <td></td>
   </tr>
