@@ -71,3 +71,10 @@ Requirements that your project *must* satify:
 For extra "difficulty points":
 
 - [ ] **Composed of multiple models**: Your system may be composed of three or more machine learning models that work together (not just in parallel!), in order to realize some goal that cannot be achieved with fewer models.
+
+### Unit 2: Cloud computing
+
+Requirements that your project *must* satify:
+
+- [ ] **Infrastructure**: Your project will run on the Chameleon infrastructure. (Although we will practice using some commercial clouds later in the semester, we want our project to run on Chameleon.)
+- [ ] **Cloud-native**: You will be expected to develop your project as a "cloud-native" service, but we'll discuss what this means specifically in Unit 3.

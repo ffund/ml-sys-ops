@@ -24,9 +24,9 @@ This table will be updated weekly with links to course materials (lecture handou
   </tr>
   <tr>
     <td>2</td>
-    <td>Cloud computing</td>
-    <td></td>
-    <td></td>
+    <td><a href="https://link.excalidraw.com/p/readonly/4lOcDZjTOcR0AUTrMck9">Cloud computing</a></td>
+    <td>TBD (pending Chameleon<br>outage fix)</td>
+    <td>TBD</td>
   </tr>
   <tr>
     <td></td>
