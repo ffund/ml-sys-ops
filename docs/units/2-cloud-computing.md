@@ -1,11 +1,11 @@
 --- 
-title: Cloud computing overview
+title: Cloud computing
 layout: page
 parent: Units
 nav_order: 2
 ---
 
-# Cloud computing overview
+# Cloud computing
 
 In this week's lecture, we are primarily concerned with the underlying *infrastructure* that our machine learning system will run on.
 
