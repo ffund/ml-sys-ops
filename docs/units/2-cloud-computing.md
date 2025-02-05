@@ -28,27 +28,35 @@ We also talked about how the virtualization of compute, storage, and networking 
 
 ## Lab assignment
 
-Due TBD
+Due 2/13
 {: .label .label-yellow}
 
-Because of an outage affecting the Chameleon JupyterHub service, we are deferring this lab assignment - keep an eye out for an announcement early next week.
-
-<!-- 
 This week's lab assignment is:
 
-[Lab manual: Deploy a machine learning service on Kubernetes](){: .btn .btn-green }
+[Lab manual: Cloud Computing on Chameleon](https://teaching-on-testbeds.github.io/cloud-chi/){: .btn .btn-green }
+
+You will submit screenshots and answer questions about this assignment in Gradescope. The link to the Gradescope submission is in Brightspace.
 
 
 {:.important }
 > Resource usage notes for this lab assignment:
-> * If your net ID ends in an even number (0, 2, 4, 6, 8) you may bring up your cluster on Chameleon on Saturday, Monday, or Wednesday before the due date.
-> * If your net ID ends in an odd number (1, 3, 5, 7, 9) you may bring up your cluster on Chameleon on Friday, Sunday, Tuesday, or Thursday before the due date.
-> * (Next week, the odds and evens will swap weekdays.)
-> * You should plan to start and finish the assignment within an eight-hour period - so block some time accordingly. Your resource may not be "active" for more than eight hours. It may be deleted by course staff if it is active for longer than eight hours.
+> 
+> * You should plan to start and finish the assignment within one or two eight-hour periods - so block some time accordingly. Your resources may not be "active" for more than eight daytime (8AM - 11:59PM) hours. They may be deleted by course staff otherwise.
+> * If your net ID ends in an even number (0, 2, 4, 6, 8) you may bring up your cluster on Chameleon on Saturday, Monday, or Wednesday before the due date. 
+> * If your net ID ends in an odd number (1, 3, 5, 7, 9) you may bring up your cluster on Chameleon on Friday, Sunday, Tuesday, or Thursday before the due date.  
+> * (For the next assignment, the odds and evens will swap weekdays.)
+> * You can use more than one of "your" days, if you need to.
+> * Overnight hours from midnight to 8AM are "free" - anyone may use them, regardless of the day of the week.
 > * Delete your compute instance as soon as you are done with the experiment, to free the resources for other students.
 
-## Reading
 
--->
+The estimated time to complete this lab assignment is 5 hours, broken down as follows:
 
+* about 1.5 hours for part 1 "Provision resources using the GUI" and part 2 "Provision resources using the openstack CLI" together
+* another 1.5 hours for part 3  "Deploy a service in a Docker container"
+* and 2 hours for part 4  "Deploy on Kubernetes" (some of this is not active time - e.g. while your cluster is installing itself.)
 
+If you prefer to complete this lab assignment in two sessions, instead of all at once, my recommendation is:
+
+* Do part 1 "Provision resources using the GUI", then part 3 "Deploy a service in a Docker container", then part 5 "Delete resources" in one session. 
+* Do part 1 "Provision resources using the GUI", then part 2 "Provision resources using the openstack CLI", then part 4 "Deploy on Kubernetes", then part 5 "Delete resources" in the second session.
