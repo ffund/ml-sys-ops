@@ -35,7 +35,7 @@ This week's lab assignment is:
 
 [Lab manual: Cloud Computing on Chameleon](https://teaching-on-testbeds.github.io/cloud-chi/){: .btn .btn-green }
 
-You will submit screenshots and answer questions about this assignment in Gradescope. The link to the Gradescope submission is in Brightspace.
+You will submit screenshots and answer questions about this assignment in Gradescope. The link to the Gradescope submission is in Brightspace. You should review the Gradescope assignment before you begin, so that you know in advance exactly what you will need to submit.
 
 
 {:.important }
