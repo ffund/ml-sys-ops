@@ -29,10 +29,10 @@ This table will be updated weekly with links to course materials (lecture handou
     <td>Due by 2/13; submit in Gradescope</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>3</td>
+    <td><a href="https://link.excalidraw.com/p/readonly/xduAEWPqHPv6IqHAOACz">DevOps for ML systems</a></td>
+    <td>Released next week</td>
+    <td>Will be due 2/20 in Gradescope</td>
   </tr>
 </tbody>
 </table>

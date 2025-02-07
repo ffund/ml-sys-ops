@@ -55,7 +55,7 @@ Engineering a machine learning system involves defining the interfaces, algorith
 ## Lab assignment
 
 Due 1/30 
-{: .label .label-yellow}
+{: .label .label-blue}
 
 {:.warning }
 There is a planned outage on KVM@TACC on 1/28, for upgrades and maintenance. You should plan to do the lab assignment on a different day, since KVM@TACC will not be available on 1/28.
