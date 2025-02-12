@@ -58,5 +58,5 @@ The estimated time to complete this lab assignment is 5 hours, broken down as fo
 
 If you prefer to complete this lab assignment in two sessions, instead of all at once, my recommendation is:
 
-* Do part 1 "Provision resources using the GUI", then part 3 "Deploy a service in a Docker container", then part 5 "Delete resources" in one session. 
+* Do part 0 "Intro", part 1 "Provision resources using the GUI", part 3 "Deploy a service in a Docker container", then part 5 "Delete resources" in one session. 
 * Do part 1 "Provision resources using the GUI", then part 2 "Provision resources using the openstack CLI", then part 4 "Deploy on Kubernetes", then part 5 "Delete resources" in the second session.
