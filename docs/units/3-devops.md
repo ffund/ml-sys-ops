@@ -36,10 +36,10 @@ For the rest of the semester, we'll work with a different one of those core orga
 
 ## Lab assignment
 
-Due 2/20
+Due TBD
 {: .label .label-yellow}
 
-The lab assignment will be released in the first half of next week.
+The lab assignment will be released TBD.
 
 <!-- 
 This week's lab assignment is:

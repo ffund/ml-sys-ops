@@ -31,10 +31,20 @@ This table will be updated weekly with links to course materials (lecture handou
   <tr>
     <td>3</td>
     <td><a href="https://link.excalidraw.com/p/readonly/xduAEWPqHPv6IqHAOACz">DevOps for ML systems</a></td>
-    <td>Released next week</td>
-    <td>Will be due 2/20 in Gradescope</td>
+    <td>Released TBD</td>
+    <td>Will be due TBD in Gradescope</td>
   </tr>
+  <tr>
+    <td>4</td>
+    <td><a href="https://link.excalidraw.com/p/readonly/zMwrCvRBneDGH71cqjxj">Model training at scale</a></td>
+    <td><a href="https://teaching-on-testbeds.github.io/llm-chi/">Large-scale model training on Chameleon</a> </td>
+    <td>Will be due 2/27 in Gradescope</td>
+  </tr>
+
 </tbody>
 </table>
+
+
+
 
 

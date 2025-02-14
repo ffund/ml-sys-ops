@@ -29,7 +29,7 @@ We also talked about how the virtualization of compute, storage, and networking 
 ## Lab assignment
 
 Due 2/13
-{: .label .label-yellow}
+{: .label .label-blue}
 
 This week's lab assignment is:
 
