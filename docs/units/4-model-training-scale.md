@@ -49,6 +49,7 @@ You will submit screenshots and answer questions about this assignment in Grades
 > * Alternatively, if you make your reservation later/not on `307G3Q3`, you will make two separate reservations and do the lab in two parts, at two separate times:
 >   * one 2-hour block on a single A100 80GB node that is reserved for our course in the last week before the deadline (`gigaio-compute-07`, `gigaio-compute-02`, or `gigaio-compute-03`). You will be able to make a reservation on these nodes starting on 2/20.
 >   * AND one 2-hour block on a different x4 A100 GPU (`JOBG3Q3`) or a x4 V100 GPU node (`P3-GPU-009` or `P3-GPU-012`) that is reserved for our course in the last week before the deadline. You will be able to make a reservation on these nodes starting on 2/20.
+> * Please start and end your lease on hour boundaries whenever possible, since this simplifies scheduling (e.g. start at XX:00 and end at YY:00).
 > * The lab assignment is designed to be completed in one 3-hour block or two 2-hour blocks. We do not have enough resources for students to use more than one 3-hour block or more than two 2-hour blocks during daytime hours. (Your lease will be deleted by course staff, if you try.) But if you need additional time, you may schedule another 3-hour block or 2-hour block during the overnight hours from 1AM to 7AM.
 
 
