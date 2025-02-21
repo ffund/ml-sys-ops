@@ -40,6 +40,13 @@ This table will be updated weekly with links to course materials (lecture handou
     <td><a href="https://teaching-on-testbeds.github.io/llm-chi/">Large-scale model training on Chameleon</a> </td>
     <td>Will be due 2/27 in Gradescope</td>
   </tr>
+    <tr>
+    <td>5</td>
+    <td><a href="https://link.excalidraw.com/p/readonly/ljOHwbv4f6bOovUeqAZJ">Model training infrastructure and platform</a></td>
+    <td>Released week of Feb 24</td>
+    <td>Will be due 3/06 in Gradescope</td>
+  </tr>
+
 
 </tbody>
 </table>

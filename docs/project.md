@@ -78,3 +78,43 @@ Requirements that your project *must* satify:
 
 - [ ] **Infrastructure**: Your project will run on the Chameleon infrastructure. (Although we will practice using some commercial clouds later in the semester, we want our project to run on Chameleon.)
 - [ ] **Cloud-native**: You will be expected to develop your project as a "cloud-native" service, but we'll discuss what this means specifically in Unit 3.
+
+### Unit 3: DevOps
+
+TBD after the lab assignment is released.
+
+<!-- 
+
+Requirements that your project *must* satify:
+
+- [ ] **Cloud-native**: You will be expected to develop your project as a "cloud-native" service, but we'll discuss what this means specifically in Unit 3.
+- [ ] **CI/CD and continuous training**: You will include an automated pipeline that, in response to a trigger, will re-train your model, test its integration with the overall service, package it for the deployment environment, and deploy it to a staging area for further testing.
+
+For extra "difficulty points":
+
+- [ ] **ArgoCD**: [ArgoCD](https://argo-cd.readthedocs.io/en/stable/) is a tool for continuous delivery that is integrated with Kubernetes. 
+
+
+<!--
+
+- [ ] **Demo UI**: This isn't a frontend course, but you will need some sort of demo UI in front of your service. [Streamlit](https://github.com/streamlit/streamlit) and [Gradio](https://github.com/gradio-app/gradio) are popular options for putting together a quick demo.
+-->
+
+
+### Unit 4: Model training at scale
+
+For extra "difficulty points":
+
+- [ ] **Training strategies for large models**: If your training job does not easily fit on a low-end GPU, you will use the strategies discussed in this lesson to train your model. For your reports, you will conduct experiments and show measurements similar to those in the lab assignment, to evaluate the effect of these strategies.
+- [ ] **Use distributed training to increase velocity**: If you have a medium-sized training job, how fast can you train your model? Include a discussion (backed up by experiment results!) of total model training time with one GPU vs. multiple GPUs of the same type, using the strategy (DDP, FSDP, and appropriate batch size) that makes the most sense given the size of your model. You will include a plot of training time vs. number of GPUs for each strategy under consideration.
+
+### Unit 4: Model training infrastructure and platform
+
+Requirements that your project *must* satify:
+
+- [ ] **Experiment tracking**: In your project proposal, you will describe the model training experiments that you *plan* to run. Then, when working on your project, you will host an experiment tracking server on Chameleon, and instrument your training code with logging calls, so that the details of all experiments are stored on your tracking server. (You may use [MLFlow](https://mlflow.org/docs/latest/index.html), like in the lab, or you can host your own [`wandb`](https://docs.wandb.ai/guides/hosting/hosting-options/self-managed/), or you can use another experiment tracking server; but you must host it yourself on Chameleon.) 
+- [ ] **Scheduling training jobs**: You will run a Ray cluster, like in the lab, and submit training jobs to it as part of your continuous training pipeline.
+
+For extra "difficulty points":
+
+- [ ] **Scheduling hyperparameter tuning jobs**: Use Ray Tune for hyperparameter tuning, and use its advanced tuning algorithms to tune more efficiently.

@@ -33,7 +33,7 @@ Prior/future experience in any of the above is helpful, although not necessary (
 2. Overview of cloud computing.
 3. DevOps and continuous X for ML systems (integration, training, deployment, testing, monitoring).
 4. Model training at scale.
-5. Scheduling training jobs; versioning and reproducibility.
+5. Model training infrastructure and platform (experiment tracking, scheduling).
 6. Model serving.
 7. Monitoring and evaluating ML systems.
 8. Large scale data systems.
