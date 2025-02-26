@@ -43,8 +43,8 @@ This table will be updated weekly with links to course materials (lecture handou
     <tr>
     <td>5</td>
     <td><a href="https://link.excalidraw.com/p/readonly/ljOHwbv4f6bOovUeqAZJ">Model training infrastructure and platform</a></td>
-    <td>Released week of Feb 24</td>
-    <td>Will be due 3/06 in Gradescope</td>
+    <td><a href="https://teaching-on-testbeds.github.io/mltrain-chi/">Train ML models with MLFlow and Ray</a></td>
+    <td>Will be due 3/13 in Gradescope</td>
   </tr>
 
 

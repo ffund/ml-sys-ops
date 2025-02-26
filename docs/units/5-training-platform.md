@@ -27,10 +27,39 @@ and we introduced some scheduling and placement policies, most of which originat
 
 ## Lab assignment
 
-Due 3/6
+Due 3/13
 {: .label .label-yellow}
 
-Lab 5 will be released early next week.
+[Lab: Train ML models with MLFlow and Ray](https://teaching-on-testbeds.github.io/mltrain-chi/){: .btn .btn-green }
+
+You will submit screenshots and answer questions about this assignment in Gradescope. The link to the Gradescope submission is in Brightspace. You should review the Gradescope assignment before you begin, so that you know in advance exactly what you will need to submit.
+
+{:.important }
+> Resource usage notes for this lab assignment:
+> 
+> * For this experiment, you will need to reserve time on a GPU node in advance. There is certainly not enough capacity for the entire class, or even a substantial fraction of the class, to access these resources in the last few days before the deadline, so you should not anticipate that you can do this lab just before it is due. It is your responsibility to plan ahead, make an advance reservation, and use that time effectively.
+> * Read the rest of these resource usage notes, then refer to the first section of the lab manual for instructions on making a reservation.
+> * You will need a 3-hour block for each section of the experiment (MLFlow, Ray). Start each lease on hour boundaries, and end your lease five minutes before the hour boundary, since this simplifies scheduling (e.g. start at XX:00 and end at YY:55, where YY = XX + 3).
+> * We are anticipating a brief outage of the Chameleon Jupyter service on March 3. However, instructions are also provided to bring up your resources using the Horizon GUI, so you can still work on the lab during this outage.
+
+Note on completing the experiment in two separate blocks of time:
+
+When you are working on the MLFlow section, you will do the following parts. (The estimated time is assuming you have read through the material in advance.)
+
+  * 1: Launch and set up server (one version - depending on which type of GPU you reserved) (takes ~30-45 minutes, not including building the container image which runs in the background as you continue)
+  * 2: Prepare data (~10 minutes)
+  * 3: Start the tracking server (takes ~30 minutes)
+  * 4: Track a Pytorch experiment (takes ~45 minutes)
+  * 5: Track a Lightning experiment (takes ~40 minutes)
+  * 6: Use MLFlow outside of training runs (takes ~5 minutes)
+
+When you are working on the Ray section, you will do the following parts. (The estimated time is assuming you have read through the material in advance.)
+
+  * 1: Launch and set up server (one version - depending on which type of GPU you reserved). (Skip the "Build a container image" cell at the end, which is only for the MLFlow section.) (takes ~30-45 minutes)
+  * 2: Prepare data (~10 minutes)
+  * 7: Start the Ray cluster (~10 minutes on NVIDIA, ~20 minutes on AMD)
+  * 8: Submit jobs to the Ray cluster (~90 minutes)
+
 
 ## Reading
 

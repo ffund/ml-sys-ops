@@ -117,4 +117,5 @@ Requirements that your project *must* satify:
 
 For extra "difficulty points":
 
+- [ ] **Using Ray Train**: Use Ray Train to execute your training job with features like fault tolerance, checkpointing to remote object storage, etc.
 - [ ] **Scheduling hyperparameter tuning jobs**: Use Ray Tune for hyperparameter tuning, and use its advanced tuning algorithms to tune more efficiently.
