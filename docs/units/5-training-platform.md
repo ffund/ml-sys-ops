@@ -39,7 +39,7 @@ You will submit screenshots and answer questions about this assignment in Grades
 > 
 > * For this experiment, you will need to reserve time on a GPU node in advance. There is certainly not enough capacity for the entire class, or even a substantial fraction of the class, to access these resources in the last few days before the deadline, so you should not anticipate that you can do this lab just before it is due. It is your responsibility to plan ahead, make an advance reservation, and use that time effectively.
 > * Read the rest of these resource usage notes, then refer to the first section of the lab manual for instructions on making a reservation.
-> * You will need a 3-hour block for each section of the experiment (MLFlow, Ray). Start each lease on hour boundaries, and end your lease five minutes before the hour boundary, since this simplifies scheduling (e.g. start at XX:00 and end at YY:55, where YY = XX + 3). Avoid leaving 1-hour or 2-hour gaps between your lease and a previous or later lease, since this time may not be usable.
+> * You will need a 3-hour block for each section of the experiment (MLFlow, Ray). Start each lease on hour boundaries, and end your lease five minutes before the hour boundary, since this simplifies scheduling (e.g. start at XX:00 and end at YY:55, where YY = XX + 2). Avoid leaving 1-hour or 2-hour gaps between your lease and a previous or later lease, since this time may not be usable.
 > * We are anticipating a brief outage of the Chameleon Jupyter service on March 3. However, instructions are also provided to bring up your resources using the Horizon GUI, so you can still work on the lab during this outage.
 
 Note on completing the experiment in two separate blocks of time:
