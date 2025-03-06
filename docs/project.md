@@ -32,7 +32,7 @@ Part of your project grade will be common to the entire group, based on the "joi
 
 You will submit project deliverables in two stages:
 
-Due 3/20 
+Due 4/3 
 {: .label .label-yellow}
 
 Midway through the course, you will submit a project proposal, including:
