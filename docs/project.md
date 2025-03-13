@@ -65,7 +65,7 @@ The per-unit project requirements will be posted here each week, after the lectu
 Requirements that your project *must* satify:
 
 - [ ] **Scale**: Your project must be at least *medium*-scale in each of these areas: (1) data, (2) model (either have one very large model or a system composed of several smaller models), and (3) deployment.
-- [ ] **Value proposition**: Your will propose a machine learning system that can be used in an existing business or service. (You should not propose a system in which a *new* business or service would be developed around the machine learning system.) Describe the value proposition for the machine learning system. What's the (non-ML) status quo used in the business or service? What business metric are you going to be judged on? (Note that the "service" does not have to be for general users; you can propose a system for a science problem, for example.)
+- [ ] **Value proposition**: You will propose a machine learning system that can be used in an existing business or service. (You should not propose a system in which a *new* business or service would be developed around the machine learning system.) Describe the value proposition for the machine learning system. What's the (non-ML) status quo used in the business or service? What business metric are you going to be judged on? (Note that the "service" does not have to be for general users; you can propose a system for a science problem, for example.)
 - [ ] **Outside materials**: You are probably going to use outside materials that you did not create - almost definitely data, and depending on the project, you may use a foundation model or an embedding model. For any outside materials you use, you need to understand and document their lineage and the conditions of their use. For example, if you are using a data set: who created this data set, and when? Under what conditions was it collected? (Is there an academic paper documenting its collection?) Are there privacy, fairness, and/or ethics concerns underlying its use? Is the version of the data we are using pre-processed in any way? Under what conditions is it legally allowed to be used (what is the license)? etc.
 
 For extra "difficulty points":
@@ -120,6 +120,24 @@ For extra "difficulty points":
 - [ ] **Using Ray Train**: Use Ray Train to execute your training job with features like fault tolerance, checkpointing to remote object storage, etc.
 - [ ] **Scheduling hyperparameter tuning jobs**: Use Ray Tune for hyperparameter tuning, and use its advanced tuning algorithms to tune more efficiently.
 
+### Unit 6: Model serving
+
+Requirements that your project *must* satisfy:
+
+- [ ] **Serving from an API endpoint**: You must wrap your model in an API endpoint for serving. (If you implement a front end, it will call your API.)
+- [ ] **Identify requirements**: You will identify specific requirements in terms of model size, throughput for batch inference, and/or latency for online (single sample) inference that are aligned with the business use case. For cloud (i.e., not on-device) deployments, you should also identify a concurrency requirement.
+- [ ] **Model optimizations to satisfy requirements**: You will explore the use of model-level optimizations, potentially including graph optimizations, quantization or reduced precision, use of operators that are optimized for a specific hardware backend, or other optimizations of your choice. In your final report, you will discuss these optimizations, and their effect on inference performance.
+- [ ] **System optimizations to satisfy requirements**: For cloud (i.e., not on-device) deployments, you will explore the use of system-level optimizations to support the required degree of concurrency while still satisfying latency requirements.
+
+For extra "difficulty points":
+
+- [ ] **Develop multiple options for serving**: If you are using a model that benefits from using GPU for inference, you can get "extra difficulty points" by developing and evaluating optimized server-grade GPU, server-grade CPU, and on-device options for model serving, and comparing them with respect to performance and cost of deployment on a commercial cloud.
+
+### Unit 7: Evaluation and monitoring
+
+TBD after the lab assignment is released.
+
+
 ## Project proposal template
 
 ```
@@ -127,12 +145,22 @@ For extra "difficulty points":
 ## Title of project
 
 <!-- 
-Discuss: Value proposition: Your will propose a machine learning system that can be used in an existing business or service. (You should not propose a system in which a new business or service would be developed around the machine learning system.) Describe the value proposition for the machine learning system. What’s the (non-ML) status quo used in the business or service? What business metric are you going to be judged on? (Note that the “service” does not have to be for general users; you can propose a system for a science problem, for example.)
+Discuss: Value proposition: Your will propose a machine learning system that can be 
+used in an existing business or service. (You should not propose a system in which 
+a new business or service would be developed around the machine learning system.) 
+Describe the value proposition for the machine learning system. What’s the (non-ML) 
+status quo used in the business or service? What business metric are you going to be 
+judged on? (Note that the “service” does not have to be for general users; you can 
+propose a system for a science problem, for example.)
 -->
 
 ### Contributors
 
-<!-- Table of contributors and their roles. First row: define responsibilities that are shared by the team. Then each row after that is: name of contributor, their role, and in the third column you will link to their contributions. If your project involves multiple repos, you will link to their contributions in all repos here. -->
+<!-- Table of contributors and their roles. 
+First row: define responsibilities that are shared by the team. 
+Then, each row after that is: name of contributor, their role, and in the third column, 
+you will link to their contributions. If your project involves multiple repos, you will 
+link to their contributions in all repos here. -->
 
 | Name                            | Responsible for | Link to their commits in this repo |
 |---------------------------------|-----------------|------------------------------------|
@@ -146,11 +174,15 @@ Discuss: Value proposition: Your will propose a machine learning system that can
 
 ### System diagram
 
-<!-- Overall digram of system. Doesn't need polish, does need to show all the pieces. Must include: all the hardware, all the containers/software platforms, all the models, all the data. -->
+<!-- Overall digram of system. Doesn't need polish, does need to show all the pieces. 
+Must include: all the hardware, all the containers/software platforms, all the models, 
+all the data. -->
 
 ### Summary of outside materials
 
-<!-- In a table, a row for each dataset, foundation model. Name of data/model, conditions under which it was created (ideally with links/references), conditions under which it may be used. -->
+<!-- In a table, a row for each dataset, foundation model. 
+Name of data/model, conditions under which it was created (ideally with links/references), 
+conditions under which it may be used. -->
 
 |              | How it was created | Conditions of use |
 |--------------|--------------------|-------------------|
@@ -162,7 +194,9 @@ Discuss: Value proposition: Your will propose a machine learning system that can
 
 ### Summary of infrastructure requirements
 
-<!-- Itemize all your anticipated requirements: What (`m1.medium` VM, `gpu_mi100`), how much/when, justification. Include compute, floating IPs, persistent storage. The table below shows an example, it is not a recommendation. -->
+<!-- Itemize all your anticipated requirements: What (`m1.medium` VM, `gpu_mi100`), 
+how much/when, justification. Include compute, floating IPs, persistent storage. 
+The table below shows an example, it is not a recommendation. -->
 
 | Requirement     | How many/when                                     | Justification |
 |-----------------|---------------------------------------------------|---------------|
@@ -173,23 +207,29 @@ Discuss: Value proposition: Your will propose a machine learning system that can
 
 ### Detailed design plan
 
-<!-- In each section, you should describe (1) your strategy, (2) the relevant parts of the diagram, (3) justification for your strategy, (4) relate back to lecture material, (5) include specific numbers. -->
+<!-- In each section, you should describe (1) your strategy, (2) the relevant parts of the 
+diagram, (3) justification for your strategy, (4) relate back to lecture material, 
+(5) include specific numbers. -->
 
 #### Model training and training platforms
 
-<!-- Make sure to clarify how you will satisfy the Unit 4 and Unit 5 requirements, and which optional "difficulty" points you are attempting. -->
+<!-- Make sure to clarify how you will satisfy the Unit 4 and Unit 5 requirements, 
+and which optional "difficulty" points you are attempting. -->
 
 #### Model serving and monitoring platforms
 
-<!-- Make sure to clarify how you will satisfy the Unit 6 and Unit 7 requirements,  and which optional "difficulty" points you are attempting. -->
+<!-- Make sure to clarify how you will satisfy the Unit 6 and Unit 7 requirements, 
+and which optional "difficulty" points you are attempting. -->
 
 #### Data pipeline
 
-<!-- Make sure to clarify how you will satisfy the Unit 8 requirements,  and which optional "difficulty" points you are attempting. -->
+<!-- Make sure to clarify how you will satisfy the Unit 8 requirements,  and which 
+optional "difficulty" points you are attempting. -->
 
 #### Continuous X
 
-<!-- Make sure to clarify how you will satisfy the Unit 3 requirements,  and which optional "difficulty" points you are attempting. -->
+<!-- Make sure to clarify how you will satisfy the Unit 3 requirements,  and which 
+optional "difficulty" points you are attempting. -->
 
 
 ```

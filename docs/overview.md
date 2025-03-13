@@ -46,6 +46,26 @@ This table will be updated weekly with links to course materials (lecture handou
     <td><a href="https://teaching-on-testbeds.github.io/mltrain-chi/">Train ML models with MLFlow and Ray</a></td>
     <td>Will be due 3/13 in Gradescope</td>
   </tr>
+    <tr>
+    <td>6</td>
+    <td><a href="https://link.excalidraw.com/p/readonly/65nXMf00Qfu3mhUr4eDv">Model serving</a></td>
+    <td><a href="https://teaching-on-testbeds.github.io/serve-model-chi/">Model optimizations for serving</a><br>
+        <a href="https://teaching-on-testbeds.github.io/serve-edge-chi/">Serving on edge devices</a><br>
+        <a href="https://teaching-on-testbeds.github.io/serve-system-chi/">System optimizations for model serving</a></td>
+    <td>Will be due 3/20 in Gradescope</td>
+  </tr>
+    <tr>
+    <td>7</td>
+    <td><a href="https://link.excalidraw.com/p/readonly/ou20L4JKbnqIPG4CiuaO">Evaluation and monitoring</a></td>
+    <td>TBD</td>
+    <td>TBD</td>
+  </tr>
+    <tr>
+    <td>8</td>
+    <td>Data</td>
+    <td>TBD</td>
+    <td>TBD</td>
+  </tr>
 
 
 </tbody>
