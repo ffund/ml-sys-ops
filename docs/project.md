@@ -127,7 +127,7 @@ Requirements that your project *must* satisfy:
 - [ ] **Serving from an API endpoint**: You must wrap your model in an API endpoint for serving. (If you implement a front end, it will call your API.)
 - [ ] **Identify requirements**: You will identify specific requirements in terms of model size, throughput for batch inference, and/or latency for online (single sample) inference that are aligned with the business use case. For cloud (i.e., not on-device) deployments, you should also identify a concurrency requirement.
 - [ ] **Model optimizations to satisfy requirements**: You will explore the use of model-level optimizations, potentially including graph optimizations, quantization or reduced precision, use of operators that are optimized for a specific hardware backend, or other optimizations of your choice. In your final report, you will discuss these optimizations, and their effect on inference performance.
-- [ ] **System optimizations to satisfy requirements**: For cloud (i.e., not on-device) deployments, you will explore the use of system-level optimizations to support the required degree of concurrency while still satisfying latency requirements.
+- [ ] **System optimizations to satisfy requirements**: For cloud (i.e., not on-device) deployments, you will explore the use of system-level optimizations to support the required degree of concurrency while still satisfying latency requirements. In your final report, you will discuss these optimizations, and their effect on inference performance.
 
 For extra "difficulty points":
 
