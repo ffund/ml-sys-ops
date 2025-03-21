@@ -81,18 +81,16 @@ Requirements that your project *must* satify:
 
 ### Unit 3: DevOps
 
-TBD after the lab assignment is released.
-
-<!-- 
-
 Requirements that your project *must* satify:
 
-- [ ] **Cloud-native**: You will be expected to develop your project as a "cloud-native" service, but we'll discuss what this means specifically in Unit 3.
-- [ ] **CI/CD and continuous training**: You will include an automated pipeline that, in response to a trigger, will re-train your model, test its integration with the overall service, package it for the deployment environment, and deploy it to a staging area for further testing.
+- [ ] **Infrastructure-as-code**: You will avoid ClickOps in provisioning your infrastructure. Instead, you'll define your infrastructure configuration in version control using either a declarative style (like Terraform, which we use in Lab 3) or imperative style (like `python-chi`, used in many other labs). This configuration must live in Git. You will similarly avoid manual installation and configuration of your infrastructure, once it is deployed. Instead, you can use a combination of automation tools like Ansible (used in Lab 3), ArgoCD (used in Lab 3), Argo Workflows (used in Lab 3), Helm, `python-chi`, and/or other tools to set up your infrastructure. Like your infrastructure configuration, these service and software configurations similarly must live in Git.
 
-For extra "difficulty points":
+- [ ] **Cloud-native**: You will be expected to develop your project as a "cloud-native" service. This means: (1) Immutable infrastructure: you avoid manual changes to infrastructure that has already been deployed. Instead, make changes to your configurations in Git, and then bring up your new infrastructure directly from these configurations. (2) Microservices: to the extent that is reasonable, deploy small independent pieces that work together via APIs, but are managed separately. (3) Containers as the smallest compute unit: you will containerize all services, so they can be deployed and scaled efficiently. You won't run anything (except building and managing containers!) directly on compute instances. 
 
-- [ ] **ArgoCD**: [ArgoCD](https://argo-cd.readthedocs.io/en/stable/) is a tool for continuous delivery that is integrated with Kubernetes. 
+- [ ] **CI/CD and continuous training**: You will define an automated pipeline that, in response to a trigger (which may be a manual trigger, a schedule, or an external condition, or some combination of these), will: re-train your model, run the complete offline evaluation suite, apply the post-training optimizations for serving, test its integration with the overall service, package it inside a container for the deployment environment, and deploy it to a staging area for further testing (e.g. load testing). 
+
+- [ ] **Staged deployment**: You will configure a "staging", "canary", and "production" environment in which your service may be deployed. You will also implement a process by which a service is promoted from the staging area to a canary environment, for online evaluation; and a process by which a service is promoted from canary to production.
+
 
 
 <!--
@@ -103,9 +101,15 @@ For extra "difficulty points":
 
 ### Unit 4: Model training at scale
 
+Requirements that your project *must* satify:
+
+- [ ] **Train and re-train**: You must train and re-train at least one model. (Your project may additionally use other models without training, but you have to train *something* and then be able to re-train it on production data.)
+- [ ] **Modeling**: You must make reasonable, appropriate, and well-justified choices for modeling.
+
 For extra "difficulty points":
 
 - [ ] **Training strategies for large models**: If your training job does not easily fit on a low-end GPU, you will use the strategies discussed in this lesson to train your model. For your reports, you will conduct experiments and show measurements similar to those in the lab assignment, to evaluate the effect of these strategies.
+
 - [ ] **Use distributed training to increase velocity**: If you have a medium-sized training job, how fast can you train your model? Include a discussion (backed up by experiment results!) of total model training time with one GPU vs. multiple GPUs of the same type, using the strategy (DDP, FSDP, and appropriate batch size) that makes the most sense given the size of your model. You will include a plot of training time vs. number of GPUs for each strategy under consideration.
 
 ### Unit 5: Model training infrastructure and platform
@@ -118,6 +122,7 @@ Requirements that your project *must* satify:
 For extra "difficulty points":
 
 - [ ] **Using Ray Train**: Use Ray Train to execute your training job with features like fault tolerance, checkpointing to remote object storage, etc.
+
 - [ ] **Scheduling hyperparameter tuning jobs**: Use Ray Tune for hyperparameter tuning, and use its advanced tuning algorithms to tune more efficiently.
 
 ### Unit 6: Model serving
@@ -135,8 +140,48 @@ For extra "difficulty points":
 
 ### Unit 7: Evaluation and monitoring
 
-TBD after the lab assignment is released.
+Requirements that your project *must* satisfy:
 
+- [ ] **Offline evaluation of model**: You will define an automated offline evaluation plan, and it will run immediately after model training with results logged to MLFlow. Your offline evaluation must include: (A) evaluation on appropriate "standard" and "domain specific" use cases for your particular model (2) evaluation on populations and slices of special relevance, including an analysis of fairness and bias if relevant (3) test on known failure modes (4) and, unit tests based on templates. Depending on the test results, you will automatically register an updated model in the model registry, or not.
+
+- [ ] **Load test in staging**: Once your "Continuous X" pipeline has deployed the service to a staging area, you should conduct a load test on it, and surface the results. (This load test may also be part of the "continuous X" pipeline.)
+
+- [ ] **Online evaluation in canary**: When your service is ready to deploy to a canary environment (i.e. it has passed tests in staging), you will conduct an online evaluation (like in Lab 7) with artificial "users". (You yourself will "be" the users; you should prepare a plan as to how you will represent the range of real users and user behaviors you might encounter in a real deployment.)
+
+- [ ] **Close the loop**: Implement a means by which you get feedback about the quality of your model's predictions in productions; whether this is with explicit user feedback, human annotators, or natural ground truth labels. Also, during production, you will save some portion of production data, label it, and use it for re-training on updated data. 
+
+- [ ] **Define a business-specific evaluation**: Although you will not be able to realize this plan, because your system will not really be deployed to users as part of a production service, you should define a business-specific evaluation plan with respect to *business metrics*, and explain how you will measure this in production.
+
+For extra "difficulty points":
+
+- [ ] **Monitor for data drift**: After your model is deployed in production, monitor for data drift and label drift, and make this available to engineers (e.g. in a dashboard).
+
+- [ ] **Monitor for model degradation**: After your model is deployed in production, monitor for degradation in the model output (by closing the feedback loop!). Make this available to engineers (e.g in a dashboard), and trigger automatic re-training with new, labeled, production data when this occurs.
+
+### Unit 8: Data pipeline
+
+
+Requirements that your project *must* satisfy:
+
+- [ ] **Persistent storage**: Following the example of Lab 8, you will provision persistent storage on Chameleon, which may be attached to and detached from your infrastructure. This will store all materials that should persist for the duration of the project, but are not tracked in Git: model training artifacts, test artifacts, models, container images, data, etc.
+
+- [ ] **Offline data**: You will set up and manage all the offline data used by your service, e.g. data used for training and re-training, keeping it in an appropriate data repository depending on whether it is structured data, unstructured data, or both. 
+
+- [ ] **Data pipelines**: You will define ETL pipeline(s) for ingesting new data either from external sources or your production service, processing it (e.g. cleaning it), and loading it into your data repository so that is is ready for model training. Your project proposal should define all data sources, and the steps required to transform them and load them into your data repository.
+
+- [ ] **Online data**: You will set up and manage a streaming data pipeline to manage the online data, e.g. for inference, including similar cleaning and processing steps. You will also need to *simulate* online data: you will write a script to generate real-time data for your service, similar to what it could be expected to see in production use. As part of your project proposal, you should describe the characteristics of this simulated data in detail.
+
+For extra "difficulty points":
+
+- [ ] **Interactive data dashboard**: Implement an interactive and comprehensive data dashboard, that members of the team can use to get high-level insight into the data and data quality.
+
+
+### "Difficulty points" 
+
+- [ ] In addition to the requirements that you *must* satisfy, your project should:
+
+  * if you are a 3-person team: check off two of the "extra difficulty points" options, and they should be from two different units.
+  * if you are a 4-person team: check off four of the "extra difficulty points" options, and they should be from three or four different units.
 
 ## Project proposal template
 
@@ -234,3 +279,16 @@ optional "difficulty" points you are attempting. -->
 
 ```
 
+## How to submit your project proposal
+
+Proposal document:
+
+* First, create a Github repository for your project, with a README and an appropriate license. Add all team members as contributors, and also add me (`ffund`) as a contributor.
+* Copy the project proposal template into the `README.md`, and modify the template to fill in the details of your project.
+* This is due at midnight on 4/3.
+
+Lightning presentation:
+
+* Prepare a single slide with the name of your project, names of all team members, and the diagram from your project proposal. You will submit this as a PDF in Brightspace, due at midnight on 4/2.
+* On 4/3, one member of your team will have a 60-second slot to present your project proposal in class.
+* During the lightning presentations, pay attention to the other teams' presentations, and note any teams using similar ideas or techniques. You should open a line of dialogue with these teams, so that you can help each other out as you work to implement your projects in the final month of the semester!
