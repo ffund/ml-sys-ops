@@ -62,7 +62,7 @@ This table will be updated weekly with links to course materials (lecture handou
   </tr>
     <tr>
     <td>8</td>
-    <td>Data</td>
+    <td><a href="https://link.excalidraw.com/p/readonly/c1WHeEW5xSufigXjQ2RS">Data</a></td>
     <td>TBD</td>
     <td>TBD</td>
   </tr>
