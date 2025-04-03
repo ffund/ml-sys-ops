@@ -44,6 +44,23 @@ Finally, we discussed many other tests of the overall machine learning pipeline.
 Due TBD
 {: .label .label-yellow}
 
+This lab assignment is in three parts (which you can do in any order):
+
+[Lab: Part 1: Offline evaluation of ML systems](https://teaching-on-testbeds.github.io/eval-offline-chi/){: .btn .btn-green } 
+[Lab: Part 2: Online evaluation of ML systems](https://teaching-on-testbeds.github.io/eval-online-chi/){: .btn .btn-green } 
+[Lab: Part 3: Closing the feedback loop](){: .btn .btn-outline }
+
+The first two parts are released in "Preview" mode, until the last part is also released; the due date will be set and the Gradescope submission will open when all parts are ready.
+
+{:.important }
+> Resource usage notes for this lab assignment:
+> 
+> * You will do this lab assignment on KVM@TACC, which does not require reservation.
+> * You can do the parts in any order, but you should only do one at a time - you must delete resources from a previous part before you start another part.
+> * Your resources may not be “active” for more than eight daytime (8AM - 11:59PM) hours. They may be deleted by course staff otherwise.
+
+
+
 ## Reading
 
 Our main reference this week was:

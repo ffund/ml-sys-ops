@@ -57,13 +57,18 @@ This table will be updated weekly with links to course materials (lecture handou
     <tr>
     <td>7</td>
     <td><a href="https://link.excalidraw.com/p/readonly/ou20L4JKbnqIPG4CiuaO">Evaluation and monitoring</a></td>
-    <td>TBD</td>
+    <td><a href="https://teaching-on-testbeds.github.io/eval-offline-chi">Offline evaluation of ML systems</a><br>
+        <a href="https://teaching-on-testbeds.github.io/eval-online-chi">Online evaluation of ML systems</a><br>
+        <i><a href="">Closing the feedback loop</a></i></td>
     <td>TBD</td>
   </tr>
     <tr>
     <td>8</td>
     <td><a href="https://link.excalidraw.com/p/readonly/c1WHeEW5xSufigXjQ2RS">Data</a></td>
-    <td>TBD</td>
+    <td><i><a href="">Persistent storage on Chameleon</a></i><br>
+        <i><a href="">Batch data pipelines</a></i><br>
+        <i><a href="">Online data pipelines</a></i><br>
+    </td>
     <td>TBD</td>
   </tr>
 
