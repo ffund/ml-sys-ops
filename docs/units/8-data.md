@@ -17,7 +17,7 @@ We discussed different types of data repositories:
 * Relational database: good for structured data with a pre-defined schema, when we need all the CRUD operations
 * Data warehouse: good for structured data with a pre-defined schema, when we will mostly read data
 * Document database: for structured or semi-structured data with a more flexible schema
-* Columnar database: good for structured data with a pre-defined scheme, optimized for operations over columns (e.g. "get the average value of of this column")
+* Columnar database: good for structured data with a pre-defined schema, optimized for operations over columns (e.g. "get the average value of of this column")
 * Data lake: appropriate for unstructured data without a schema, is most effective with a metadata layer on top
 * Data lakehouse: has a management layer on top of a data lake, to provide additional functionality 
 
