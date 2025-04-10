@@ -315,3 +315,12 @@ Some bare metal GPU resources are reserved for use by our class as a group, star
 
 For now, you may reserve up to 6 hours at a time on these bare metal nodes. (Once we get closer to the end of the semester, this time limit will be smaller.)
 
+## What you should be working on now
+
+Updated 4/10 
+{: .label .label-yellow}
+
+* **Mode training team member**: develop the model training infrasructure/platform, e.g. the basic setup for experiment tracking. Put together a minimal model for other team members to develop against (for example: your base model with the correct classification head on top, without actually training it).
+* **Model serving and evaluation team member**: develop the model serving/evaluation/monitoring platform. Set up a serving endpoint using the minimal model. Start preparing specific data sets for offline evaluations.
+* **Data team member**: Prepare the data ingestion pipeline (for some, this is more involved than others). Make sure to set aside some "late" data for evaluation and for simulating production data. Set up persistent storage for other team members to use (block storage for application, object store for large training data sets).
+* **Continuous X team member**: Work with other teams to identify infrastructure provisioning and bootstrapping needs, and start to de-duplicate these.
