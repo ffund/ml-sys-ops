@@ -292,3 +292,26 @@ Lightning presentation:
 * Prepare a single slide with the name of your project, names of all team members, and the diagram from your project proposal. You will submit this as a PDF in Brightspace, due at midnight on 4/2.
 * On 4/3, one member of your team will have a 60-second slot to present your project proposal in class.
 * During the lightning presentations, pay attention to the other teams' presentations, and note any teams using similar ideas or techniques. You should open a line of dialogue with these teams, so that you can help each other out as you work to implement your projects in the final month of the semester!
+
+
+## Using resources on Chameleon
+
+As you know, your projects will be developed, hosted, and evaluated entirely on Chameleon. The only external hosted service you are permitted to use is Github (for version control and source code hosting only; you are *not* allowed to use Github-hosted runners for CI actions, for example), and potentially external data APIs.
+
+Please follow these guidelines when using resource on Chameleon:
+
+* **Naming convention**: Whenever you create a resource (including: VMs, bare metal compute instances, bare metal leases, edge device containers, edge device leases, block storage volumes, object store containers), give it a name that ends in the word "project" and your project number. For example, if I am in project group 0, I might launch a VM instance named "node1-project0". This is how you will protect your resources from premature deletion (since I proactively delete resources used for lab assignments!)
+* **Lifecycle of compute resources**: You should not expect to persist *any* compute resources for the duration of the entire project! Once you have a data pipeline involving persistent storage + you have automated the infrastructure provisioning and bootstrapping process, then it becomes easy to bring up compute when you plan to actually work on it, and free up the compute when you are not activey working. For bare metal resources, see the guidelines below. For VM resources, you should not plan to leave these alive longer than one day at a time.
+* **Lifecycle of network resources**: You *can* keep a private network alive for the duration of the project, so that you can attach and detach VMs easily as you launch/delete them. Within a project group, you should not use more than one floating IP per site at a time.
+* **Persistent storage**: In many cases, you can use less persistent storage and also be more efficient by improving your data pipeline to include pre-training transformations such as resizing, that reduce the size of the data. If you are working with a very large data set, you should use this approach, mostly for your own sanity.
+
+Some bare metal GPU resources are reserved for use by our class as a group, starting 4/12 through at least 5/1 (some extending a bit beyond this). You may use them as follows:
+
+* A variable number of `gpu_rtx6000` nodes at CHI@UC, which each have one RTX6000 NVIDIA GPU. You may use these for general model training or inference jobs. 
+* Four `compute_liqid` nodes at CHI@TACC, which each have an A100 40GB NVIDIA GPU. You may use these for general model training or inference jobs, especially if your inference job involves an NVIDIA Triton service. 
+* Two `gpu_mi100` nodes at CHI@TACC, which each have 2 MI100 AMD GPUs. You may use these for general model training or inference jobs.
+* A variable number of `compute_gigaio` nodes at CHI@UC, which each have one A100 80GB NVIDIA GPU. Use these for model training or inference jobs with very large models, where it is not practical to use a GPU with less memory.
+* A `gpu_a100_pcie` (either `J0BG3Q3` or `307G3Q3`) at CHI@UC. These are 4x A100 80GB NVIDIA GPU nodes. We have one reserved from 4/12 through 5/6. You should use these only if you are using distributed training to train a very large model that is not practical to train on a single GPU. 
+
+For now, you may reserve up to 6 hours at a time on these bare metal nodes. (Once we get closer to the end of the semester, this time limit will be smaller.)
+
