@@ -41,7 +41,7 @@ Finally, we discussed many other tests of the overall machine learning pipeline.
 
 ## Lab assignment
 
-Due TBD
+Due 4/22
 {: .label .label-yellow}
 
 This lab assignment is in three parts (which you can do in any order):

@@ -32,7 +32,7 @@ This table will be updated weekly with links to course materials (lecture handou
     <td>3</td>
     <td><a href="https://link.excalidraw.com/p/readonly/xduAEWPqHPv6IqHAOACz">DevOps for ML systems</a></td>
     <td>Released TBD</td>
-    <td>Will be due TBD in Gradescope</td>
+    <td>Will be due 4/29 in Gradescope</td>
   </tr>
   <tr>
     <td>4</td>
@@ -60,7 +60,7 @@ This table will be updated weekly with links to course materials (lecture handou
     <td><a href="https://teaching-on-testbeds.github.io/eval-offline-chi">Offline evaluation of ML systems</a><br>
         <a href="https://teaching-on-testbeds.github.io/eval-online-chi">Online evaluation of ML systems</a><br>
         <i><a href="">Closing the feedback loop</a></i></td>
-    <td>TBD</td>
+    <td>Will be due 4/22 in Gradescope</td>
   </tr>
     <tr>
     <td>8</td>
@@ -69,7 +69,7 @@ This table will be updated weekly with links to course materials (lecture handou
         <i><a href="">Batch data pipelines</a></i><br>
         <i><a href="">Online data pipelines</a></i><br>
     </td>
-    <td>TBD</td>
+    <td>Will be due 5/6 in Gradescope</td>
   </tr>
 
 
