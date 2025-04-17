@@ -142,7 +142,7 @@ For extra "difficulty points":
 
 Requirements that your project *must* satisfy:
 
-- [ ] **Offline evaluation of model**: You will define an automated offline evaluation plan, and it will run immediately after model training with results logged to MLFlow. Your offline evaluation must include: (A) evaluation on appropriate "standard" and "domain specific" use cases for your particular model (2) evaluation on populations and slices of special relevance, including an analysis of fairness and bias if relevant (3) test on known failure modes (4) and, unit tests based on templates. Depending on the test results, you will automatically register an updated model in the model registry, or not.
+- [ ] **Offline evaluation of model**: You will define an automated offline evaluation plan, and it will run immediately after model training with results logged to MLFlow. Your offline evaluation must include: (1) evaluation on appropriate "standard" and "domain specific" use cases for your particular model (2) evaluation on populations and slices of special relevance, including an analysis of fairness and bias if relevant (3) test on known failure modes (4) and, unit tests based on templates. Depending on the test results, you will automatically register an updated model in the model registry, or not.
 
 - [ ] **Load test in staging**: Once your "Continuous X" pipeline has deployed the service to a staging area, you should conduct a load test on it, and surface the results. (This load test may also be part of the "continuous X" pipeline.)
 
