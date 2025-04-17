@@ -59,7 +59,7 @@ This table will be updated weekly with links to course materials (lecture handou
     <td><a href="https://link.excalidraw.com/p/readonly/ou20L4JKbnqIPG4CiuaO">Evaluation and monitoring</a></td>
     <td><a href="https://teaching-on-testbeds.github.io/eval-offline-chi">Offline evaluation of ML systems</a><br>
         <a href="https://teaching-on-testbeds.github.io/eval-online-chi">Online evaluation of ML systems</a><br>
-        <i><a href="">Closing the feedback loop</a></i></td>
+        <a href="https://teaching-on-testbeds.github.io/eval-loop-chi/">Closing the feedback loop</a></td>
     <td>Will be due 4/22 in Gradescope</td>
   </tr>
     <tr>
