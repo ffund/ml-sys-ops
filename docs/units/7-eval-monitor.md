@@ -48,7 +48,7 @@ This lab assignment is in three parts (which you can do in any order):
 
 [Lab: Part 1: Offline evaluation of ML systems](https://teaching-on-testbeds.github.io/eval-offline-chi/){: .btn .btn-green } 
 [Lab: Part 2: Online evaluation of ML systems](https://teaching-on-testbeds.github.io/eval-online-chi/){: .btn .btn-green } 
-[Lab: Part 3: Closing the feedback loop](https://teaching-on-testbeds.github.io/eval-loop-chi/){: .btn .btn-outline }
+[Lab: Part 3: Closing the feedback loop](https://teaching-on-testbeds.github.io/eval-loop-chi/){: .btn .btn-green }
 
 
 {:.important }
