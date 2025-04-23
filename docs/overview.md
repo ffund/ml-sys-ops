@@ -31,7 +31,7 @@ This table will be updated weekly with links to course materials (lecture handou
   <tr>
     <td>3</td>
     <td><a href="https://link.excalidraw.com/p/readonly/xduAEWPqHPv6IqHAOACz">DevOps for ML systems</a></td>
-    <td>Released TBD</td>
+    <td><a href="https://teaching-on-testbeds.github.io/mlops-chi/">Build an MLOps pipeline on Chameleon</a></td>
     <td>Will be due 4/29 in Gradescope</td>
   </tr>
   <tr>
