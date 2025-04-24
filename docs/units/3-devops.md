@@ -48,7 +48,10 @@ Due 4/29
 > * You can do the parts in any order, but you should only do one at a time - you must delete resources from a previous part before you start another part.
 > * Your resources may not be "active" for more than eight daytime (8AM - 11:59PM) hours. They may be deleted by course staff otherwise.
 > * Delete your compute instance as soon as you are done with the experiment, to free the resources for other students.
-
+> * This lab assignment includes one long unattended setup step (where Ansible installs and configures a Kubernetes cluster) in the middle. The recommended timeline is: 
+>   * Do notebooks 0, 1, 2, 3 (takes about an hour if you read through it in advance)
+>   * Start notebook 4 running and, once you are convinced that it is going OK, leave it running. Go do something else - go to class, do some other coursework, etc. - for a couple of hours
+>   * Then, continue with notebooks 5, 6, 7, 8 (these will take a couple of hours)
 
 ## Reading
 
