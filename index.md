@@ -37,7 +37,8 @@ Prior/future experience in any of the above is helpful, although not necessary (
 6. Model serving.
 7. Monitoring and evaluating ML systems.
 8. Large scale data systems.
-9. Using commercial clouds (GCP, AWS).
+9. Safeguarding ML systems
+10. Using commercial clouds (GCP, AWS).
 
 The remaining lecture sessions will be used for case studies, additional topics, and project presentations.
 
