@@ -304,7 +304,7 @@ Lightning presentation:
 * For this presentation you will prepare a single slide following the template below. You will submit this as a PDF in Brightspace, due at midnight on 4/30.
 * You can present using the following "template", filling in the blanks as appropriate for your own project:
 
-> We are team **[team name]**, and we are developing a system for **[name of specific customer]** to **[very briefly describe the goal of your system, and the value add, in no more than one sentence]**.
+> We are team **[team name]**, and we are developing a system for **[name of ONE specific customer]** to **[very briefly describe the goal of your system, and the value add, in no more than one sentence]**.
 > 
 > We are using **[name of dataset(s)]** to train a model **[name of model and brief description of it]**. First, we **[describe any transformations applied to the data before input to the model]**, then the following features: **[list features]** are input to the model, and the output is **[name/brief description of the direct model output]**. **[If you have multiple models, repeat for each model.]**
 > 
