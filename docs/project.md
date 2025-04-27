@@ -294,6 +294,45 @@ Lightning presentation:
 * During the lightning presentations, pay attention to the other teams' presentations, and note any teams using similar ideas or techniques. You should open a line of dialogue with these teams, so that you can help each other out as you work to implement your projects in the final month of the semester!
 
 
+## Instructions for project "lightning talk" on 5/1
+
+
+
+Lightning presentation:
+
+* On 5/1, one member of your team will have a 60-second slot to present your project proposal in class.
+* For this presentation you will prepare a single slide following the template below. You will submit this as a PDF in Brightspace, due at midnight on 4/30.
+* You can present using the following "template", filling in the blanks as appropriate for your own project:
+
+> We are team **[team name]**, and we are developing a system for **[name of specific customer]** to **[very briefly describe the goal of your system, and the value add, in no more than one sentence]**.
+> 
+> We are using **[name of dataset(s)]** to train a model **[name of model and brief description of it]**. First, we **[describe any transformations applied to the data before input to the model]**, then the following features: **[list features]** are input to the model, and the output is **[name/brief description of the direct model output]**. **[If you have multiple models, repeat for each model.]**
+> 
+> Here is the diagram of our system as deployed on Chameleon. 
+> * **[ Describe each physical resource and container involved in data processing. ]** 
+> * **[Describe each physical resource and container involved in model training.]** 
+> * **[Describe each physical resources and container involved in model serving, evaluation, and monitoring.]** 
+> * **[ Describe each physical resource and container involved in orchestrating a "continuous X" pipeline. ]**
+
+You can access the slide template here: 
+
+[Lightning talk slide template](https://link.excalidraw.com/l/2qkLiEmqaLK/1GjYZOQysDB){: .btn .btn-blue }
+
+On the left side of this slide, you will have a diagram of all the infrastructure resources and systems included in your project:
+
+* Indicate every object store container your project uses as a red block, with the name of the object store (as deployed on CHI@TACC or CHI@UC) and the name of the dataset that you store in it.
+* Indicate every block storage volume your project uses as a red block, with the name of the volume (as deployed on KVM@TACC) and a brief description of what's stored on it.
+* Indicate every compute instance that your project uses (including "ephemeral" instances that you don't use all the time!) as an orange block, with the name of the instance when it is deployed, and its flavor (for VM instances) and machine type (for bare metal instances).
+* Indicate every private network that your project uses as a green block, with the name of the network, and show which instances are connected to the private network.
+* Indicate every floating IP that your project uses as a blue block, and indicate which compute instance it is associated with.
+* *Inside* each orange compute instance, list every container that runs on this instance as a purple block. If some containers run inside a Kubernetes cluster, where specific pods are not necessarily mapped to specific nodes, then you can just list them alongside the Kubernetes cluster.
+* For any resouce type (storage, network, compute, and container): if you have already implemented it in your project **and the code/configuration to implement it is in your Git repository by the time you submit your slide**, leave it as a saturated color. If you do not have the code/configuration to implement it in your Git repository by the time you submit your slide, set it to a light, de-saturated color.
+
+On the right side of this slide, you will have a diagram of each model and each dataset your project uses:
+
+* For each model, show which dataset(s) are used to train it. Show an example of one input to the model from each dataset. Also indicate any transformations applied to the data between its "raw" original state and how it appears at input to the model. Also show an example of a single model output. (Show the direct model output, before any post-processing applied at the system level.)
+
+
 ## Using resources on Chameleon
 
 As you know, your projects will be developed, hosted, and evaluated entirely on Chameleon. The only external hosted service you are permitted to use is Github (for version control and source code hosting only; you are *not* allowed to use Github-hosted runners for CI actions, for example), and potentially external data APIs.
@@ -321,12 +360,3 @@ Some bare metal GPU resources are reserved for use by our class as a group, star
 
 For now, you may reserve up to 6 hours at a time on these bare metal nodes. (Once we get closer to the end of the semester, this time limit will be smaller.)
 
-## What you should be working on now
-
-Updated 4/10 
-{: .label .label-yellow}
-
-* **Mode training team member**: Develop the model training infrasructure/platform, e.g. the basic setup for experiment tracking. Put together a minimal model for other team members to develop against (for example: your base model with the correct classification head on top, without actually training it).
-* **Model serving and evaluation team member**: Start to develop the model serving/evaluation/monitoring platform. Set up a serving endpoint using the minimal model. Start preparing specific data sets for offline evaluations.
-* **Data team member**: Prepare the data ingestion pipeline (for some, this is more involved than others). Make sure to set aside some "late" data for evaluation and for simulating production data. Set up persistent storage for other team members to use (block storage for application, object store for large training data sets).
-* **Continuous X team member**: If there is a separate "continuous X" team member, they are responsible for "Infrastructure-as-code" item in the project, which starts on day 1! Work with other teams to identify infrastructure provisioning and bootstrapping needs, and start to de-duplicate these.
