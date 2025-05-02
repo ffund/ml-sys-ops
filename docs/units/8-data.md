@@ -40,19 +40,14 @@ A feature store may integrate all this functionality for ML systems, by taking b
 Due TBD
 {: .label .label-yellow}
 
-This lab assignment is in three parts:
 
 [Lab: Part 1: Persistent storage on Chameleon](https://teaching-on-testbeds.github.io/data-persist-chi/){: .btn .btn-green } 
-[Lab: Part 2: Batch data pipelines](){: .btn .btn-outline } 
-[Lab: Part 3: Online data pipelines](){: .btn .btn-outline }
 
-The first part is released in "Preview" mode, until the last parts are also released; the due date will be set and the Gradescope submission will open when all parts are ready.
 
 {:.important }
 > Resource usage notes for this lab assignment:
 > 
 > * You will do this lab assignment on KVM@TACC, which does not require reservation.
-> * You can do the parts in any order, but you should only do one at a time - you must delete resources from a previous part before you start another part.
 > * Your resources may not be “active” for more than eight daytime (8AM - 11:59PM) hours. They may be deleted by course staff otherwise. This includes data resources (block storage volumes, object storage containers).
 
 

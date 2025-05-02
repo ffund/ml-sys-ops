@@ -66,8 +66,6 @@ This table will be updated weekly with links to course materials (lecture handou
     <td>8</td>
     <td><a href="https://link.excalidraw.com/p/readonly/c1WHeEW5xSufigXjQ2RS">Data</a></td>
     <td><a href="https://teaching-on-testbeds.github.io/data-persist-chi/">Persistent storage on Chameleon</a><br>
-        <i><a href="">Batch data pipelines</a></i><br>
-        <i><a href="">Online data pipelines</a></i><br>
     </td>
     <td>Will be due 5/6 in Gradescope</td>
   </tr>
