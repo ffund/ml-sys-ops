@@ -350,7 +350,7 @@ Also, here are some recommendations:
 * **Shared key**: For convenience, you may want to create a key pair (public and private SSH key) for your project, and distribute it to all team members. Everyone should get the public and private key; everyone should upload the public key to their Chameleon profile on CHI@UC, CHI@TACC, and KVM@TACC (in addition to, not replacing, your existing keys). Then, when you create resources for the project, all project members will be able to access the resources with that key.
 * **Persistent storage**: In many cases, you can use less persistent storage and also be more efficient by improving your data pipeline to include pre-training transformations such as resizing, that reduce the overall size of the data. If you are working with a very large data set, you should use this approach, mostly for your own sanity (it will make it much easier to work with the data!).
 
-Some bare metal GPU resources are reserved for use by our class as a group, starting 4/12 through at least 5/1 (some extending a bit beyond this). You may use them as follows:
+Some bare metal GPU resources are reserved for use by our class as a group, starting 4/12. You may use them as follows:
 
 * A variable number of `gpu_rtx6000` nodes at CHI@UC, which each have one RTX6000 NVIDIA GPU. You may use these for general model training or inference jobs. 
 * Four `compute_liqid` nodes at CHI@TACC, which each have an A100 40GB NVIDIA GPU. You may use these for general model training or inference jobs, especially if your inference job involves an NVIDIA Triton service. 
