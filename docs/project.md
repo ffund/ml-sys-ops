@@ -334,7 +334,7 @@ On the right side of this slide, you will have a diagram of each model and each 
 
 ## Instructions for project submission on 5/11 and presentations on 5/12, 5/13, 5/14
 
-* You will "submit" your project via the README in your project repository, due at midnight on 5/11. Your README should explain all the parts of your project, with reference to specific files in your Git repository; and it should include instructions for *running* your project on Chameleon.
+* You will "submit" your project via the README in your project repository, due at midnight on 5/11. Your README should explain all the parts of your project, **with reference to specific files in your Git repository** - I'm not just going to read the README, I want to follow links in it to see your actual implementation of each piece; and it should include instructions for *running* your project on Chameleon.
 * Your project presentation will be on 5/12, 5/13, or 5/14; the presentation schedule is listed in Brightspace. You will prepare a 15-minute presentation. You won't use slides; instead, you should prepare a live walkthrough of your project repository and demo your running systems. It's OK if you only demo "persistent" parts of your system, e.g. experiment tracking, monitoring, workflow management, online data, and serving if it is not on GPU; you don't have to demo the parts that only run on GPU instaces.
 * Each team member should present the part of the project that they "own", following the "Group work expectations" listed on this page. 
 
