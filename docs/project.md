@@ -332,6 +332,73 @@ On the right side of this slide, you will have a diagram of each model and each 
 
 * For each model, show which dataset(s) are used to train it. Show an example of one input to the model from each dataset. Also indicate any transformations applied to the data between its "raw" original state and how it appears at input to the model. Also show an example of a single model output. (Show the direct model output, before any post-processing applied at the system level.)
 
+## Instructions for project submission on 5/11 and presentations on 5/12, 5/13, 5/14
+
+* You will "submit" your project via the README in your project repository, due at midnight on 5/11. Your README should explain all the parts of your project, with reference to specific files in your Git repository; and it should include instructions for *running* your project on Chameleon.
+* Your project presentation will be on 5/12, 5/13, or 5/14; the presentation schedule is listed in Brightspace. You will prepare a 15-minute presentation. You won't use slides; instead, you should prepare a live walkthrough of your project repository and demo your running systems. It's OK if you only demo "persistent" parts of your system, e.g. experiment tracking, monitoring, workflow management, online data, and serving if it is not on GPU; you don't have to demo the parts that only run on GPU instaces.
+* Each team member should present the part of the project that they "own", following the "Group work expectations" listed on this page. 
+
+The requirements above are the only hard requirements, read on if you also want to hear my recommendations!
+
+For both your project README and your presentation, it is helpful if you follow the lifecycle of the system from "nothing" to "deployed in production", and also make sure to hit all of the project requirements along the way. If you follow the recommended structure (in both README and presentation), it will make it easy for me to check off and credit you for the requirements that you satisfy. 
+
+I have clarified in brackets who is expected to present each part, and how long it should take (for the presentation).
+
+Unit 1: ANY PERSON - 1 minute
+
+1. **Value proposition**:  Describe the ONE specific customer you are targeting in your design. (Not a category of customers, not a list of several potential customers....) You will briefly describe the value proposition of your system, for this specific customer. Next, you will describe the specific details of the customer that influence your system design (including the data, deployment, and evaluation plans).
+2. **Scale**: describe the size of the data (in GB), the size of the model/how long it takes to train a model, and the size of the deployment (how many inference requests per day? per hour?)
+
+Unit 2/3: CONTINUOUS X (4 person team) or ANY (3 person team) - 1 minute
+
+3. **Cloud-native**: Show an updated diagram of your infrastructure and all the systems it runs, just like the lightning talk; you don't have to explain it.
+4. **Infrastructure** and **Infrastructure-as-code**: Show how to provision and set up the infrastructure required for your project (i.e. all the systems in your diagram).
+
+Unit 8: DATA PERSON - 2 minutes
+
+5. **Persistent storage**: Describe the persistent storage allocated for your project, and what is in it. Show the contents of each persistent storage bucket/volume and its size (as deployed on Chameleon).
+6. **Offline data**: Identify the training data set, and describe the data lineage. Show an example sample of one sample from each dataset that you use. Relate the data sample to the specific customer.  If relevant, describe what is known about a production sample over its lifetime. (example: are some features only known later? is there a natural ground truth label?)
+7. **Data pipeline**: Show the pipeline that retrieves the data from its original source and loads it into what object store or whatever data repository you are using. Describe how you divide the data into training, evaluation, and one or more production sets, avoiding data leakage if relevant. Describe any pre-processing steps that are part of the offline data pipeline.
+8. **Optional: Data dashboard**: if you have a "data dashboard" (note: not a "model dashboard" or "service dashboard", but a dashboard devoted to data and data quality), show it and explain an example of how your customer will gain insight from it.
+
+Unit 4 and 5: MODEL TRAINING PERSON - 3 minutes
+
+9. **Modeling**: Describe how you set up the modeling problem. What are the inputs to the model? What are the outputs (target variable)? Make sure to clarify how it is used by your customer. Describe the model itself. Why did you choose this model, for this particular use case and customer?
+10. **Train and re-train**: Show your training code, including whatever code is used to re-train the model as part of a non-interactive pipeline.
+11. **Experiment tracking**: Bring up your experiment tracking server, and show a comparison of the main experiments you ran.
+12. **Scheduling training jobs**: Show your training and re-training setup.
+13. **Optional: Training strategies for large models/Use distributed training to increase velocity**: If you hit these difficulty points, explain what you did! Include numbers (e.g. "training time decreased from X to Y due to training strategy Z.")
+14. **Optional: Using Ray Train or Ray Tune features**: If you hit these difficulty points, show off the relevant section of your code! Make sure I realize that you did it!
+
+Unit 6 and 7: MODEL SERVING AND EVALUATION PERSON - 2 minutes
+
+15. **Serving from an API endpoint**: Describe how you set up the API endpoint. What is the input? What is the output? 
+16. **Identify requirements**: Discuss requirements with respect to the specific customer.
+17. **Model optimizations**: Show the part of your repo that implements this, and discuss the results!
+18. **System optimizations**: Show the part of your repo that implements this, and discuss the results!
+19. **Offline evaluation of model**: Show your offline test suite in your repository, including all of the types of tests discussed in the requirements, and show results for the most recent model (in MLFlow or your workflow manager or wherever results are logged).
+20. **Load test in staging**: Show your load test suite in your repository, and show results for the most recent model (wherever results are logged).
+21. **Define a business-specific evaluation**: Describe this hypothetical evaluation; it's not something you actually implement.
+22. **Optional: Develop multiple options for serving**: If you attempt this difficulty point, make sure I know it! Show the parts of the repo that implement each option, and show a comparison of the options with respect to performance and cost of deployment on a commercial cloud. (You can use a commercial cloud cost calculator to estimate costs. Show your work.)
+
+
+Unit 2/3: CONTINUOUS X (4 person team) or ANY (3 person team) - 1 minute
+
+23. **Staged deployment**: Show how a model progresses from "training" to "staging" to "canary" deployment.
+
+Unit 8: DATA PERSON - 1 minutes
+
+24. **Online data**: Show how "new" data is sent to the inference endpoint during "production" use.
+
+Unit 6 and 7: MODEL SERVING AND EVALUATION PERSON - 1 minute
+
+25. **Online evaluation/Close the loop**: Show how you evaluate and monitor your model in production, and especially how you "close the loop" and get feedback and/or labels during production use. Show me your "online" monitoring dashboards.
+26. **Optional: Monitor for data drift**: If you are doing this, make sure I know it! Show me your "data drift" dashboard/refer to the part of the code that implements it.
+27. **Optional: Monitor for model degradation**: If you are doing this, make sure I know it! Show me your "model quality" dashboard/refer to the part of the code that implements it.
+
+Unit 2/3: CONTINUOUS X (4 person team) or ANY (3 person team) - 1 minute
+
+28. **CI/CD and continuous training**: Show me how the cycle starts again - what triggers re-training? Show me the re-training to re-deployment pipeline.
 
 ## Using resources on Chameleon
 
