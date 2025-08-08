@@ -1,5 +1,5 @@
 ---
-title: Instructor Guid
+title: Instructor Guide
 layout: page
 nav_order: 5
 ---
