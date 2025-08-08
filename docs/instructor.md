@@ -13,9 +13,12 @@ This page includes some notes for instructors who want to use these materials in
 Since this course was first offered in Spring 2025, some things have changed:
 
 * Starting August 1, 2025, KVM@TACC [requires reservations](https://chameleoncloud.org/blog/2025/07/01/chameleon-changelog-for-june-2025/) for VM instances. The instructions for lab assignments involving VMs have not yet been updated to include reservation.
+
 * DockerHub has changed its rate limit for anonymous "docker pull" operations. If many students are deploying Kubernetes (as in: "Cloud Computing", "MLOps Pipeline" labs) at the same time, since they all appear to be coming from the same public IP, they will exceed that rate limit. A workaround is for the instructor to set up a [pull-through Dockerhub cache](https://github.com/teaching-on-testbeds/dockerhub-pull-through-cache) and then for students to [configure Docker](https://github.com/teaching-on-testbeds/gourmetgram-iac/blob/main/ansible/pre_k8s/pre_k8s_configure.yml#L39) to use that cache. 
   * The "MLOps Pipeline" lab assumes that this pull-through cache is set up. If you don't set up the cache, it won't work.
   * The "Cloud Computing" lab needs to be adapted for this, or you will hit the rate limit.
+
+* Over the course of Fall 2025. I will be changing/updating this material in preparation for Spring 2026. I will almost certainly break some things along the way.
 
 
 ## Before the class begins
