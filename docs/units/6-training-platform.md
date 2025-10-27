@@ -2,7 +2,7 @@
 title: Model training infrastructure and platform
 layout: page
 parent: Units
-nav_order: 5
+nav_order: 6
 ---
 
 # Model training infrastructure and platform
@@ -22,6 +22,12 @@ Then, we discussed requirements for a ML training job scheduler:
 
 and we introduced some scheduling and placement policies, most of which originated in the world of high performance computing.
 
+## Lab assignment
+
+## Reading
+
+
+<!-- 
 [Slides: Model training infrastructure and platform](https://link.excalidraw.com/p/readonly/ljOHwbv4f6bOovUeqAZJ){: .btn .btn-purple }
 
 
@@ -79,3 +85,5 @@ Siddharth Murching, Tomas Nykodym, Paul Ogilvie, Mani Parkhe, Fen Xie, Corey Zum
 * and Ray: refer to
   * Philipp Moritz, Robert Nishihara, Stephanie Wang, Alexey Tumanov, Richard Liaw, Eric Liang, Melih Elibol, Zongheng Yang, William Paul, Michael I. Jordan, and Ion Stoica, "Ray: A Distributed Framework for Emerging AI Applications" in OSDI '18. [Link](https://www.usenix.org/conference/osdi18/presentation/moritz)
   * and the [Ray 2.0 Architecture Whitepaper](https://docs.google.com/document/d/1tBw9A4j62ruI5omIJbMxly-la5w4q_TjyJgJL_jN2fI/preview)
+
+-->

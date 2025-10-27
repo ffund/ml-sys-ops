@@ -21,12 +21,20 @@ You will complete these projects in groups of 3 or 4, where:
 
 * certain elements of the project are going to be "owned" by all group members: the idea and the value proposition, the basic setup of the ML problem (what is the data, what is the target variable, etc.), the approach that the group will take for each part, and the overall integration of all of the parts.
 * other parts of the project are going to be "owned" by individual group members: 
-  1. one group member must "own" the model training part (using units 4 and 5)
-  2. the second group member must "own" the model serving (unit 6) and monitoring (unit 7) part
-  3. the third group member must "own" the data pipeline (unit 8)
+  1. one group member must "own" the model training part (using units 5 and 6) and offline evaluation (part of unit 8)
+  2. the second group member must "own" the model serving (unit 7) and online evaluation and monitoring (part of unit 8) part
+  3. the third group member must "own" the data pipeline (unit 4) (including a script that simulates use in operation) and the "closing the feedback loop" (part of unit 8) part
   4. if you are a group of four: another group member must "own" the continuous X pipeline (unit 3). If you are a group of three, the continuous X pipeline is jointly developed by all three group members, where each group member takes responsibility for the part of the continuous X pipeline that relates to their other role on the project.
 
 Part of your project grade will be common to the entire group, based on the "jointly owned" elements; part of your project grade will be individual, based on the work you have produced in your personal role.
+
+## Project deliverables and deadlines
+
+* Due 3/23: Project proposal and "lightning" talk (5/40 points)
+* Due 4/20-4/27: Implementation, demo, and second "lightning" talk (15/40 points)
+* Due 5/4-5/11: Ongoing operation, demo, and third "lightning" talk (20/40 points)
+
+<!-- 
 
 ## Project deliverables and deadlines
 
@@ -91,13 +99,16 @@ Requirements that your project *must* satify:
 
 - [ ] **Staged deployment**: You will configure a "staging", "canary", and "production" environment in which your service may be deployed. You will also implement a process by which a service is promoted from the staging area to a canary environment, for online evaluation; and a process by which a service is promoted from canary to production.
 
+-->
 
 
 <!--
 
 - [ ] **Demo UI**: This isn't a frontend course, but you will need some sort of demo UI in front of your service. [Streamlit](https://github.com/streamlit/streamlit) and [Gradio](https://github.com/gradio-app/gradio) are popular options for putting together a quick demo.
+
 -->
 
+<!--
 
 ### Unit 4: Model training at scale
 
@@ -198,14 +209,16 @@ status quo used in the business or service? What business metric are you going t
 judged on? (Note that the “service” does not have to be for general users; you can 
 propose a system for a science problem, for example.)
 -->
-
+<!--
 ### Contributors
-
+-->
 <!-- Table of contributors and their roles. 
 First row: define responsibilities that are shared by the team. 
 Then, each row after that is: name of contributor, their role, and in the third column, 
 you will link to their contributions. If your project involves multiple repos, you will 
 link to their contributions in all repos here. -->
+
+<!--
 
 | Name                            | Responsible for | Link to their commits in this repo |
 |---------------------------------|-----------------|------------------------------------|
@@ -223,26 +236,32 @@ link to their contributions in all repos here. -->
 Must include: all the hardware, all the containers/software platforms, all the models, 
 all the data. -->
 
+<!--
 ### Summary of outside materials
+-->
 
 <!-- In a table, a row for each dataset, foundation model. 
 Name of data/model, conditions under which it was created (ideally with links/references), 
 conditions under which it may be used. -->
 
+<!--
 |              | How it was created | Conditions of use |
 |--------------|--------------------|-------------------|
 | Data set 1   |                    |                   |
 | Data set 2   |                    |                   |
 | Base model 1 |                    |                   |
 | etc          |                    |                   |
+-->
 
-
+<!--
 ### Summary of infrastructure requirements
+-->
 
 <!-- Itemize all your anticipated requirements: What (`m1.medium` VM, `gpu_mi100`), 
 how much/when, justification. Include compute, floating IPs, persistent storage. 
 The table below shows an example, it is not a recommendation. -->
 
+<!--
 | Requirement     | How many/when                                     | Justification |
 |-----------------|---------------------------------------------------|---------------|
 | `m1.medium` VMs | 3 for entire project duration                     | ...           |
@@ -251,31 +270,41 @@ The table below shows an example, it is not a recommendation. -->
 | etc             |                                                   |               |
 
 ### Detailed design plan
+-->
 
 <!-- In each section, you should describe (1) your strategy, (2) the relevant parts of the 
 diagram, (3) justification for your strategy, (4) relate back to lecture material, 
 (5) include specific numbers. -->
 
+<!--
+
 #### Model training and training platforms
+-->
 
 <!-- Make sure to clarify how you will satisfy the Unit 4 and Unit 5 requirements, 
 and which optional "difficulty" points you are attempting. -->
 
+<!--
+
 #### Model serving and monitoring platforms
+-->
 
 <!-- Make sure to clarify how you will satisfy the Unit 6 and Unit 7 requirements, 
 and which optional "difficulty" points you are attempting. -->
 
+<!--
 #### Data pipeline
-
+-->
 <!-- Make sure to clarify how you will satisfy the Unit 8 requirements,  and which 
 optional "difficulty" points you are attempting. -->
 
+<!--
 #### Continuous X
-
+-->
 <!-- Make sure to clarify how you will satisfy the Unit 3 requirements,  and which 
 optional "difficulty" points you are attempting. -->
 
+<!--
 
 ```
 
@@ -427,3 +456,4 @@ Some bare metal GPU resources are reserved for use by our class as a group, star
 
 For now, you may reserve up to 6 hours at a time on these bare metal nodes. (Once we get closer to the end of the semester, this time limit will be smaller.)
 
+-->

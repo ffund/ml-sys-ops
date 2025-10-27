@@ -4,7 +4,7 @@ layout: home
 nav_order: 1
 ---
 
-# ECE-GY 9183 Machine Learning Systems Engineering and Operations - Spring 2025
+# ECE-GY 9183 Machine Learning Systems Engineering and Operations - Spring 2026
 
 _Fraida Fund_ 
 
@@ -12,11 +12,11 @@ _Fraida Fund_
 
 **Instructor**: Fraida Fund (ffund@nyu.edu) (370 Jay St, Room 936). The best way to reach me is to post on Ed or to visit my office hour (see Brightspace calendar for dates and Zoom links).
 
-**Instruction mode**: In person. We will meet on Thursdays at 2PM in 370 Jay Street, Room 202.
+**Instruction mode**: In person. We will meet on Mondays at 11AM in 370 Jay Street, Room 202.
 
 **Prerequisites**: ECE-GY 6143 Intro ML or equivalent.
 
-**Approach**: students will learn through a combination of lectures, case studies, guided lab assignments on the [ChameleonCloud](https://chameleoncloud.org/) research infrastructure and on commercial clouds (GCP, AWS), and a final project.
+**Approach**: students will learn through a combination of lectures, case studies, guided lab assignments on the [ChameleonCloud](https://chameleoncloud.org/) research infrastructure and on commercial clouds (GCP, DigitalOcean), and a final project.
 
 **Grading**: 60% lab assignments (weekly); 40% final project.
 
@@ -29,18 +29,19 @@ Prior/future experience in any of the above is helpful, although not necessary (
 
 **Topics**: This course will cover the following topics (tentative plan/subject to change):
 
-1. Challenges and basic principles of machine learning systems engineering and operations.
+1. Challenges and basic principles of machine learning systems engineering and operations. 
 2. Overview of cloud computing.
 3. DevOps and continuous X for ML systems (integration, training, deployment, testing, monitoring).
-4. Model training at scale.
-5. Model training infrastructure and platform (experiment tracking, scheduling).
-6. Model serving.
-7. Monitoring and evaluating ML systems.
-8. Large scale data systems.
-9. Safeguarding ML systems
+4. Large scale data systems.
+5. Model training at scale.
+6. Model training infrastructure and platforms.
+7. Model serving.
+8. Monitoring and evaluating ML systems.
+9. Safeguarding ML systems.
 10. Using commercial clouds (GCP, AWS).
 
-The remaining lecture sessions will be used for case studies, additional topics, and project presentations.
+
+The remaining lecture sessions and the final exam period will be used for case studies, additional topics, and project presentations (3/23, 4/20, 4/27, 5/4, 5/11).
 
 **Time commitment**: This is a 3-credit course. The average student should spend at least 3 hours/week/credit → 9 hours/week for a 3 credit course. A typical week will include:
 
@@ -50,13 +51,13 @@ The remaining lecture sessions will be used for case studies, additional topics,
 
 as well as some time for project development and implementation. (Toward the end of the semester, the lab workload will decrease somewhat to allow more time for project work.) A student who is not very comfortable with computer systems may have to spend more time than the estimate above in order to do well. 
 
-**Compute resources**: For most lab assignments and the course project, students will use storage, network, and compute resources on [ChameleonCloud](https://chameleoncloud.org/), including bare metal GPU instances, virtual machines, and containers on edge devices. We will also use [GCP](https://cloud.google.com/gcp) for one lab assignment (coupons will be available for GCP credit; you will not need a credit card to sign up).
+**Compute resources**: For most lab assignments and the course project, students will use storage, network, and compute resources on [ChameleonCloud](https://chameleoncloud.org/), including bare metal instances, virtual machines, and containers on edge devices. We will also use [GCP](https://cloud.google.com/gcp) (coupons will be available for GCP credit; you will not need a credit card to sign up) and [AMD Developer Cloud Powered byDigitalOcean](https://amd.digitalocean.com/) (again, you will not need a credit card) for one assignment.
 
 To make sure that compute resources will be available to all students in the course: students are expected to use these resoures for this course *only*, not for personal projects or other courses; and to follow guidelines regarding usage when specified.
 
 **Final project**: The final project will be a group project, completed in groups of 3 or 4. Refer to the [Project](docs/project) page for more details on specific requirements.
 
-**Policy on late work**: Lab assignments will be released on Fridays, and will be due on Thursdays at midnight. However, the "due date" is not the "do date" - you should plan to complete each lab early, so that if you need help or encounter unexpected problems (illness, technical issues, etc.) you will still have time to re-do it before the deadline. 
+**Policy on late work**: Lab assignments will be released on a weekly schedule, and will be due on Mondays at midnight. However, the "due date" is not the "do date" - you should plan to complete each lab early, so that if you need help or encounter unexpected problems (illness, technical issues, etc.) you will still have time to re-do it before the deadline. 
 
 This is especially important because we have a limited quota for compute resources, and it is simply not possible in many cases for the entire class to do the lab assignment on the day that it is due. In some cases, you will have to reserve a time slot to use scarce compute resources, or be assigned to specific days on which you may access the compute resources.
 

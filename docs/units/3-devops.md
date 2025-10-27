@@ -32,7 +32,12 @@ Finaly, we reviewed the first few stages of the lifecycle in more depth -
 
 For the rest of the semester, we'll work with a different one of those core organization capabilities in each unit.
 
-[Slides: DevOps for ML systems](https://link.excalidraw.com/p/readonly/xduAEWPqHPv6IqHAOACz){: .btn .btn-purple }
+## Lab assignment
+
+## Reading
+
+
+<!-- [Slides: DevOps for ML systems](https://link.excalidraw.com/p/readonly/xduAEWPqHPv6IqHAOACz){: .btn .btn-purple }
 
 ## Lab assignment
 
@@ -60,3 +65,4 @@ Due 4/29
 * Most of this lesson is based on: Khalid Salama, Jarek Kazmierczak, Donna Schut. "Practitioners guide to MLOps: A framework for continuous delivery and automation of machine learning." Google Cloud Whitepaper, May 2021. [PDF](https://services.google.com/fh/files/misc/practitioners_guide_to_mlops_whitepaper.pdf)
 
 * We also discussed a case study: Jeremy Hermann. "Meet Michelangelo: Uber’s Machine Learning Platform". Uber blog, September 2017. [URL](https://www.uber.com/blog/michelangelo-machine-learning-platform/)
+-->

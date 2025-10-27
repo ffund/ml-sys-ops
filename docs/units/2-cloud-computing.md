@@ -11,19 +11,23 @@ In this week's lecture, we are primarily concerned with the underlying *infrastr
 
 We talked about how to *build* a cloud - we identified key ingredients including:
 
-* hardware and connectivity (of course)
+* hardware and connectivity
 * compute (bare metal, VM, container), network, and storage (block, file, object) services
 * shared services (authentication and authorization, bootable images)
 * user interfaces (GUI, CLI, Python SDK)
 
 and as an example, we named the OpenStack components that handle each of these. This semester we are going to spend a lot of time on Chameleon, which is an OpenStack cloud.
 
-We said that besides for providing access to compute, storage, and network resources, cloud infrastructure providers can also offer managed services in which the infrastructure provider assumes responsibility for parts of the stack that were previously the user's responsibility. We named some cloud service models, and described what the infrastructure provider is responsible for providing and maintaining, in each case.
+We said that besides for providing access to compute, storage, and network resources, cloud infrastructure providers can also offer *managed services* in which the infrastructure provider assumes responsibility for parts of the stack that were previously the user's responsibility. We named some cloud service models, and described what the infrastructure provider is responsible for providing and maintaining, in each case.
 
 We also talked about how the virtualization of compute, storage, and networking resources in the cloud provides opportunities to manage our services like "cattle" instead of like "pets" - with systems in place to handle their lifecycles at scale. We introduced containers (e.g. Docker) and container orchestration frameworks (e.g. Kubernetes) as tools for managing services at scale.
 
+## Lab assignment
 
-[Slides: Cloud computing overview](https://link.excalidraw.com/p/readonly/4lOcDZjTOcR0AUTrMck9){: .btn .btn-purple }
+## Reading
+
+
+<!-- [Slides: Cloud computing overview](https://link.excalidraw.com/p/readonly/4lOcDZjTOcR0AUTrMck9){: .btn .btn-purple }
 
 
 ## Lab assignment
@@ -60,3 +64,4 @@ If you prefer to complete this lab assignment in two sessions, instead of all at
 
 * Do part 0 "Intro", part 1 "Provision resources using the GUI", part 3 "Deploy a service in a Docker container", then part 5 "Delete resources" in one session. 
 * Do part 1 "Provision resources using the GUI", then part 2 "Provision resources using the openstack CLI", then part 4 "Deploy on Kubernetes", then part 5 "Delete resources" in the second session.
+-->

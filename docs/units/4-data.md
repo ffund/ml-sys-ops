@@ -2,7 +2,7 @@
 title: Data systems
 layout: page
 parent: Units
-nav_order: 8
+nav_order: 4
 ---
 
 # Data systems
@@ -33,6 +33,12 @@ For online (streaming) data, we won't necessarily think about data as "living" i
 
 A feature store may integrate all this functionality for ML systems, by taking batch data sources and streaming data sources and making them more readily discoverable and available for model training and inference.
 
+## Lab assignment
+
+## Reading
+
+
+<!-- 
 [Slides: Data systems](https://link.excalidraw.com/p/readonly/c1WHeEW5xSufigXjQ2RS){: .btn .btn-purple }
 
 ## Lab assignment
@@ -52,3 +58,4 @@ Due TBD
 
 
 
+-->

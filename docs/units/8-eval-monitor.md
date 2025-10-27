@@ -2,7 +2,7 @@
 title: Evaluation and monitoring
 layout: page
 parent: Units
-nav_order: 7
+nav_order: 8
 ---
 
 # Evaluation and monitoring
@@ -37,6 +37,12 @@ However, this is challenging because in production, we do not necessarily have g
 
 Finally, we discussed many other tests of the overall machine learning pipeline. 
 
+## Lab assignment
+
+## Reading
+
+
+<!-- 
 [Slides: Evaluation and monitoring](https://link.excalidraw.com/p/readonly/ou20L4JKbnqIPG4CiuaO){: .btn .btn-purple }
 
 ## Lab assignment
@@ -71,3 +77,5 @@ You may also be interested in:
 * this paper about template-based unit tests: Ribeiro, Marco Tulio, Wu, Tongshuang, Guestrin, Carlos, and Singh, Sameer. "Beyond Accuracy: Behavioral Testing of NLP Models with CheckList". In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (ACL 2020). [Link](https://idl.uw.edu/papers/check-list) [Github](https://github.com/marcotcr/checklist)
 * this paper on GenAI-in-the-loop testing for language tasks:  Marco Tulio Ribeiro and Scott Lundberg. "Adaptive Testing and Debugging of NLP Models" . In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (ACL 2022). [Link](https://aclanthology.org/2022.acl-long.230/) [Github](https://github.com/microsoft/adaptive-testing)
 * or, this one on GenAI-in-the-loop testing for computer vision tasks: Irena Gao, Gabriel Ilharco, Scott Lundberg, Marco Tulio Ribeiro. "Adaptive Testing of Computer Vision Models". In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV 2023). [Link](https://openaccess.thecvf.com/content/ICCV2023/html/Gao_Adaptive_Testing_of_Computer_Vision_Models_ICCV_2023_paper.html)
+
+-->

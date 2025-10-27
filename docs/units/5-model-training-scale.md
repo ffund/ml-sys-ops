@@ -2,7 +2,7 @@
 title: Model training at scale
 layout: page
 parent: Units
-nav_order: 4
+nav_order: 5
 ---
 
 
@@ -25,6 +25,12 @@ and we also talked about strategies for distributed training across multiple GPU
 
 In a future lesson, we will see how to offer some of these strategies as part of a model training "service" (e.g. as part an organization's core ML capabilities).
 
+## Lab assignment
+
+## Reading
+
+
+<!-- 
 [Slides: Model training at scale](https://link.excalidraw.com/p/readonly/zMwrCvRBneDGH71cqjxj){: .btn .btn-purple }
 
 
@@ -77,3 +83,5 @@ The techniques from this week's lecture are described in the following papers:
 ](https://andrew.gibiansky.com/blog/machine-learning/baidu-allreduce/). 
 * Then, it gained more widespread use after it was implemented in a framework called Horovod, developed at Uber: Alexander Sergeev and Mike Del Balso. 2018. "Horovod: fast and easy distributed deep learning in TensorFlow." arXiv preprint arXiv:1802.05799. (It's still around as an open source project: [Horovod](https://github.com/horovod/horovod).) 
 * It has since been included in various other deep learning frameworks.
+
+-->

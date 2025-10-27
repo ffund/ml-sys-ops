@@ -49,6 +49,12 @@ The same underlying prediction (e.g., recommending movies to users) will be real
 
 Engineering a machine learning system involves defining the interfaces, algorithms, data, and hardware necessary for it to satisfy use-case-specific requirements including: reliability, cost, maintainability, and many others. In this course, we'll look at each part of the pipeline in turn, and learn about some components we can use to address system-level challenges at that stage.
 
+## Lab assignment
+
+## Reading
+
+
+<!-- 
 [Slides: Machine learning systems](https://link.excalidraw.com/p/readonly/UV8Ez1d9Tc1wLE5vIsLY){: .btn .btn-purple }
 
 
@@ -94,3 +100,5 @@ You should also read -
 * The classic "technical debt" paper: D. Sculley, Gary Holt, Daniel Golovin, Eugene Davydov, Todd Phillips, Dietmar Ebner, Vinay Chaudhary, Michael Young, Jean-Francois Crespo, and Dan Dennison. 2015. Hidden technical debt in Machine learning systems. In Proceedings of the 29th International Conference on Neural Information Processing Systems - Volume 2 (NeurIPS'15), Vol. 2. MIT Press, Cambridge, MA, USA, 2503–2511. [Link](https://proceedings.neurips.cc/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html).
 * and the one about failures in large ML pipelines:  Daniel Papasian, Todd Underwood. 2020. How ML Breaks: A Decade of Outages for One Large ML Pipeline. In Proceedings of the 2020 USENIX Conference on Operational Machine Learning (OpML '20). [Link](https://www.usenix.org/conference/opml20/presentation/papasian).
 * the "3 Vs" of operational machine learning came from an interview study that you may find interesting: Shreya Shankar, Rolando Garcia, Joseph M. Hellerstein, Aditya G. Parameswaran. 2022. Operationalizing Machine Learning: An Interview Study. [arXiv:2209.09125](https://arxiv.org/abs/2209.09125).
+
+-->

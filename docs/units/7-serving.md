@@ -2,7 +2,7 @@
 title: Model serving
 layout: page
 parent: Units
-nav_order: 6
+nav_order: 7
 ---
 
 # Model serving
@@ -44,6 +44,12 @@ Finally, we shifted gears and used [LyftLearn Serving](https://eng.lyft.com/powe
 * isolate different models owned by different teams, so that they do not affect one another,
 * and make it easy for ML teams to create a deployment that will perform well for their particular model and use case, e.g. with customized templates.
 
+## Lab assignment
+
+## Reading
+
+
+<!-- 
 [Slides: Model serving](https://link.excalidraw.com/p/readonly/65nXMf00Qfu3mhUr4eDv){: .btn .btn-purple }
 
 
@@ -71,3 +77,4 @@ You will submit screenshots and answer questions about this assignment in Grades
 > * For the third part, "System optimizations for serving", you will need a 3-hour block on a `gpu_p100` node type at CHI@TACC. These are subject to contention with other Chameleon users.
 
 
+-->
