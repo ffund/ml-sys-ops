@@ -6,14 +6,14 @@ nav_order: 2
 
 # Overview
 
-This table will be updated weekly with links to course materials (lecture handouts, lab manuals) and due dates as we progress through the course.
+This table will be updated weekly with links to course materials (lecture handouts, recordings, lab manuals) as we progress through the course.
 
 <table><thead>
   <tr>
     <th>Week</th>
     <th>Lecture topic</th>
     <th>Lab</th>
-    <th>Deadlines</th>
+    <th>Links</th>
   </tr></thead>
 <tbody>
   <tr>
