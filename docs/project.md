@@ -21,9 +21,9 @@ You will complete these projects in groups of 3 or 4, where:
 
 * certain elements of the project are going to be "owned" by all group members: the idea and the value proposition, the basic setup of the ML problem (what is the data, what is the target variable, etc.), the approach that the group will take for each part, and the overall integration of all of the parts.
 * other parts of the project are going to be "owned" by individual group members: 
-  1. one group member must "own" the model training part (using units 5 and 6) and offline evaluation (part of unit 8)
-  2. the second group member must "own" the model serving (unit 7) and online evaluation and monitoring (part of unit 8) part
-  3. the third group member must "own" the data pipeline (unit 4) (including a script that simulates use in operation) and the "closing the feedback loop" (part of unit 8) part
+  1. one group member must "own" model training (using units 5 and 6) and offline evaluation (part of unit 8)
+  2. the second group member must "own" model serving (unit 7) and online evaluation and monitoring (part of unit 8)
+  3. the third group member must "own" the data pipeline (unit 4) (including a script that simulates use in operation) and "closing the feedback loop" (part of unit 8)
   4. if you are a group of four: another group member must "own" the continuous X pipeline (unit 3). If you are a group of three, the continuous X pipeline is jointly developed by all three group members, where each group member takes responsibility for the part of the continuous X pipeline that relates to their other role on the project.
 
 Part of your project grade will be common to the entire group, based on the "jointly owned" elements; part of your project grade will be individual, based on the work you have produced in your personal role.
@@ -31,7 +31,7 @@ Part of your project grade will be common to the entire group, based on the "joi
 ## Project deliverables and deadlines
 
 * Due 3/23: Project proposal and "lightning" talk (5/40 points)
-* Due 4/20-4/27: Implementation, demo, and second "lightning" talk (15/40 points)
+* Due 4/20-4/27: Implementation, demo (15/40 points)
 * Due 5/4-5/11: Ongoing operation, demo, and third "lightning" talk (20/40 points)
 
 <!-- 
