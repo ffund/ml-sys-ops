@@ -8,13 +8,15 @@ nav_order: 2
 
 This table will be updated weekly with links to course materials (lecture handouts, recordings, lab manuals) as we progress through the course.
 
-<table><thead>
+<table>
+<thead>
   <tr>
     <th>Week</th>
     <th>Lecture topic</th>
     <th>Lab</th>
     <th>Links</th>
-  </tr></thead>
+  </tr>
+  </thead>
 <tbody>
   <tr>
     <td>1 (1/26)</td>
@@ -41,7 +43,6 @@ This table will be updated weekly with links to course materials (lecture handou
     </td>
     <td></td>
   </tr>
-
   <tr>
     <td>5 (2/23)</td>
     <td>Model training at scale</td>
@@ -82,7 +83,6 @@ This table will be updated weekly with links to course materials (lecture handou
     <td></td>
     <td></td>
   </tr>
-  </tr>
     <tr>
     <td>11 (4/20)</td>
     <td>Additional topic: MLOps for GenAI</td>
@@ -101,8 +101,6 @@ This table will be updated weekly with links to course materials (lecture handou
     <td></td>
     <td></td>
   </tr>
-
-
 </tbody>
 </table>
 

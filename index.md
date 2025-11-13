@@ -4,6 +4,14 @@ layout: home
 nav_order: 1
 ---
 
+
+
+{: .note }
+> Are you an educator who wants to use some of this material in your own class? Check out the [instructor guide](/docs/instructor.html).
+
+
+
+
 # ECE-GY 9183 Machine Learning Systems Engineering and Operations - Spring 2026
 
 _Fraida Fund_ 
@@ -16,16 +24,7 @@ _Fraida Fund_
 
 **Prerequisites**: ECE-GY 6143 Intro ML or equivalent.
 
-**Approach**: students will learn through a combination of lectures, case studies, guided lab assignments on the [ChameleonCloud](https://chameleoncloud.org/) research infrastructure and on commercial clouds (GCP, DigitalOcean), and a final project.
-
 **Grading**: 60% lab assignments (weekly); 40% final project.
-
-**Relationship to other ECE courses**: Although only Intro ML is required as a prerequisite, this course will complement existing ECE courses at NYU Tandon (for students who have taken/will take them), including 
-
-* ML courses such as ECE-GY 6143 Intro to Machine Learning, ECE-GY 7123 Deep Learning, and ECE-GY 9143 Intro to High Performance Machine Learning
-* and networking/systems courses such as ECE-GY 6353 Internet Architecture and Protocols and ECE-GY 6363 Data Center and Cloud Computing.
-
-Prior/future experience in any of the above is helpful, although not necessary (except for Intro ML). Students will gain a big-picture view and hands-on experience integrating concepts from all of these courses into the development of a production-ready machine learning system. 
 
 **Topics**: This course will cover the following topics (tentative plan/subject to change):
 
@@ -39,9 +38,11 @@ Prior/future experience in any of the above is helpful, although not necessary (
 8. Monitoring and evaluating ML systems.
 9. Safeguarding ML systems.
 10. Using commercial clouds (GCP, AWS).
+11. Other topics (tentative): GenAI/LLMOps, RAG, Agents and MCP.
 
+The remaining lecture sessions and the final exam period will be used for case studies, additional topics, and project presentations.
 
-The remaining lecture sessions and the final exam period will be used for case studies, additional topics, and project presentations (3/23, 4/20, 4/27, 5/4, 5/11).
+**Approach**: students will learn through a combination of lectures, case studies, guided lab assignments on the [ChameleonCloud](https://chameleoncloud.org/) research infrastructure and on commercial clouds (GCP, DigitalOcean), and a final project.
 
 **Time commitment**: This is a 3-credit course. The average student should spend at least 3 hours/week/credit → 9 hours/week for a 3 credit course. A typical week will include:
 
@@ -56,6 +57,13 @@ as well as some time for project development and implementation. (Toward the end
 To make sure that compute resources will be available to all students in the course: students are expected to use these resoures for this course *only*, not for personal projects or other courses; and to follow guidelines regarding usage when specified.
 
 **Final project**: The final project will be a group project, completed in groups of 3 or 4. Refer to the [Project](docs/project) page for more details on specific requirements.
+
+**Relationship to other ECE courses**: Although only Intro ML is required as a prerequisite, this course will complement existing ECE courses at NYU Tandon (for students who have taken/will take them), including 
+
+* ML courses such as ECE-GY 6143 Intro to Machine Learning, ECE-GY 7123 Deep Learning, and ECE-GY 9143 Intro to High Performance Machine Learning
+* and networking/systems courses such as ECE-GY 6353 Internet Architecture and Protocols and ECE-GY 6363 Data Center and Cloud Computing.
+
+Prior/future experience in any of the above is helpful, although not necessary (except for Intro ML). Students will gain a big-picture view and hands-on experience integrating concepts from all of these courses into the development of a production-ready machine learning system. 
 
 **Policy on late work**: Lab assignments will be released on a weekly schedule, and will be due on Mondays at midnight. However, the "due date" is not the "do date" - you should plan to complete each lab early, so that if you need help or encounter unexpected problems (illness, technical issues, etc.) you will still have time to re-do it before the deadline. 
 
