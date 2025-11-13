@@ -7,7 +7,7 @@ nav_order: 1
 
 
 {: .note }
-> Are you an educator who wants to use some of this material in your own class? Check out the [instructor guide](/docs/instructor).
+> Are you an educator who wants to use some of this material in your own class? Check out the [instructor guide](docs/instructor).
 
 
 
