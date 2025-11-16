@@ -8,6 +8,293 @@ nav_order: 5
 
 This page includes some notes for instructors who want to use these materials in their own courses.
 
+## Overview of available lab materials
+
+<table>
+  <thead>
+    <tr>
+      <th>Lab Instructions</th>
+      <th>Trovi Artifact</th>
+      <th>GitHub Repo</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- Week 1 -->
+    <tr>
+      <td>
+        <a href="https://teaching-on-testbeds.github.io/hello-chameleon">Hello, Chameleon</a>
+        <div>(Intro)</div>
+      </td>
+      <td>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/a10a1b51-51d7-4c6e-ba83-010a5cf759d6">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/teaching-on-testbeds/hello-chameleon">
+          <img src="../assets/images/github-badge.svg" alt="GitHub">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://teaching-on-testbeds.github.io/hello-linux/index-chi">Hello, Linux</a>
+        <div>(Intro)</div>
+      </td>
+      <td>
+        (Use "Hello, Chameleon" artifact)
+      </td>
+      <td>
+        <a href="https://github.com/teaching-on-testbeds/hello-linux">
+          <img src="../assets/images/github-badge.svg" alt="GitHub">
+        </a>
+      </td>
+    </tr>
+
+    <!-- Week 2 -->
+    <tr>
+      <td>
+        <a href="https://teaching-on-testbeds.github.io/cloud-chi/">Cloud computing on Chameleon</a>
+        <div>(Cloud computing)</div>
+      </td>
+      <td>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/a5efb034-917e-4fdd-b83d-1a7f8930d960">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/teaching-on-testbeds/cloud-chi">
+          <img src="../assets/images/github-badge.svg" alt="GitHub">
+        </a>
+      </td>
+    </tr>
+
+    <!-- Week 3 -->
+    <tr>
+      <td>
+        <a href="https://teaching-on-testbeds.github.io/mlops-chi/">Build an MLOps pipeline on Chameleon</a>
+        <div>(DevOps and continuous X for ML systems)</div>
+      </td>
+      <td>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/1eb302de-4707-4ae9-ae2d-391b9b8e5261">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/teaching-on-testbeds/mlops-chi">
+          <img src="../assets/images/github-badge.svg" alt="GitHub">
+        </a>
+      </td>
+    </tr>
+
+    <!-- Week 4 -->
+    <tr>
+      <td>
+        <a href="https://teaching-on-testbeds.github.io/data-persist-chi/">Persistent storage on Chameleon</a>
+        <div>(Large scale data systems)</div>
+      </td>
+      <td>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/a1c68238-81f8-498d-8323-9d6c46cb0a78">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/teaching-on-testbeds/data-persist-chi">
+          <img src="../assets/images/github-badge.svg" alt="GitHub">
+        </a>
+      </td>
+    </tr>
+
+    <!-- Week 5 -->
+    <tr>
+      <td>
+        <a href="https://teaching-on-testbeds.github.io/llm-chi/">Large-scale model training on Chameleon</a>
+        <div>(Model training at scale)</div>
+        <div>⛔ Deprecated in favor of new vision-language model training lab</div>
+      </td>
+      <td>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/39a536c6-6070-4ccf-9e91-bc47be9a94af">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/teaching-on-testbeds/llm-chi">
+          <img src="../assets/images/github-badge.svg" alt="GitHub">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="">Training a large vision-language model</a>
+        <div>(Model training at scale)</div>
+        <div>🔧 In development</div>
+      </td>
+      <td>
+
+      </td>
+      <td>
+
+      </td>
+    </tr>
+
+    <!-- Week 6 -->
+    <tr>
+      <td>
+        <a href="https://teaching-on-testbeds.github.io/mltrain-chi/">Train ML models with MLFlow and Ray</a>
+        <div>(Model training infrastructure and platforms)</div>
+        <div>⛔ Deprecated in favor of separate MLFlow + Ray labs</div>
+
+      </td>
+      <td>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/d48d7684-cf6d-4c33-bcd6-5504266bc3d4">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/teaching-on-testbeds/mltrain-chi">
+          <img src="../assets/images/github-badge.svg" alt="GitHub">
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <a href="https://teaching-on-testbeds.github.io/mlflow-chi/">ML experiment tracking with MLFlow</a>
+        <div>(Model training infrastructure and platforms)</div>
+      </td>
+      <td>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/aefd5288-b99c-455d-8a85-028d4aad3209">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/teaching-on-testbeds/mlflow-chi">
+          <img src="../assets/images/github-badge.svg" alt="GitHub">
+        </a>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <a href="">Building a model training cluster with Ray</a>
+        <div>(Model training infrastructure and platforms)</div>
+        <div>🔧 In development</div>
+      </td>
+      <td>
+
+      </td>
+      <td>
+
+      </td>
+    </tr>
+
+
+    <!-- Week 7 -->
+    <tr>
+      <td>
+        <a href="https://teaching-on-testbeds.github.io/serve-model-chi/">Model optimizations for serving</a>
+        <div>(Model serving)</div>
+      </td>
+      <td>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/f5acccf8-f2cb-4d1e-8918-4c8fd97bfc32">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/teaching-on-testbeds/serve-model-chi">
+          <img src="../assets/images/github-badge.svg" alt="GitHub">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://teaching-on-testbeds.github.io/serve-edge-chi/">Serving on edge devices</a>
+        <div>(Model serving)</div>
+      </td>
+      <td>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/a1662022-9017-45b1-9b96-31705ca20358">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/teaching-on-testbeds/serve-edge-chi">
+          <img src="../assets/images/github-badge.svg" alt="GitHub">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://teaching-on-testbeds.github.io/serve-system-chi/">System optimizations for model serving</a>
+        <div>(Model serving)</div>
+      </td>
+      <td>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/45097b76-3b24-472d-9b23-d522e795b2e0">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/teaching-on-testbeds/serve-system-chi">
+          <img src="../assets/images/github-badge.svg" alt="GitHub">
+        </a>
+      </td>
+    </tr>
+
+    <!-- Week 8 -->
+    <tr>
+      <td>
+        <a href="https://teaching-on-testbeds.github.io/eval-offline-chi">Offline evaluation of ML systems</a>
+        <div>(Monitoring and evaluating ML systems)</div>
+      </td>
+      <td>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/3785c5f5-4c98-4dae-b66d-9e693544a269">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/teaching-on-testbeds/eval-offline-chi">
+          <img src="../assets/images/github-badge.svg" alt="GitHub">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://teaching-on-testbeds.github.io/eval-online-chi">Online evaluation of ML systems</a>
+        <div>(Monitoring and evaluating ML systems)</div>
+      </td>
+      <td>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/4e7c43ef-31be-46c5-bb64-4d358608b3b8">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/teaching-on-testbeds/eval-online-chi">
+          <img src="../assets/images/github-badge.svg" alt="GitHub">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://teaching-on-testbeds.github.io/eval-loop-chi/">Closing the feedback loop</a>
+        <div>(Monitoring and evaluating ML systems)</div>
+      </td>
+      <td>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/285f3758-3df2-4226-99ab-c243aa715b8e">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/teaching-on-testbeds/eval-loop-chi">
+          <img src="../assets/images/github-badge.svg" alt="GitHub">
+        </a>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+
 ## Things that are known to be broken
 
 <!-- 
@@ -77,7 +364,6 @@ To ensure that your students will be able to access GPU resources as needed, you
 <table>
   <thead>
     <tr>
-      <th>#</th>
       <th>Assignment</th>
       <th>Instance Type(s)</th>
       <th>Number of Hours per Student</th>
@@ -85,43 +371,36 @@ To ensure that your students will be able to access GPU resources as needed, you
   </thead>
   <tbody>
     <tr>
-      <td>4</td>
       <td>Train at Scale (Multi GPU)</td>
       <td><code>gpu_a100_pcie</code>, <code>gpu_v100</code></td>
       <td>2</td>
     </tr>
     <tr>
-      <td>4</td>
       <td>Train at Scale (One GPU)</td>
       <td><code>compute_gigaio</code> at CHI@UC only (needs A100 80GB)</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>5</td>
       <td>Training in a Cluster (Multi GPU)</td>
       <td><code>gpu_mi100</code></td>
       <td>3</td>
     </tr>
     <tr>
-      <td>5</td>
       <td>Experiment Tracking (One GPU)</td>
       <td><code>compute_liqid</code> at CHI@TACC or <code>compute_gigaio</code> at CHI@UC</td>
       <td>3</td>
     </tr>
     <tr>
-      <td>6</td>
       <td>Model Serving Optimizations</td>
       <td><code>compute_liqid</code> at CHI@TACC or <code>compute_gigaio</code> at CHI@UC</td>
       <td>3</td>
     </tr>
     <tr>
-      <td>6</td>
       <td>Serving from the Edge</td>
       <td><code>rpi5</code> on CHI@Edge (you may need to BYOD)</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>6</td>
       <td>System Serving Optimizations</td>
       <td><code>gpu_p100</code></td>
       <td>3</td>
