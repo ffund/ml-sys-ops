@@ -65,34 +65,6 @@ To make sure that compute resources will be available to all students in the cou
 
 Prior/future experience in any of the above is helpful, although not necessary (except for Intro ML). Students will gain a big-picture view and hands-on experience integrating concepts from all of these courses into the development of a production-ready machine learning system. 
 
-**Policy on AI use**: Some limited use of AI (such as LLMs) is permitted in this course, please read carefully!
-
-In my Intro ML course, the learning objective is to develop the mental models of machine learning. Writing code yourself helps you develop that mental model; letting an LLM generate code bypasses the cognitive work the course is designed to develop. So, in Intro ML, I don't allow AI use (except for direct translation from one language to another, or generating plotting/visualization code).
-
-In ML Systems Design and Operations, the learning objective is different. This course focuses on
-
-* designing systems, by identifying requirements and evaluating tradeoffs
-* and then operationalizing those designs
-
-The cognitive work in this course is not writing code or configurations; it is making correct decisions, understanding trade-offs, defending decisions, explaining the system to stakeholders, and diagnosing failures (i.e. "making it work"). So, you are permitted to use LLMs to help write code and configs, but only as an implementation tool to help realize *your* design, not as designers.
-
-What that means in practice for your course project is:
-
-*You own the design*. You (the human) must develop the design yourself. You'll be asked to defend your design choices, answer "what if" questions about changing requirements, and discuss tradeoffs. If you haven't thoughtly deeply about the problem and thought through all the possibilities, you'll struggle to do that.
-
-*LLMs may help implement your design*. You can ask an LLM to help you write or modify code and configs, with the following constraints:
-  1. *Start from the provided labs when possible*. Wherever possible, you should use the lab assignments as a starting point for code or configs (like a human would!), and build on that rather than starting from scratch. (Of course, if you are implementing something we didn't do in the lab, you'll do it from scratch.) This is practical (you avoid having to debug problems that I've already solved when developing the lab!) and it's also realistic (in most settings, you will be modifying existing pipelines and systems, not starting a greenfield design from scratch).
-  2. *You specify; the LLM executes*. You tell the LLM what to do, based on the design *you* developed. 
-  3. *You must understand what it produced.*. You are responsible for being able to explain any code or configuration that appears in your project, including what it does and why it is needed for your design.
-  4. *No silent design changes.* Do not allow the LLM to change configurations, parameters, or pipeline structure without your explicit decision and justification. (This is something I have noticed they tend to do when implementing ML systems.)
-  5. *Disclosure is required.* Any commit that includes LLM-generated or LLM-modified code or configuration must include a lightweight disclosure (e.g. `Assisted by Codex 5.2` or equivalent).
-
-*Running systems matter, code itself doesn't*. There is no credit for systems that are not running on Chameleon Cloud. Code or configuration that has not been executed in the target environment, or that only runs locally, does not count. Producing text is easy; making a real system run is the work.
-
-*Communication is human-only*. All lab reports, project reports, project documentation, and slides must be written by you without AI assistance. This is because communicating your design is a core learning objective of this class. Only direct translation of your own writing into English (e.g., using Google Translate) is allowed.
-
-If you use LLMs as intended - to implement your ideas, not replace them - they will help you build better systems and you will still learn what this course is designed to teach.
-
 **Policy on late work**: Lab assignments will be released on a weekly schedule, and will be due on Mondays at midnight. However, the "due date" is not the "do date" - you should plan to complete each lab early, so that if you need help or encounter unexpected problems (illness, technical issues, etc.) you will still have time to re-do it before the deadline. 
 
 This is especially important because we have a limited quota for compute resources, and it is simply not possible in many cases for the entire class to do the lab assignment on the day that it is due. In some cases, you will have to reserve a time slot to use scarce compute resources, or be assigned to specific days on which you may access the compute resources.
@@ -135,12 +107,33 @@ Also note:
 
 * After the class ends, some students like to share their solutions to assignments as part of an online "portfolio", to show off their work. However, you may only share the part that you wrote - you may not share the parts of any lab "template" (code or text) that were written by me. In general, the material distributed to you is for your use in this course, and you do not have permission to redistribute it.
 
-**Policy on use of AI**: You are permitted to use AI assistance for the following:
+**Policy on AI use**: Some limited use of AI (such as LLMs) is permitted in this course, please read carefully!
 
-* computer translation between English and another language, e.g. you may write an explanation for a question on a lab assignment in another language and then submit a direct translation to English using Google Translate or a similar service. (Note: this does not include "cleaning up" or rephrasing text, which is not allowed - only direct translation is allowed. You shouldn't "clean up" text because (1) I don't care about your spelling, grammar, or vocabulary, and (2) if I am asking for an open-ended response, I want to hear *your* voice, not an LLM's voice.)
-* to generate Python code for plotting and visualization. You are fully responsible for any figures or visualizations you submit, including making sure their appearance is reasonable and the data in them is correct. But, you are permitted to use an AI assistant such as ChatGPT or Gemini to help you generate `matplotlib` or `seaborn` code to make your plots look the way you want. If you do use an AI assistant, you must include your LLM prompt in your submission.
+In my Intro ML course, the learning objective is to develop the mental models of machine learning. Writing code yourself helps you develop that mental model; letting an LLM generate code bypasses the cognitive work the course is designed to develop. So, in Intro ML, I don't allow AI use (except for direct translation from one language to another, or generating plotting/visualization code).
 
-With the exception of the tasks listed above, AI assistance is not permitted in this course.
+In ML Systems Design and Operations, the learning objective is different. This course focuses on
+
+* designing systems, by identifying requirements and evaluating tradeoffs
+* and then operationalizing those designs
+
+The cognitive work in this course is not writing code or configurations; it is making correct decisions, understanding trade-offs, defending decisions, explaining the system to stakeholders, and diagnosing failures (i.e. "making it work"). So, you are permitted to use LLMs to help write code and configs, but only as an implementation tool to help realize *your* design, not as designers.
+
+What that means in practice for your course project is:
+
+*You own the design*. You (the human) must develop the design yourself. You'll be asked to defend your design choices, answer "what if" questions about changing requirements, and discuss tradeoffs. If you haven't thoughtly deeply about the problem and thought through all the possibilities, you'll struggle to do that.
+
+*LLMs may help implement your design*. You can ask an LLM to help you write or modify code and configs, with the following constraints:
+  1. *Start from the provided labs when possible*. Wherever possible, you should use the lab assignments as a starting point for code or configs (like a human would!), and build on that rather than starting from scratch. (Of course, if you are implementing something we didn't do in the lab, you'll do it from scratch.) This is practical (you avoid having to debug problems that I've already solved when developing the lab!) and it's also realistic (in most settings, you will be modifying existing pipelines and systems, not starting a greenfield design from scratch).
+  2. *You specify; the LLM executes*. You tell the LLM what to do, based on the design *you* developed. 
+  3. *You must understand what it produced.*. You are responsible for being able to explain any code or configuration that appears in your project, including what it does and why it is needed for your design.
+  4. *No silent design changes.* Do not allow the LLM to change configurations, parameters, or pipeline structure without your explicit decision and justification. (This is something I have noticed they tend to do when implementing ML systems.)
+  5. *Disclosure is required.* Any commit that includes LLM-generated or LLM-modified code or configuration must include a lightweight disclosure (e.g. `Assisted by Codex 5.2` or equivalent).
+
+*Running systems matter, code itself doesn't*. There is no credit for systems that are not running on Chameleon Cloud. Code or configuration that has not been executed in the target environment, or that only runs locally, does not count. Producing text is easy; making a real system run is the work.
+
+*Communication is human-only*. All lab reports, project reports, project documentation, and slides must be written by you without AI assistance. This is because communicating your design is a core learning objective of this class. Only direct translation of your own writing into English (e.g., using Google Translate) is allowed.
+
+If you use LLMs as intended - to implement your ideas, not replace them - they will help you build better systems and you will still learn what this course is designed to teach.
 
 **Violation of academic integrity policies**: The course staff wants to spend their time and effort supporting students who want to learn, not policing students' avoidance of learning. However, when we *do* detect a violation of these policies, we take it very seriously.
 
