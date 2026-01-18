@@ -2,6 +2,8 @@
 title: Overview
 layout: page
 nav_order: 2
+nav_exclude: true
+search_exclude: true
 ---
 
 # Overview

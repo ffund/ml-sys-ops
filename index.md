@@ -56,7 +56,7 @@ as well as some time for project development and implementation. (Toward the end
 
 To make sure that compute resources will be available to all students in the course: students are expected to use these resoures for this course *only*, not for personal projects or other courses; and to follow guidelines regarding usage when specified.
 
-**Final project**: The final project will be a group project, completed in groups of 3 or 4. Refer to the [Project](docs/project) page for more details on specific requirements.
+**Final project**: The final project will be a group project, completed in groups of 3 or 4. More specific requirements will be shared in class.
 
 **Relationship to other ECE courses**: Although only Intro ML is required as a prerequisite, this course will complement existing ECE courses at NYU Tandon (for students who have taken/will take them), including 
 
