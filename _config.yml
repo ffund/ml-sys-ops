@@ -6,6 +6,8 @@ url: https://ffund.github.io/ml-sys-ops/
 
 heading_anchors: true
 
+search_enabled: false
+
 defaults:
   - scope:
       path: "docs" # an empty string here means all files in the project
