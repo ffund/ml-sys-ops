@@ -1,5 +1,5 @@
 ---
-title: Machine Learning Systems Engineering and Operations
+title: Syllabus
 layout: home
 nav_order: 2
 ---
