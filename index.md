@@ -29,7 +29,7 @@ This course covers the following topics:
 7. Model serving.
 8. Monitoring and evaluating ML systems.
 9. Safeguarding ML systems.
-10. Using commercial clouds (GCP, AWS).
+10. Using commercial clouds.
 11. Other topics (tentative): GenAI/LLMOps, RAG, Agents and MCP.
 
 

@@ -30,7 +30,7 @@ _Fraida Fund_
 7. Model serving.
 8. Monitoring and evaluating ML systems.
 9. Safeguarding ML systems.
-10. Using commercial clouds (GCP, AWS).
+10. Using commercial clouds.
 11. Other topics (tentative): GenAI/LLMOps, RAG, Agents and MCP.
 
 The remaining lecture sessions and the final exam period will be used for case studies, additional topics, and project presentations.
@@ -45,7 +45,7 @@ The remaining lecture sessions and the final exam period will be used for case s
 
 as well as some time for project development and implementation. (Toward the end of the semester, the lab workload will decrease somewhat to allow more time for project work.) A student who is not very comfortable with computer systems may have to spend more time than the estimate above in order to do well. 
 
-**Compute resources**: For most lab assignments and the course project, students will use storage, network, and compute resources on [ChameleonCloud](https://chameleoncloud.org/), including bare metal instances, virtual machines, and containers on edge devices. We will also use [GCP](https://cloud.google.com/gcp) (coupons will be available for GCP credit; you will not need a credit card to sign up) and [AMD Developer Cloud Powered byDigitalOcean](https://amd.digitalocean.com/) (again, you will not need a credit card) for one assignment.
+**Compute resources**: For most lab assignments and the course project, students will use storage, network, and compute resources on [ChameleonCloud](https://chameleoncloud.org/), including bare metal instances, virtual machines, and containers on edge devices. We will also use [GCP](https://cloud.google.com/gcp) (coupons will be available for GCP credit; you will not need a credit card to sign up) and [AMD Developer Cloud Powered byDigitalOcean](https://amd.digitalocean.com/) (again, you will not need a credit card).
 
 To make sure that compute resources will be available to all students in the course: students are expected to use these resoures for this course *only*, not for personal projects or other courses; and to follow guidelines regarding usage when specified.
 
