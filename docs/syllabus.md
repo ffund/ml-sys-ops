@@ -34,8 +34,6 @@ _Fraida Fund_
 10. Using commercial clouds.
 11. Other topics (tentative): GenAI/LLMOps, RAG, Agents and MCP.
 
-The remaining lecture sessions and the final exam period will be used for case studies, additional topics, and project presentations.
-
 **Approach**: students will learn through a combination of lectures, case studies, guided lab assignments on the [ChameleonCloud](https://chameleoncloud.org/) research infrastructure and on commercial clouds (GCP, DigitalOcean), and a final project.
 
 **Time commitment**: This is a 3-credit course. The average student should spend at least 3 hours/week/credit → 9 hours/week for a 3 credit course. A typical week will include:
