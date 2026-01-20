@@ -20,19 +20,25 @@ _Fraida Fund_
 
 **Grading**: 60% lab assignments (weekly); 40% final project.
 
-**Topics**: This course will cover the following topics (tentative plan/subject to change):
+**Schedule**: This course will cover the following topics (tentative plan/subject to change):
 
-1. Challenges and basic principles of machine learning systems engineering and operations. 
-2. Overview of cloud computing.
-3. DevOps and continuous X for ML systems (integration, training, deployment, testing, monitoring).
-4. Large scale data systems.
-5. Model training at scale.
-6. Model training infrastructure and platforms.
-7. Model serving.
-8. Monitoring and evaluating ML systems.
-9. Safeguarding ML systems.
-10. Using commercial clouds.
-11. Other topics (tentative): GenAI/LLMOps, RAG, Agents and MCP.
+| Lecture | Date | Day | Topic | Notes |
+|---|---|---|---|---|
+| 1 | Jan 26, 2026 | Monday | Challenges and basic principles of ML systems | |
+| 2 | Feb 2, 2026 | Monday | Overview of cloud computing | |
+| 3 | Feb 9, 2026 | Monday | DevOps and continuous X for ML systems | |
+| 4 | Feb 17, 2026 | Tuesday | Large scale data systems | Legislative Monday |
+| 5 | Feb 23, 2026 | Monday | Model training at scale | |
+| 6 | Mar 2, 2026 | Monday | Model training infrastructure and platforms | |
+| 7 | Mar 9, 2026 | Monday | Model serving | |
+| — | Mar 16, 2026 | — | No class | Spring break |
+| 8 | Mar 23, 2026 | Monday | Monitoring and evaluating ML systems | |
+| 9 | Mar 30, 2026 | Monday | Safeguarding ML systems | |
+| 10 | Apr 6, 2026 | Monday | Using commercial clouds | |
+| 11 | Apr 13, 2026 | Monday | Extra topic: GenAIOps and LLMOps | |
+| 12 | Apr 20, 2026 | Monday | Extra topic: Retrieval-Augmented Generation (RAG) | |
+| 13 | Apr 27, 2026 | Monday | Extra topic: Agents and Model Context Protocol (MCP) | |
+| 14 | May 4, 2026 | Monday | Course recap and synthesis | |
 
 **Approach**: students will learn through a combination of lectures, case studies, guided lab assignments on the [ChameleonCloud](https://chameleoncloud.org/) research infrastructure and on commercial clouds (GCP, DigitalOcean), and a final project.
 
@@ -48,7 +54,17 @@ as well as some time for project development and implementation. (Toward the end
 
 To make sure that compute resources will be available to all students in the course: students are expected to use these resoures for this course *only*, not for personal projects or other courses; and to follow guidelines regarding usage when specified.
 
-**Final project**: The final project will be a group project, completed in groups of 3 or 4 where each group membership must have "ownership" of specific parts of the project. The project will be due in four separate deliverables: proposal (5/40 points), implementation (10/40 points), integration (15/40 points), and ongoing operation (10/40 points). More specific requirements will be shared in class.
+**Final project**: The final project will be a group project, completed in groups of 3 or 4 where each group membership must have "ownership" of specific parts of the project. The project will be due in four separate deliverables: 
+
+| Milestone | Due Date | Points | Scope |
+|---|---|---|---|
+| Project proposal | Mar 2, 2026 | 5 / 40 | Problem statement, data sources, modeling approach, alignment with business requirements |
+| Initial implementation | Apr 6, 2026 | 10 / 40 | Data, model training, model serving, monitoring and evaluation implemented individually (not necessarily integrated); overall pipeline with dummy steps also implemented for 4-person groups |
+| System implementation | Apr 20, 2026 | 15 / 40 | All components tightly integrated into a single end-to-end ML system, including safeguarding |
+| Ongoing operation | May 4, 2026 | 10 / 40 | Operation with emulated "live" data; operational behavior, stability, and evaluation over time |
+
+
+More specific requirements will be shared in class.
 
 **Relationship to other ECE courses**: Although only Intro ML is required as a prerequisite, this course will complement existing ECE courses at NYU Tandon (for students who have taken/will take them), including 
 
