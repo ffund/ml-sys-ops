@@ -2,7 +2,7 @@
 title: Project
 layout: page
 nav_order: 3
-nav_exclude: true
+nav_exclude: false
 search_exclude: true
 ---
 
@@ -10,31 +10,137 @@ search_exclude: true
 {: .no_toc }
 
 
-For your course project, you will design and implement a medium-scale ML system. In your project, you must use the techniques discussed in our lectures to address some of the challenges *also* discussed in those lectures.
+For your course project, you will design and implement an end-to-end ML system. In your project, you must use the techniques discussed in our lectures to address some of the challenges *also* discussed in those lectures.
 
 1. TOC
 {:toc}
 
+## Project context requirement
 
+For your project, you will add a *complementary* ML feature to an existing open-source, self-hosted software system that you will run on Chameleon. 
+
+Why? In practice, ML models most often operate as components within larger systems that impose constraints around data availability, latency, reliability, deployment, and operational ownership. If you design a new service "around the model" you get to ignore these constraints and do whatever is convenient, which bypasses the core challenges the course is intended to teach. 
+
+For example, you may design a feature that complements:
+
+* meetings/webinars via [Jitsi](https://github.com/jitsi/jitsi-meet)
+* diagram sketching via [Excalidraw](https://github.com/excalidraw/excalidraw)
+* audiobook/podcast library via [audiobookshelf](https://github.com/advplyr/audiobookshelf)
+* recipe manager via [Mealie](https://github.com/mealie-recipes/mealie)
+* photo library via [immich](https://github.com/immich-app/immich) or [PhotoPrism](https://github.com/photoprism/photoprism)
+* book library/reading with [BookLore](https://github.com/booklore-app/booklore)
+* blog/publishing via [Ghost](https://github.com/TryGhost/Ghost)
+* team chat via [Mattermost](https://github.com/mattermost/mattermost) or [Zulip](https://github.com/zulip/zulip)
+* media server via [Jellyfin](https://github.com/jellyfin/jellyfin)
+* music streaming via [Navidrome](https://github.com/navidrome/navidrome)
+* note taking via [Trilium](https://github.com/TriliumNext/Trilium) or [DocMost](https://github.com/docmost/docmost)
+* document storage and sharing via [NextCloud](https://github.com/nextcloud)
+* Internet search via [SearXNG](https://github.com/searxng/searxng)
+* livestreaming via [Owncast](https://github.com/owncast/owncast)
+* document management via [Paperless-ngx](https://github.com/paperless-ngx/paperless-ngx)
+* caregiving via [BabyBuddy](https://github.com/babybuddy/babybuddy)
+* project management via [AppFlowy](https://github.com/AppFlowy-IO/AppFlowy)
+* personal finance via [ActualBudget](https://github.com/actualbudget/actual)
+* travel planning via [AdventureLog](https://github.com/seanmorley15/AdventureLog)
+* fitness tracking via [SparkyFitness](https://github.com/CodeWithCJ/SparkyFitness)
+* etc.
+
+
+If the project you plan to complement has fewer than 2.5k stars on Github, you should get advance approval from course staff before preparing your proposal.
+
+You don't have to use the project exactly as intended - for example, if you want to implement an ML feature for team chat that is specifically designed for students working on a group project together, you can do it in Zulip even if that's a general purpose chat service. Or if you want to implement an ML feature for a news website, you can do it with Ghost, and so on.
+
+Also, integration with the core open source project is exempt from the "you must understand everything about your code and what it does" policy on AI use. You are welcome to vibe code the part that integrates with the core open source service. Right around the time when you'll be integrating your system (in April), we'll give some additional guidance and resources on using an AI coding agent to help with this part.
+
+Additional requirements:
+
+* Your ML feature must be designed so that when deployed in "production", you get new data and feedback from "users", and can use this for retraining.
+* You can use an LLM out-of-the-box (without retraining) for part of your project, but if you do, you must also include another model that you train/retrain.
 
 ## Group work expectations
 
-You will complete these projects in groups of 3 or 4, where:
+You will complete these projects in groups of 3 or 4, where certain elements of the project are going to be "owned" by all group members, and other parts are going to be "owned" by individual group members.
 
-* certain elements of the project are going to be "owned" by all group members: the idea and the value proposition, the basic setup of the ML problem (what is the data, what is the target variable, etc.), the approach that the group will take for each part, and the overall integration of all of the parts.
-* other parts of the project are going to be "owned" by individual group members: 
-  1. one group member must "own" model training (using units 5 and 6) and offline evaluation (part of unit 8)
-  2. the second group member must "own" model serving (unit 7) and online evaluation and monitoring (part of unit 8)
-  3. the third group member must "own" the data pipeline (unit 4) (including a script that simulates use in operation) and "closing the feedback loop" (part of unit 8)
-  4. if you are a group of four: another group member must "own" the continuous X pipeline (unit 3). If you are a group of three, the continuous X pipeline is jointly developed by all three group members, where each group member takes responsibility for the part of the continuous X pipeline that relates to their other role on the project.
+| Role | Responsibilities |
+|---|---|
+| All group members (joint) | Project idea and value proposition; high-level approach; overall system integration<br><i>(3-person team): Platform / DevOps responsibilities are shared; each member owns automation related to their primary role (Unit 3)</i>  |
+| Training | Model training and retraining pipelines (Units 5–6)<br>Offline evaluation (part of Unit 8) <br>Safeguarding elements related to role (Unit 10) |
+| Serving | Model serving (Unit 7)<br>Online evaluation and monitoring (part of Unit 8) <br>Safeguarding elements related to role (Unit 10) |
+| Data | Data pipeline (Unit 4)<br>Closing the feedback loop (getting outcomes/labels in production) (part of Unit 8)<br>Emulated operational data <br>Safeguarding elements related to role (Unit 10) |
+| DevOps / Platform<br>(4-person team) | Infrastructure as code, CI/CD/CT pipelines, automation (Unit 3) <br>Safeguarding elements related to role (Unit 10) |
 
-Part of your project grade will be common to the entire group, based on the "jointly owned" elements; part of your project grade will be individual, based on the work you have produced in your personal role.
+
+Part of your project grade will be common to the entire group, based on the "jointly owned" elements and shared responsibilities; part of your project grade will be individual, based on the work you have produced in your personal role.
+
+> **Can I work by myself and take on all of these roles?** No, not in this course. An explicit learning objectives of this course is to practice building, operating, and integrating ML systems as a team activity. In real ML systems, components such as data pipelines, training workflows, serving infrastructure, and automation are developed independently and must interoperate through well-defined contracts. In a solo project, you can change interfaces arbitrarily to simplify implementation, which bypasses the core challenge of designing components to work as part of a whole. Therefore, a group project is required.
 
 ## Project deliverables and deadlines
 
-* Due 3/23: Project proposal and "lightning" talk (5/40 points)
-* Due 4/20-4/27: Implementation, demo (15/40 points)
-* Due 5/4-5/11: Ongoing operation, demo, and third "lightning" talk (20/40 points)
+
+| Milestone | Due Date | Points | Scope |
+|---|---|---|---|
+| Project proposal | Mar 2, 2026 | 5 / 40 | Problem statement, data sources, modeling approach, alignment with business requirements |
+| Initial implementation | Apr 6, 2026 | 10 / 40 | Data, model training, model serving, monitoring and evaluation implemented individually (not necessarily integrated); overall pipeline with dummy steps also implemented for 4-person groups |
+| System implementation | Apr 20, 2026 | 15 / 40 | All components tightly integrated into a single end-to-end ML system, including safeguarding |
+| Ongoing operation | May 4, 2026 | 10 / 40 | Operation with emulated "live" data; operational behavior, stability, and evaluation over time |
+
+More specific information will be shared ahead of each deadline.
+
+<!-- 
+### Project proposal (Mar 2)
+
+> Focus: intent, feasibility, business alignment
+
+| Role | Responsibilities |
+|---|---|
+| All | Specify the problem statement and value proposition; justify alignment with business requirements; allocate roles |
+| Training | Define a high-level modeling approach; state assumptions about labels and supervision; identify modeling risks |
+| Serving | Describe how predictions are used; determine serving mode (on-demand vs precomputed) and deployment context (on-device vs cloud); estimate scale, throughput, and latency requirements |
+| Data | Identify and justify training and emulated live data sources; define basic schema and data volume; describe data generation or ingestion; identify data risks |
+| Platform / DevOps<br>(4-person team) | Describe high-level system components; state infrastructure assumptions; identify components to be automated later |
+
+
+### Initial implementation (Apr 6)
+
+### System implementation (Apr 20)
+
+### Ongoing operation (May 4)
+
+-->
+
+## Policy on AI use
+
+The ML Systems Design and Operations course focuses on
+
+* designing systems, by identifying requirements and evaluating tradeoffs
+* and then operationalizing those designs
+
+The cognitive work in this course is not writing code or configurations; it is making correct decisions, understanding trade-offs, defending decisions, explaining the system to stakeholders, and diagnosing failures (i.e. "making it work"). So, you are permitted to use LLMs to help write code and configs, but only as an implementation tool to help realize *your* design, not as designers.
+
+What that means in practice for your course project is:
+
+*You own the design*. You (the human) must develop the design yourself. You'll be asked to defend your design choices, answer "what if" questions about changing requirements, and discuss tradeoffs. If you haven't thoughtly deeply about the problem and thought through all the possibilities, you'll struggle to do that.
+
+*LLMs may help implement your design*. You can ask an LLM to help you write or modify code and configs, with the following constraints:
+  1. *Start from the provided labs when possible*. Wherever possible, you should use the lab assignments as a starting point for code or configs (like a human would!), and build on that rather than starting from scratch. (Of course, if you are implementing something we didn't do in the lab, you'll do it from scratch.) This is practical (you avoid having to debug problems that I've already solved when developing the lab!) and it's also realistic (in most settings, you will be modifying existing pipelines and systems, not starting a greenfield design from scratch).
+  2. *You specify; the LLM executes*. You tell the LLM what to do, based on the design *you* developed. 
+  3. *You must understand what it produced*. You are responsible for being able to explain any code or configuration that appears in your project, including what it does and why it is needed for your design.
+  4. *No silent design changes.* Do not allow the LLM to change configurations, parameters, or pipeline structure without your explicit decision and justification. (This is something I have noticed they tend to do when implementing ML systems.)
+  5. *Disclosure is required*. Any commit that includes LLM-generated or LLM-modified code or configuration must include a lightweight disclosure (e.g. `Assisted by Codex 5.2` or equivalent).
+
+*Communication is human-only*. All lab reports, project reports, project documentation, and slides must be written by you without AI assistance. This is because communicating your design is a core learning objective of this class. Only direct translation of your own writing into English (e.g., using Google Translate) is allowed.
+
+*Running systems matter, code itself doesn't*. In industry, the availability of LLMs has not made ML engineering work substantially easier. Instead, it has shifted how effort is spent: less time writing artifacts (code and configurations) line-by-line from scratch, and more time specifying intent, directing tools, reviewing generated code and configurations, making corrections, and ensuring that systems are correct, robust, and operational. To the extent that this process is sometimes faster, expectations around productivity have simply increased.
+
+In this class, similarly, expectations around outcomes must be aligned with what people can do *with* LLM assistance. In the past, producing plausible but non-operational code or configurations could serve as evidence of partial understanding of the course material. Today, that is no longer the case, because generating artifacts that look reasonable but do not run requires no expertise. Therefore, these artifacts cannot earn any credit.
+
+What matters in this course is not the ability to produce text or code, but the ability to design, justify, and operate a real ML system. So, in this project, you are graded on:
+
+* making sound system design choices (that are aligned with business reuqirements)
+* justifying those choices and trade-offs using course concepts
+* realizing those choices in operational systems running on the course infrastructure
+
+There is no credit for systems that are not running on Chameleon Cloud. Code or configuration that has not been executed in the target environment, or that only runs locally, does not count. Producing text is easy; making a real system run is the work.
 
 <!-- 
 
