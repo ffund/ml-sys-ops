@@ -30,7 +30,7 @@ This course covers the following topics:
 8. Monitoring and evaluating ML systems.
 9. Safeguarding ML systems.
 10. Using commercial clouds.
-11. Other topics (tentative): GenAI/LLMOps, RAG, Agents and MCP.
+11. Other topics: GenAI/LLMOps, RAG, Agents and MCP.
 
 
 Students will learn through a combination of lectures, case studies, guided lab assignments on the [ChameleonCloud](https://chameleoncloud.org/) research infrastructure and on commercial clouds (GCP, DigitalOcean), and a final project.
