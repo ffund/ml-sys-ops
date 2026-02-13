@@ -19,7 +19,7 @@ For your course project, you will design and implement an end-to-end ML system. 
 
 For your project, you will add a *complementary* ML feature to an existing open-source, self-hosted software system that you will run on Chameleon. 
 
-Why? In practice, ML models most often operate as components within larger systems that impose constraints around data availability, latency, reliability, deployment, and operational ownership. If you design a new service "around the model" you get to ignore these constraints and do whatever is convenient, which bypasses the core challenges the course is intended to teach. 
+Why? In practice, ML models most often operate as components within larger systems that impose constraints around data availability, latency, reliability, deployment, and operational ownership. If you design a new service "around the model" you get to ignore these constraints and do whatever is convenient, which bypasses the core challenges the course is intended to teach. So instead, we are asking you do design and implement a complementary feature in the context of an existing system and its constraints.
 
 For example, you may design a feature that complements:
 
