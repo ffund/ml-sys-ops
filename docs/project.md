@@ -4,6 +4,7 @@ layout: page
 nav_order: 3
 nav_exclude: false
 search_exclude: true
+nav_enabled: false
 ---
 
 # Project
