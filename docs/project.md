@@ -57,6 +57,7 @@ Additional requirements:
 
 * Your ML feature must be designed so that when deployed in "production", you get new data and feedback from "users", and can use this for retraining.
 * You can use an LLM out-of-the-box (without retraining) for part of your project, but if you do, you must also include another model that you train/retrain.
+* You must use at least one high-quality non-synthetic external dataset with known lineage (who created it, how, etc.)
 
 ## Group work expectations
 
