@@ -18,7 +18,7 @@ For your course project, you will design and implement an end-to-end ML system. 
 
 ## Project context requirement
 
-For your project, you will integrate one or omre *complementary* ML features into an existing open-source, self-hosted software system that you will run on Chameleon. 
+For your project, you will integrate one or more *complementary* ML features into an existing open-source, self-hosted software system that you will run on Chameleon. 
 
 Why? In practice, ML models most often operate as components within larger systems that impose constraints around data availability, latency, reliability, deployment, and operational ownership. If you design a new service "around the model" you get to ignore these constraints and do whatever is convenient, which bypasses the core challenges the course is intended to teach. So instead, we are asking you to design and implement a complementary feature in the context of an existing system and its constraints.
 
@@ -88,20 +88,56 @@ Part of your project grade will be common to the entire group, based on the "joi
 
 More specific information will be shared ahead of each deadline.
 
-<!-- 
-### Project proposal (Mar 2)
+### Project proposal (Due Mar 2)
 
-> Focus: intent, feasibility, business alignment
+**Focus**: intent, feasibility, business alignment.
 
-| Role | Responsibilities |
-|---|---|
-| All | Specify the problem statement and value proposition; justify alignment with business requirements; allocate roles |
-| Training | Define a high-level modeling approach; state assumptions about labels and supervision; identify modeling risks |
-| Serving | Describe how predictions are used; determine serving mode (on-demand vs precomputed) and deployment context (on-device vs cloud); estimate scale, throughput, and latency requirements |
-| Data | Identify and justify training and emulated live data sources; define basic schema and data volume; describe data generation or ingestion; identify data risks |
-| Platform / DevOps<br>(4-person team) | Describe high-level system components; state infrastructure assumptions; identify components to be automated later |
+**Format**: You will submit a document (max 2 pages) and slides for a presentation (10 minutes for a 3-person team, 12 minutes for a 4-person team) covering the items listed below. You will also sign up for a presentation slot during the week of March 2, in which your group will present the proposal to a pair of course assistants and answer questions about it.
+
+**Rubric**: The proposal will be graded according to the following rubric:
+
+Requirements checklist (all must be satisfied, otherwise the team cannot proceed with the proposed project):
+
+- [ ] Team defines a hypothetical service into which the ML feature will be integrated
+- [ ] The service will be realized using an existing open source project (at least 2.5k stars on GitHub)
+- [ ] The proposed ML feature(s) will be a complementary feature
+- [ ] The service will be fully hosted on Chameleon
+- [ ] The proposed design involves at least one model that is trained/retrained
+- [ ] Training will involve at least one high-quality non-synthetic external dataset with known lineage
+- [ ] When deployed in "production", the system will get new data and feedback from "users", and can use this for retraining
 
 
+Joint responsiblities *(3/5 points, all team members will have the same score for this part)*:
+
+- [ ] *(0.5 points)* Describe the public-facing service that you will realize with the selected open source project (not the ML feature - the service that the ML feature will be complementary to). Discuss the audience (including anticipated number you are designing for), what their context is, etc.
+<!-- 0.5 points -->
+- [ ] *(2 points)* Describe the design of the complementary ML feature, following the process from [1.5.5 Specifying the design](https://ffund.github.io/ml-sys-ops-notes/chapters/01-designing-ml-systems/#specifying-the-design), and answer questions posed by the course assistants. Make sure to discuss feedback, and how it will be used for re-training, since this is a strict requirement.
+<!--  2 points. During the presentation, course assistants will ask specific, concrete questions about tradeoffs in the design ("could you design feature X differently for Y type of users?" kind of thing). Course assistants can also ask follow up questions about failures and potential harms ("under what circumstances could feature Z actually be more harmful than the status quo, and what could you do to mitigate this?" type of thing).  -->
+- [ ] *(0.5 points)* Describe external dataset(s) you will use, including a discussion of alignment with the proposed public-facing service. Show a few examples of real data points, and explain the lineage of the data (who collected it, how, why). (Refer to [4.3 Acquiring training data](https://ffund.github.io/ml-sys-ops-notes/chapters/04-large-scale-data/#acquiring-training-data).)
+<!-- 0.5 points. Course assistants should push back if there is some mis-alignment especially if not acknowledged. -->
+
+Training team member *(2/5 points)*:
+
+- [ ] *(1 points)* Specify the type of model(s) that will be used to realize the ML feature(s), and how they will be trained/re-trained.
+- [ ] *(1 points)* Specify input features and output.
+
+Serving team member *(2/5 points)*:
+
+- [ ] *(1 points)* Estimate operational requirements for serving your ML feature, with suggested numbers (requests/second, latency/request, etc.) and justification.
+- [ ] *(1 points)* Describe how the model output(s) will translate to an *outcome* in the real system.
+
+Data team member *(2/5 points)*:
+
+- [ ] *(1 points)* Describe the data flow - what data arrives at the system, how it is processed in real time for inference, how it is processed for training. (You will not specify frameworks or tools at this stage - describe what will happen to data, not how you will implement it.)
+- [ ] *(1 points)* Discuss training data more specifically, including plans for candidate selection  ([4.7.2 Candidate selection](https://ffund.github.io/ml-sys-ops-notes/chapters/04-large-scale-data/#candidate-selection)) and avoiding data leakage ([4.7.5 Splitting and leakage](https://ffund.github.io/ml-sys-ops-notes/chapters/04-large-scale-data/#splitting-and-leakage))
+
+DevOps/Platform team member (4-person teams only) *(2/5 points)*:
+
+- [ ] *(1 points)* Describe freshness requirements for models (how frequently, and under what circumstances, should they be retrained?) with justification, and how this will fit into your proposed automation lifecycle.
+- [ ] *(1 points)* Describe scaling requirements for the deployment (e.g. what is peak usage, what is typical usage, how will you "right size").
+
+
+<!--
 ### Initial implementation (Apr 6)
 
 ### System implementation (Apr 20)
