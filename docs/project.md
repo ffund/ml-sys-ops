@@ -69,7 +69,7 @@ You will complete these projects in groups of 3 or 4, where certain elements of 
 | Training | Model training and retraining pipelines (Units 5–6)<br>Offline evaluation (part of Unit 8) <br>Safeguarding elements related to role (Unit 10) |
 | Serving | Model serving (Unit 7)<br>Online evaluation and monitoring (part of Unit 8) <br>Safeguarding elements related to role (Unit 10) |
 | Data | Data pipeline (Unit 4)<br>Closing the feedback loop (getting outcomes/labels in production) (part of Unit 8)<br>Emulated operational data <br>Safeguarding elements related to role (Unit 10) |
-| DevOps / Platform<br>(4-person team) | Infrastructure as code, CI/CD/CT pipelines, automation (Unit 3) <br>Safeguarding elements related to role (Unit 10) |
+| DevOps / Platform<br>(4-person team) | Infrastructure as code, CI/CD/CT pipelines, automation (Unit 3) <br>Infrastructure monitoring and observability<br>Safeguarding elements related to role (Unit 10) |
 
 
 Part of your project grade will be common to the entire group, based on the "jointly owned" elements and shared responsibilities; part of your project grade will be individual, based on the work you have produced in your personal role.
