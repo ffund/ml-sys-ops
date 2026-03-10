@@ -59,7 +59,7 @@ To make sure that compute resources will be available to all students in the cou
 | Milestone | Due Date | Points | Scope |
 |---|---|---|---|
 | Project proposal | Mar 2, 2026 | 5 / 40 | Problem statement, data sources, modeling approach, alignment with business requirements |
-| Initial implementation | Apr 6, 2026 | 10 / 40 | Data, model training, model serving, monitoring and evaluation implemented individually (not necessarily integrated); overall pipeline with dummy steps also implemented for 4-person groups |
+| Initial implementation | Apr 6, 2026 | 10 / 40 | Data, model training, model serving, implemented individually (not necessarily integrated); overall pipeline with dummy steps also implemented for 4-person groups |
 | System implementation | Apr 20, 2026 | 15 / 40 | All components tightly integrated into a single end-to-end ML system, including safeguarding |
 | Ongoing operation | May 4, 2026 | 10 / 40 | Operation with emulated "live" data; operational behavior, stability, and evaluation over time |
 

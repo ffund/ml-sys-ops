@@ -82,7 +82,7 @@ Part of your project grade will be common to the entire group, based on the "joi
 | Milestone | Due Date | Points | Scope |
 |---|---|---|---|
 | Project proposal | Mar 2, 2026 | 5 / 40 | Problem statement, data sources, modeling approach, alignment with business requirements |
-| Initial implementation | Apr 6, 2026 | 10 / 40 | Data, model training, model serving, monitoring and evaluation implemented individually (not necessarily integrated); overall pipeline with dummy steps also implemented for 4-person groups |
+| Initial implementation | Apr 6, 2026 | 10 / 40 | Data, model training, model serving implemented individually (not necessarily integrated); overall pipeline with dummy steps also implemented for 4-person groups |
 | System implementation | Apr 20, 2026 | 15 / 40 | All components tightly integrated into a single end-to-end ML system, including safeguarding |
 | Ongoing operation | May 4, 2026 | 10 / 40 | Operation with emulated "live" data; operational behavior, stability, and evaluation over time |
 
@@ -136,9 +136,142 @@ DevOps/Platform team member (4-person teams only) *(2/5 points)*:
 - [ ] *(1 points)* Describe freshness requirements for models (how frequently, and under what circumstances, should they be retrained?) with justification, and how this will fit into your proposed automation lifecycle.
 - [ ] *(1 points)* Describe scaling requirements for the deployment (e.g. what is peak usage, what is typical usage, how will you "right size").
 
+### Initial implementation (Due Apr 6)
+
+**Focus**: Each team member delivers a runnable, role-owned subsystem on Chameleon, built to a shared interface (example payloads). Components do not need to be integrated end-to-end yet, nor integrated with the open source system.
+
+Note that deliverables are designed so that, except for the shared items (worth 1/10 points), all team members can work independently *without* having to wait for an artifact from another team member.
+
+**Resource usage**: Use Chameleon to develop your project, subject to the following:
+
+* when you create resources (leases, server instances, volumes, object storage buckets, new security groups), you *must* include your project ID (e.g. `proj99`) as a suffix in its name. Otherwise, it will be deleted by course staff.
+* follow best practices for keeping infrastructure costs low: keep compute instances alive only when you are actively working on them (*not* just to persist their data or to save on setup time), keep large data sets and model checkpoints in object storage, persist small application state data to a block storage volume, use the smallest instance type possible for the task, assign a floating IP to only one compute instance per site and use it as a "jump" host to reach others.
+
+**Format**: Each team member submits different items/subject to different requirements. In the rubric, 
+
+* 📝 indicates that this item is submitted as a written document.
+* 🎥 indicates you should have a short demo video showing this item live on Chameleon, from beginning to end (in faster-than-real-time or much-faster-than-real-time depending on duration).
+* 📄 indicates that this item should live in your team's source code repository.
+* 💻 indicates that this item should be live on Chameleon, for course staff to interact with.
+
+
+**Rubric**: The initial implementation will be graded according to the following rubric:
+
+Joint responsibilities *(1/10 points, all team members will have the same score for this part)*:
+
+- [ ] 📄 A pair of JSON files representing one input sample (with real representative values) and one model output (again, with real representative values). (Training, serving, and data team members must agree on this item together; training and inference team members ingest an input like the sample and produce an output like the sample, data team member produces something like the input sample in online and offline workflows.) If your project involves more than one model, you will have one JSON pair per model.
+- [ ] 📝 *(4-person team only)* A table enumerating all the containers involved in each role, with links to their Dockerfiles/Docker Compose files, and a link to the equivalent K8S manifest for each one. The object is to show that each of the individual role-owned systems will be supported by the DevOps/Platform role, although at this stage team members are working independently.
+
+Training team member *(9/10 points)*:
+
+Delivering a trained model file and some training code is not enough: this course is about *operationalizing* ML processes, including training. That means another engineer (or the TA) can reproduce a training run, inspect tracking information for a run, and compare candidates (including simpler baselines).
+
+Deliverables (what you submit):
+
+- [ ] 📝 Training runs table: a table of training runs with good candidates clearly marked; each row links to an MLflow run. An example table is below. You will highlight the rows that you consider most promising, and in the notes, explain why (e.g. one model has the best accuracy, a different model has accuracy almost as good but is much faster to train, etc.).
+- [ ] 📄 Repository artifacts: Dockerfile(s) for the training container (and optionally, another Dockerfile for interactive development), training code as a Python script (not an interactive notebook), and sample training config file(s) if config lives in a separate file.
+- [ ] 🎥 Sped-up demo video: one complete training run in a Docker container on Chameleon. (If training takes hours, you can record in snippets including beginning, middle, and end.)
+- [ ] 💻 Live MLflow service running on Chameleon, browsable by course staff, with all your training runs.
+
+Example table:
+
+| Candidate | MLflow run link | Code version | Key hyperparams | Key model metrics | Key training cost metrics | Notes |
+|---|---|---|---|---|---|---|
+| baseline | http://... | `git sha` | `lr=..., batch=..., epochs=...` | `metric1=..., metric2=...` | `wall=..., gpu_hrs=..., peak_vram=...` | establishes baseline |
+| v1 | http://... | `git sha` | `...` | `...` | `...` | tradeoff: better X, worse Y |
+| v2 | http://... | `git sha` | `...` | `...` | `...` | why it is promising + next experiment |
+
+Requirements to get credit for those deliverables:
+
+- [ ] All training runs should be executed on Chameleon from inside a container on a compute instance, and should be tracked in MLFlow. (For purposes of this project, "local" work doesn't count.)
+- [ ] No one-off training scripts for different configurations: structure your code so that candidates and hyperparameters are selected via configuration (a single configuration dictionary that you edit directly in your code, a standalone config file in JSON or YAML format that is read in by your training code, or configuration specified by command line arguments). You should have one training script (or if your model options include totally separate frameworks, like one scikit-learn and one Pytorch model, one training script per framework). (If your feature involves multiple models with different prediction tasks, then you'll have one training script per framework pre prediction task.)
+- [ ] For each run, you must log configuration   parameters, model quality metrics that are appropriate for the prediction task, model training cost metrics (e.g. time per epoch, total training time), and information about the training environment (e.g. GPU information).
+- [ ] You should give your "manager" (me! I'm your manager!) choices for managing the tradeoff between training/serving speed, cost, and model quality. The table should include at least 1 simple baseline model, as well as other candidates you want to consider.
+- [ ] Use reasonable and well-justified strategies for hyperparameter tuning. (Note: even if you are not using Ray, there are other good libraries for hyperparameter tuning beyond grid search.)
+
+
+Bonus items (to the extent that they make sense for your particular project):
+
+- [ ] 🎥📄📝 Use Ray Train's integration with your training framework to real effect (I don't mean calling `ray submit` on an unmodified training script) in a way that goes beyond what we had done in the lab. To get bonus credit, you must show through a concrete example how your integration makes training more robus.
+
+Additional materials for you to use:
+
+- [Trovi artifact to bring up a "medium" VM instance with MLFlow and persistent storage](). Before you launch any training run, you will first bring up your MLFlow instance. Then, you'll set the MLFlow training URI in your training code/environment to point to its floating IP.
+
+Serving team member *(9/10 points)*:
+
+The serving role must prepare a set of measured serving options (fast/good/cheap tradeoffs) so the team can choose a deployment approach during system integration.
+
+Note that you do *not* have to wait for the training team member to deliver a trained model before you can start working! You can start developing and evaluating serving metrics around an equivalent *un*-trained model (with base weights/random weights). Once your training teammate delivers a trained model, then you can also evaluate task quality metrics, but in the meantime you can write *code* to do so on an *un*-trained model.
+
+Deliverables (what you submit):
+
+- [ ] 📝 Serving options table: a table comparing multiple serving options, with the most promising options clearly marked (best options with respect to different priorities). An example table is given below.
+- [ ] 📄 Repository artifacts: Dockerfile(s) for serving, serving code/serving config file(s) depending on framework. ("Serving code" can include scripts that consume a model artifact and product an optimized model artifact, which is then served.)
+- [ ] 🎥 Sped-up demo video: show your most promising serving option running on Chameleon, and responding to the agreed example request(s).
+
+Example table:
+
+| Option | Endpoint URL | Model version | Code version | Hardware | p50/p95 latency | Throughput | Error rate | Concurrency tested | Compute instance type | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|
+| baseline_http | http://... | `model id` | `git sha` | CPU | `...` | `...` | `...` | `...` | `cpu/mem` | simplest reference |
+| onnx_or_quantized | http://... | `model id` | `git sha` | CPU | `...` | `...` | `...` | `...` | `cpu/mem` | model-level optimization |
+| batching_or_triton | http://... | `model id` | `git sha` | GPU or CPU | `...` | `...` | `...` | `...` | `cpu/gpu/mem` | system-level optimization |
+
+Requirements to get credit for those deliverables:
+
+- [ ] All experiments should run on Chameleon, from inside a container on a compute instance. (For purposes of this project, "local" work doesn't count.)
+- [ ] You must prepare and evaluate a variety of serving options, including a baseline option and some optimized options. Your optimizations should include model-level, system-level, and infrastructure-level optimizations, separately and in combination. Your evaluations should be appropriate to validate the expected benefit of each optimization, as well as its potential tradeoffs.
+- [ ] Right-sizing note: for the most promising option(s), clarify CPU/memory (and GPU if any) needs using observed resource usage on Chameleon under a representative load.
+
+Bonus items (only to the extent that they make sense for your particular project):
+
+- [ ] 🎥📄📝 Integrate a serving framework not used in the lab (e.g. *not* FastAPI/Triton Inference Server) that improves your serving design in a meaningful way, and justify why it improves your design relative to the lab frameworks, with a concrete, realistic example. (Examples: Ray Serve, KServe, etc.)
+
+Data team member *(9/10 points)*:
+
+- [ ] 📝 High-level data design document. You should enumerate the data repositories (databases, lakehouses, object storage buckets, etc.) that will be used, and for each, identify: 
+  - What data is stored there, and the data schema
+  - What services and processes write/update the data, and when
+  - How it is versioned (data that will be used to train models must be versioned, along with enough information to track how it entered the system and how it was transformed within the system)
+  and you should also have one or more diagrams that show the data flow.
+- [ ] 💻 Live object storage bucket on Chameleon, browsable by course staff, with data as illustrated by your data design document.
+- [ ] 🎥📄 Repository artifacts + sped-up demo video: reproducible pipeline that ingests external data into Chameleon object storage, and executes whatever transformation is necessary to make it ready for training. If the data is small (less than 5GB), you should also expand the data following best practices for synthetic data generation discussed in the lecture. (Video should demonstrate everything from pipeline launch to external confirmation that it worked.)
+- [ ] 🎥📄 Repository artifacts + sped-up demo video: Data generator that hits the (hypothetical) service endpoints with real or synthetic data (following our best practices for synthetic data generation, as discussed in the lecture). (Video should demonstrate launch + a few minutes of runtime.)
+- [ ] 🎥📄 Repository artifacts + sped-up demo video: Online feature computation path for real time inference (does not have to be fully integrated with the open source service, but needs to be integrate-able...) (Video should demonstrate at least one end-to-end example.)
+- [ ] 🎥📄 Repository artifacts + sped-up demo video: Batch pipeline that compiles versioned training and evaluation data sets from "production" data, with well-justified candidate selection and avoiding data leakage. (Video should demonstrate everything from pipeline launch to external confirmation that it worked.)
+
+(You are not required to use a workflow orchestrator at this stage; pipelines can be a `make` target, one-shot jobs in a Docker compose, or run with a sequence of Python scripts. But, all components must be runnable non-interactively from the artifacts saved in repository.)
+
+Bonus items (to the extent that they make sense for your particular project):
+
+- [ ] 🎥📄📝 Integrate a data framework not used in the lab assignments, that substantially improves your data design (i.e. swapping MariaDB in place of PostgreSQL doesn't count). For example: implement a data transformation layer with `dbt`, add data quality checks with Soda, use a vector database like Qdrant, integrate a Feast feature store, implement distributed computation of features with Spark, add a DataHub data catalog. You must justify why it improves your design, using a concrete example that is realistic in the context of your proposed service.
+
+DevOps/Platform team member (4-person teams only) *(9/10 points)*:
+
+Deliverables (what you submit):
+
+- [ ] 📝 Infrastructure requirements table: for each service running in your cluster, show the GPU, CPU, memory requests and limits you set, plus brief evidence from Chameleon showing how you arrived at appropriate values for right-sizing.
+- [ ] 📄 Repository artifacts: IaC/CaC materials that provision Chameleon infrastructure and configure a Kubernetes cluster (cluster, networking/ingress, persistent volumes, namespaces). Also, K8S manifests and other necessary materials to deploy the open source service on which the project is based, and to deploy platform services required by other team members.
+- [ ] 🎥 Sped-up demo video: selected open source service running inside Kubernetes on Chameleon. (Video should demonstrate everything from launching the service to confirming its health status inside K8S to validating in a browser that it is reachable and functional.)
+- [ ] 🎥 Sped-up demo video: Shared platform services running inside Kubernetes on Chameleon, with persistent storage as appropriate. (Video should demonstrate everything from launching the service to confirming health status inside K8S to validating in a browser that it is reachable and functional.)
+
+Requirements to get credit for those deliverables:
+
+- [ ] Kubernetes is required for 4-person teams. (For 3-person teams, Kubernetes is optional; Docker Compose is acceptable.)
+- [ ] Git as source of truth: IaC/CaC artifacts and Kubernetes manifests (or equivalents) are in the repo.
+- [ ] Durability: platform state and artifacts persist across pod restarts (MLflow artifacts and other shared artifacts use a persistent volume/object storage, not ephemeral container filesystems).
+- [ ] Secrets hygiene: no secrets in Git.
+
+Bonus items (only to the extent that they make sense for your particular project):
+
+- [ ] 🎥📄 Integrate a platform tool/framework not used in the lab assignments that materially improves operability, and justify why it improves your design using a realistic example. You may investigate frameworks for secrets management, TLS automation, centralized logging, image security/scanning, distributed tracing, etc. (Note: Prometheus/Grafana do not "count" because they are used in Lab 8.) You must show one concrete operational win in demo video + a short justification.
+
+Additional materials for you to use:
+
+- [Trovi artifact to add a short-term GPU instance to a Kubernetes cluster, and launch GPU jobs on it.]()
 
 <!--
-### Initial implementation (Apr 6)
 
 ### System implementation (Apr 20)
 
