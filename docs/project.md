@@ -147,6 +147,13 @@ Note that deliverables are designed so that, except for the shared items (worth 
 * when you create resources (leases, server instances, volumes, object storage buckets, new security groups), you *must* include your project ID (e.g. `proj99`) as a suffix in its name. Otherwise, it will be deleted by course staff.
 * follow best practices for keeping infrastructure costs low: keep compute instances alive only when you are actively working on them (*not* just to persist their data or to save on setup time), keep large data sets and model checkpoints in object storage, persist small application state data to a block storage volume, use the smallest instance type possible for the task, assign a floating IP to only one compute instance per site and use it as a "jump" host to reach others.
 
+Some notes on advance planning:
+
+* if you require general-purpose VMs, these generally don't require advance reservation (although even that may change if all of you try to launch many instances just before the deadline...) 
+* For GPU instances, the easiest types to get are `gpu_rtx_6000` at CHI@UC (NVIDIA RTX6000 x1 bare metal instance), `gpu_mi100` at CHI@TACC (AMD Instinct MI100 x2 bare metal instance), `gpu_p100` at CHI@TACC (NVIDIA P100 x2 bare metal instance) and `g1.h100.pci.1` at KVM@TACC (NVIDIA H100 x1 VM instance). You should plan access to these and make your reservation about a week in advance. 
+* if you require a bare metal A100 (80GB or 40GB) or A30 instance type (available on some `compute_gigaio` and `compute_liqid` nodes), these might require a little more advance planning - make reservations two weeks in advance.
+* if you require a 4-GPU instance: `gpu_a100_pcie` at CHI@UC (NVIDIA A100 4x bare metal instance), `gpu_v100` at CHI@UC (NVIDIA V100 4x bare metal instance) or `g1.h100.pci.4` at KVM@TACC (NVIDIA H100 4x VM instance), you should likely plan several weeks in advance.
+
 **Format**: Each team member submits different items/subject to different requirements. In the rubric, 
 
 * 📝 indicates that this item is submitted as a written document.
@@ -269,7 +276,7 @@ Bonus items (only to the extent that they make sense for your particular project
 
 Additional materials for you to use:
 
-- [Trovi artifact to add a short-term GPU instance to a Kubernetes cluster, and launch GPU jobs on it.]()
+- [How to add a short-term GPU instance to a Kubernetes cluster, and launch GPU jobs on it.]()
 
 <!--
 
