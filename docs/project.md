@@ -207,7 +207,7 @@ Note that you do *not* have to wait for the training team member to deliver a tr
 Deliverables (what you submit):
 
 - [ ] 📝 Serving options table: a table comparing multiple serving options, with the most promising options clearly marked (best options with respect to different priorities). An example table is given below.
-- [ ] 📄 Repository artifacts: Dockerfile(s) for serving, serving code/serving config file(s) depending on framework. ("Serving code" can include scripts that consume a model artifact and product an optimized model artifact, which is then served.)
+- [ ] 📄 Repository artifacts: Dockerfile(s) for serving, serving code/serving config file(s) depending on framework, and scripts or notebooks for evaluating a serving configuration. ("Serving code" can include scripts that consume a model artifact and product an optimized model artifact, which is then served.)
 - [ ] 🎥 Sped-up demo video: show your most promising serving option running on Chameleon, and responding to the agreed example request(s).
 
 Example table:
