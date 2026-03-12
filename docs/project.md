@@ -203,7 +203,7 @@ Bonus items (to the extent that they make sense for your particular project):
 
 Additional materials for you to use:
 
-- [Trovi artifact to bring up a "medium" VM instance with MLFlow and persistent storage](). Before you launch any training run, you will first bring up your MLFlow instance. Then, you'll set the MLFlow training URI in your training code/environment to point to its floating IP.
+- [Trovi artifact to bring up a "medium" VM instance with MLFlow and persistent storage](https://trovi.chameleoncloud.org/dashboard/artifacts/c4f2aaed-1ef8-4cec-a9d2-1edbf35ada10). Before you launch any training run, you should first bring up a standalone MLFlow instance with persistent storage. Then, you'll set the MLFlow training URI in your training code/environment to point to its floating IP.
 
 Serving team member *(9/10 points)*:
 
@@ -276,7 +276,7 @@ Bonus items (only to the extent that they make sense for your particular project
 
 Additional materials for you to use:
 
-- [How to add a short-term GPU instance to a Kubernetes cluster, and launch GPU jobs on it.]()
+- [How to add a short-term GPU instance to a Kubernetes cluster, and launch GPU jobs on it.](https://github.com/teaching-on-testbeds/gourmetgram-iac/tree/gpu)
 
 <!--
 
