@@ -199,7 +199,7 @@ Requirements to get credit for those deliverables:
 
 Bonus items (to the extent that they make sense for your particular project):
 
-- [ ] 🎥📄📝 Use Ray Train's integration with your training framework to real effect (I don't mean calling `ray submit` on an unmodified training script) in a way that goes beyond what we had done in the lab. To get bonus credit, you must show through a concrete example how your integration makes training more robus.
+- [ ] 🎥📄📝 Use Ray Train's integration with your training framework to real effect (I don't mean calling `ray submit` on an unmodified training script) in a way that goes beyond what we had done in the lab. To get bonus credit, you must show through a concrete example how your integration makes training more robust.
 
 Additional materials for you to use:
 
