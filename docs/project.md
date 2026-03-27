@@ -161,6 +161,13 @@ Some notes on advance planning:
 * 📄 indicates that this item should live in your team's source code repository.
 * 💻 indicates that this item should be live on Chameleon, for course staff to interact with.
 
+These items will be submitted to an NYU Box upload link, which will be shared on Brightspace.
+
+Teams may also sign up for a presentation slot, with each team member presenting for 3 minutes (3-person team gets 9 minutes, 4-person team gets 12 minutes):
+
+* If your team had a blocking issue in your project proposal feedback, you are **required** to sign up for a project presentation time slot.
+* If the feedback on your project proposal did not have any blocking issues, then a presentation is optional at this stage - you may choose as a team whether you will only submit the materials, or whether you will also sign up for a presentation time slot. (You may prefer to give a presentation, even if it is not required, so that you can clarify any issues or questions the graders have about your presentation.)
+
 
 **Rubric**: The initial implementation will be graded according to the following rubric:
 
