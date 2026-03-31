@@ -161,7 +161,7 @@ Some notes on advance planning:
 * 📄 indicates that this item should live in your team's source code repository.
 * 💻 indicates that this item should be live on Chameleon, for course staff to interact with.
 
-These items will be submitted to an NYU Box upload link, which will be shared on Brightspace.
+These items will be submitted in Gradescope.
 
 Teams may also sign up for a presentation slot, with each team member presenting for 3 minutes (3-person team gets 9 minutes, 4-person team gets 12 minutes):
 
