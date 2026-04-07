@@ -285,9 +285,52 @@ Additional materials for you to use:
 
 - [How to add a short-term GPU instance to a Kubernetes cluster, and launch GPU jobs on it.](https://github.com/teaching-on-testbeds/gourmetgram-iac/tree/gpu)
 
-<!--
 
 ### System implementation (Apr 20)
+
+**Focus**: system integration, end-to-end operation, and automation. By this stage, the project should no longer consist of separate role-owned components that only work in isolation. Instead, the team must deliver a single integrated ML system in which the complementary ML feature is actually implemented inside the chosen open source service, with all interfaces and dependencies connected. The full path from production data collection, to feature computation and model inference, to feedback capture, to retraining, evaluation, packaging, and deployment of a new model version should be in place and runnable with minimal or no human intervention.
+
+This milestone also adds requirements that were not fully in scope in earlier stages: evaluation, monitoring, and safeguarding across the whole system. These responsibilities apply to all roles. 
+
+**Timeline**: Teams will submit an initial demo on April 20. They will have a chance to apply feedback and make *minor* modifications until April 27. After that, implementations are "frozen" and during a period in the week leading up to May 4, the system will run under emulated user traffic without intervention. Periodic videos showing the system behavior over this interval will make up the "production" submission.
+
+Joint responsibilities *(12/15 points)*:
+
+- [ ] The team delivers a single integrated ML system running on Chameleon.
+- [ ] The end-to-end plumbing needed for operation is in place, including movement of production data through the system, capture of feedback or outcomes, preparation of training data, retraining, evaluation, packaging, deployment, and rollback or update. These workflows should run through automation with minimal human work (e.g. you can choose to require manual approval of promotion from a canary environment to production, but not "engineer must SSH into the instance and run these commands to promote from canary environment to production".)
+- [ ] The complementary ML feature is implemented in the selected open source service itself, so that the feature is used in the regular user flow. (You may find it helpful to use an [AI agent](https://ffund.github.io/hello-opencode/) to help with this part, since the open source service may be a large, complex, codebase and possibly written in a language you are unfamiliar with.)
+- [ ] "Bonus" items from the previous stage should also be integrated, in order for them to be credited in the "initial implementation" stage.
+- [ ] Safeguarding plan: the team must deliver a safeguarding plan and implement it within the system. This plan should take *active* steps with concrete mechanisms to support fairness, explainability, transparency, privacy, accountability, and robustness principles (as discussed in lecture).
+
+Requirements for credit:
+
+- [ ] The deployed system is unified rather than duplicated across roles. Shared infrastructure should be de-duplicated unless the team has a clear technical reason not to do so. For example, teams should not run multiple MLflow instances, multiple monitoring stacks, separate training data buckets, or other parallel copies of the same shared service simply because different team members started work separately. 
+- [ ] (Teams should clean up legacy/un-used infrastructure components, e.g. team-owned security groups or buckets that are no longer used in their integrated system, before submission.)
+- [ ] The team will submit one repository or multiple repositories with an organized structure for the integrated system. This does not have to be a single repository, but if work is split across repositories, the split should reflect a logical architectural boundary rather than historical role separation. The repository or repositories should make it clear how the full system is organized, deployed, operated, and reproduced.
+- [ ] For four-person teams, the integrated system must run within Kubernetes. Three-person teams may choose between Kubernetes or a Docker Compose deployment.
+- [ ] Four-person teams should deliver a system with staging, canary, and production environments, and automated promotion of new model versions with well-justified rules. Three-person teams should incorporate re-training and CI/CD including models with well-justified rules, but do not necessarily need separate environments. (However, if there are no separate environments, there must be an automated model roll back process that kicks in if the production system is not doing well.)
+
+Training team member *(3/15 points)*:
+
+- [ ] Evaluation: The training role must evaluate model quality in a meaningful, task-specific way (following best practices from our evaluation and monitoring lesson). All model training runs are tracked, but saved models are registered only if they pass model quality gates. These quality requirements should be well-justified given the overall context.
+
+Serving team member *(3/15 points)*:
+
+- [ ] Monitoring: The serving role must monitor the behavior of the deployed model over time, including model output, operational metrics, and user feedback. This team member is responsible for the triggers that promote a model, or roll back model versions. These triggers should be well-justified given the overall context.
+
+Data team member *(3/15 points)*:
+
+- [ ] Evaluation and monitoring: The data role must evaluate data quality at three points: at ingestion from external data sources, when compiling training sets for re-training, and monitor live inference data quality and drift in production. 
+
+
+DevOps/Platform team member *(3/15 points)*:
+
+- [ ] Evaluation and monitoring: The DevOps/platform role must monitor the health and performance of the infrastructure that supports the system, with automated scaling to preserve system health, and alerting in case the system degrades.
+
+
+
+
+<!--
 
 ### Ongoing operation (May 4)
 
@@ -321,7 +364,7 @@ In this class, similarly, expectations around outcomes must be aligned with what
 
 What matters in this course is not the ability to produce text or code, but the ability to design, justify, and operate a real ML system. So, in this project, you are graded on:
 
-* making sound system design choices (that are aligned with business reuqirements)
+* making sound system design choices (that are aligned with business requirements)
 * justifying those choices and trade-offs using course concepts
 * realizing those choices in operational systems running on the course infrastructure
 
