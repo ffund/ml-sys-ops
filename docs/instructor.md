@@ -91,6 +91,22 @@ This page includes some notes for instructors who want to use these materials in
     <!-- Week 4 -->
     <tr>
       <td>
+        <a href="https://teaching-on-testbeds.github.io/data-platform-chi/">Data platforms on Chameleon</a>
+        <div>(Large scale data systems)</div>
+      </td>
+      <td>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/3aca301f-22f7-4929-88c4-4b666f3d4c92">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/teaching-on-testbeds/data-platform-chi">
+          <img src="../assets/images/github-badge.svg" alt="GitHub">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
         <a href="https://teaching-on-testbeds.github.io/data-persist-chi/">Persistent storage on Chameleon</a>
         <div>(Large scale data systems)</div>
       </td>
@@ -111,7 +127,6 @@ This page includes some notes for instructors who want to use these materials in
       <td>
         <a href="https://teaching-on-testbeds.github.io/llm-chi/">Large-scale model training on Chameleon</a>
         <div>(Model training at scale)</div>
-        <div>⛔ Deprecated in favor of new vision-language model training lab</div>
       </td>
       <td>
         <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/39a536c6-6070-4ccf-9e91-bc47be9a94af">
@@ -124,40 +139,8 @@ This page includes some notes for instructors who want to use these materials in
         </a>
       </td>
     </tr>
-    <tr>
-      <td>
-        <a href="">Training a large vision-language model</a>
-        <div>(Model training at scale)</div>
-        <div>🔧 In development</div>
-      </td>
-      <td>
-
-      </td>
-      <td>
-
-      </td>
-    </tr>
 
     <!-- Week 6 -->
-    <tr>
-      <td>
-        <a href="https://teaching-on-testbeds.github.io/mltrain-chi/">Train ML models with MLFlow and Ray</a>
-        <div>(Model training infrastructure and platforms)</div>
-        <div>⛔ Deprecated in favor of separate MLFlow + Ray labs</div>
-
-      </td>
-      <td>
-        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/d48d7684-cf6d-4c33-bcd6-5504266bc3d4">
-          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
-        </a>
-      </td>
-      <td>
-        <a href="https://github.com/teaching-on-testbeds/mltrain-chi">
-          <img src="../assets/images/github-badge.svg" alt="GitHub">
-        </a>
-      </td>
-    </tr>
-
     <tr>
       <td>
         <a href="https://teaching-on-testbeds.github.io/mlflow-chi/">ML experiment tracking with MLFlow</a>
@@ -178,15 +161,18 @@ This page includes some notes for instructors who want to use these materials in
 
     <tr>
       <td>
-        <a href="">Building a model training cluster with Ray</a>
+        <a href="https://teaching-on-testbeds.github.io/mltrain-chi/">Building a model training cluster with Ray</a>
         <div>(Model training infrastructure and platforms)</div>
-        <div>🔧 In development</div>
       </td>
       <td>
-
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/b4578c82-e84a-4353-83d2-fbecf153eefd">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
       </td>
       <td>
-
+        <a href="https://github.com/teaching-on-testbeds/mltrain-chi">
+          <img src="../assets/images/github-badge.svg" alt="GitHub">
+        </a>
       </td>
     </tr>
 
@@ -294,6 +280,19 @@ This page includes some notes for instructors who want to use these materials in
   </tbody>
 </table>
 
+## Overview of available lecture materials
+
+| Topic | Links |
+| --- | --- |
+| Intro to ML Systems | [Chapter 1](https://ffund.github.io/ml-sys-ops-notes/chapters/01-designing-ml-systems/) |
+| Cloud computing | [Chapter 2](https://ffund.github.io/ml-sys-ops-notes/chapters/02-cloud-computing/) |
+| DevOps and continuous X for ML systems | [Chapter 3](https://ffund.github.io/ml-sys-ops-notes/chapters/03-mlops/) |
+| Large scale data systems | [Chapter 4](https://ffund.github.io/ml-sys-ops-notes/chapters/04-large-scale-data/) |
+| Model serving | [Chapter 7](https://ffund.github.io/ml-sys-ops-notes/chapters/07-model-serving/) |
+| Model training at scale | [Chapter 5](https://ffund.github.io/ml-sys-ops-notes/chapters/05-large-model-training/) |
+| Model training infrastructure and platforms | [Chapter 6](https://ffund.github.io/ml-sys-ops-notes/chapters/06-training-infra-platforms/) |
+| Monitoring and evaluating ML systems | TBD |
+
 
 ## Things that are known to be broken
 
@@ -308,7 +307,7 @@ Since this course was first offered in Spring 2025, some things have changed:
   * The "Cloud Computing" lab needs to be adapted for this, or you will hit the rate limit.
 -->
 
-* Over the course of Fall 2025. I will be changing/updating this material in preparation for Spring 2026. I will almost certainly break some things along the way.
+* No notes at the moment.
 
 
 ## Before the class begins
