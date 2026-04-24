@@ -328,13 +328,66 @@ DevOps/Platform team member *(3/15 points)*:
 - [ ] Evaluation and monitoring: The DevOps/platform role must monitor the health and performance of the infrastructure that supports the system, with automated scaling to preserve system health, and alerting in case the system degrades.
 
 
+### Ongoing operation (April 28-May 4)
+
+**Focus**: steady-state operation, with evidence that your system remains useful, reliable, and evaluable over time in a realistic user setting.
+
+**Timeline**:
+
+* *April 27, 2026 at 11:59 PM*: implementation freeze. As of this point, teams must not make further modifications in GitHub before the end of the semester.
+* *April 28, 2026 by 11:59 PM*: bring up the full system in its production-like setup on Chameleon. (Note: if you are a 4-person team, the DevOps person will record a walkthrough of this - see additional details below.)
+* *April 29, 2026 12:01 AM through May 3, 2026 11:59 PM*: system must remain up, with emulated load generation running continuously. During this stage, teams should evaluate their systems without making code changes and without any SSH-based intervention as part of routine operation/evaluation. (See details below.) At least once during this interval, the end-to-end automation loop must execute: (1) preparation of batch data from production samples for re-training, (2) model re-training, and (3) service re-deployment with the updated model.
+* *May 4, 2026 by 11:59 PM*: submit your final evidence package for this milestone.
 
 
-<!--
+**Format for submission at bring-up time (Due April 28, 2026 at 11:59 PM)**:
 
-### Ongoing operation (May 4)
+Course staff will interact with your system as regular users during the week (e.g., listening to music, uploading photos, entering real transactions), so systems should be prepared for real interactive use. You will submit links and (new user) login credentials for all relevant live services, including:
 
--->
+* user-facing application
+* MLflow
+* database access frontends (if available)
+* monitoring/observability platforms
+* any other operational platform services involved in your workflow
+
+as well as a brief operator note describing what graders should expect to observe in each platform.
+
+**Format for final submission (Due May 4, 2026 at 11:59 PM)**:
+
+Joint responsibilities:
+
+- [ ] Interact with your system using your own real data and document whether the experience works well or has bugs.
+- [ ] Demonstrate how users *discover* and use the ML feature, and how they discover/use feedback.
+- [ ] Work through one clear happy-path example, where it is clear that the feature is working well. (If there are multiple happy path behaviors in your system, e.g. depending on model confidence, you may work through more than one example.)
+- [ ] Work through one clear failure-path example, where the model is wrong, and show correction/feedback behavior. (If there are different types of failures in your system, you may work through several examples.)
+- [ ] Demonstrate through examples the extent to which the system feels personalized/smarter over continued interaction.
+
+The expected format for this part is a written document with screenshots from your live system as evidence for each point. (You may find it easiest to record video of your interactions with the platform, then extract screenshots from that afterwards.)
+
+Training team member:
+
+- [ ] Interact with your system as a user, with your own real data, and discuss the performance of your model. Then, compare this to the offline evaluation outputs (MLflow, Pytest tests, or equivalent) of the model that is currently deployed. Discuss the extent to which the user experience is better or worse than expected based on the offline evaluation. The expected format for this part is a written document with screenshots from your live system as evidence for each point. 
+- [ ] Your model should be re-trained *automatically* at least once during this period. After this retraining occurs, explain the retraining event flow, including post-training offline evaluation and quality gates. The expected format for this is a video walkthrough with two side-by-side browser windows (1) left window: repositories/source code, (2) right window: live systems/platform services (UI, MLflow, buckets, dashboards, DB frontends, etc.). You will trace the flow of events through the code on the left, while showing the visible output of each event in the live system on the right.
+- [ ] After re-training occurs, interact with your system as a user *again*, with your own real data. Discuss whether or not the new model is better than the old one to an extent that is perceived by users, providing user-facing evidence from real interaction. The expected format for this part is a written document with screenshots from your live system as evidence for each point. 
+
+Serving team member:
+
+- [ ] Interact with your system as a user while it is under high load (either your emulated load, if it varies over time, or by getting several friends to use it while you are testing) and compare the experience to use during low load. Use serving evaluation/monitoring signals to back up your qualitative observations. The expected format for this part is a written document with screenshots from your live system as evidence. 
+- [ ] Your model should be re-trained and re-deployed *automatically* at least once during this period. After this retraining occurs, explain the re-deployment event flow, including evaluation on operational and task quality metrics, and quality gates/rollback behavior as relevant. The expected format for this is a video walkthrough with two side-by-side browser windows (1) left window: repositories/source code, (2) right window: live systems/platform services (UI, MLflow, buckets, dashboards, DB frontends, etc.). You will trace the flow of events through the code on the left, while showing the visible output of each event in the live system on the right.
+
+Data team member:
+
+- [ ] Interact with your system as a user and trace the flow of one *new* user data sample through your system. You should show the same data sample in its original raw form; as it is ingested by your online pipeline; as it arrives at the inference endpoint; as a response is served; as you correct or provide feedback; and then as it becomes a new re-training sample. The expected format for this is a video walkthrough with two side-by-side browser windows (1) left window: repositories/source code, (2) right window: live systems/platform services (UI, MLflow, buckets, dashboards, DB frontends, etc.). You will trace the flow of events through the code on the left, while showing the visible output of each event in the live system on the right.
+- [ ] As a regular user, interact with the system and introduce substantially drifted samples versus emulated production data. Show how this is handled (or not) by the system.  The expected format for this part is a written document with screenshots from your live system as evidence. 
+- [ ] As a regular user, interact with the system and introduce low-quality samples that should really be excluded from the next re-training set. Show how this is handled (or not) by the system.  The expected format for this part is a written document with screenshots from your live system as evidence. 
+
+
+DevOps/Platform team member:
+
+- [ ] Record the full bring-up process from scratch on April 28. (Leases and persistent storage may exist beforehand, but no compute instances should be running before bring-up.)  The expected format for this is a video walkthrough with two side-by-side browser windows (1) left window: repositories/source code, (2) right window: live systems/platform services (UI, MLflow, buckets, dashboards, DB frontends, etc.). You will trace the flow of events through the code on the left, while showing the visible output of each event in the live system on the right.
+- [ ] Near the end of the week, use your monitoring setup to show resource usage over time (CPU, GPU if used, memory, disk). Evaluate the extent to which your system sizing is appropriate or wasteful. Also, use a cloud cost calculator (AWS or GCP) to estimate the cost of your  system, assuming you manage everything yourself on top of compute instances, stating assumptions clearly (instance type, etc.).The expected format for this part is a written document with screenshots from your live system as evidence. 
+- [ ] Near the end of the week, evaluate the stability of your system. Did all services remain up all week? Were there failures/pod restarts? Discuss. The expected format for this part is a written document with screenshots from your live system as evidence. 
+
 
 ## Policy on AI use
 
