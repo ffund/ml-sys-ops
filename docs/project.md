@@ -332,6 +332,8 @@ DevOps/Platform team member *(3/15 points)*:
 
 **Focus**: steady-state operation, with evidence that your system remains useful, reliable, and evaluable over time in a realistic user setting.
 
+Note that there are no new implementation requirements beyond the previous stage; this is just about evaluating and understanding how your system performs in regular use. We are looking for teams that assess their own design realistically, with a critical eye; we are not expecting systems with ML features that make good decisions 100% of the time.
+
 **Timeline**:
 
 * *April 27, 2026 at 11:59 PM*: implementation freeze. As of this point, teams must not make further modifications in GitHub before the end of the semester.
