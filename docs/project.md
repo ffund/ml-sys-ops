@@ -358,10 +358,10 @@ as well as a brief operator note describing what graders should expect to observ
 
 Joint responsibilities:
 
-- [ ] Interact with your system using your own real data and document whether the experience works well or has bugs.
+- [ ] Interact with your system *as a user would*, using your own real data and document whether the experience works well or has bugs.
 - [ ] Demonstrate how users *discover* and use the ML feature, and how they discover/use feedback.
 - [ ] Work through one clear happy-path example, where it is clear that the feature is working well. (If there are multiple happy path behaviors in your system, e.g. depending on model confidence, you may work through more than one example.)
-- [ ] Work through one clear failure-path example, where the model is wrong, and show correction/feedback behavior. (If there are different types of failures in your system, you may work through several examples.)
+- [ ] Work through one clear failure-path example, where the model is wrong or the system is broken, and show correction/feedback behavior. (If there are different types of failures in your system, you may work through several examples.)
 - [ ] Demonstrate through examples the extent to which the system feels personalized/smarter over continued interaction.
 
 The expected format for this part is a written document with screenshots from your live system as evidence for each point. (You may find it easiest to record video of your interactions with the platform, then extract screenshots from that afterwards.)
