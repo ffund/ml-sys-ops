@@ -10,11 +10,29 @@ This page includes some notes for instructors who want to use these materials in
 
 ## Overview of available lab materials
 
+{: .note }
+> Some lab materials are available in multiple versions tuned for different hardware types. If you have a large class, you can spread capacity across the available hardware by assigning students to different versions.
+
+Instructors can refer to the "Before the class begins" section to understand how to get started on Chameleon and prepare for their class.
+
+Instructors are advised to test each lab shortly before assigning it to their class, since the software and hardware on Chameleon and the software stack used in the lab are regularly updated. Feel free to contact [ffund@nyu.edu](mailto:ffund@nyu.edu) with any questions or problems.
+
+<style>
+  tr.variant-continues > td:not([rowspan]) {
+    border-bottom: 0;
+  }
+
+  tr.variant-continuation > td:first-child {
+    border-left: 1px solid #eeebee;
+  }
+</style>
+
 <table>
   <thead>
     <tr>
       <th>Lab Instructions</th>
       <th>Trovi Artifact</th>
+      <th>Compute Instance Type</th>
       <th>GitHub Repo</th>
     </tr>
   </thead>
@@ -31,6 +49,7 @@ This page includes some notes for instructors who want to use these materials in
           <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
         </a>
       </td>
+      <td><code>m1.small</code></td>
       <td>
         <a href="https://github.com/teaching-on-testbeds/hello-chameleon">
           <img src="../assets/images/github-badge.svg" alt="GitHub">
@@ -45,6 +64,7 @@ This page includes some notes for instructors who want to use these materials in
       <td>
         (Use "Hello, Chameleon" artifact)
       </td>
+      <td><code>m1.small</code></td>
       <td>
         <a href="https://github.com/teaching-on-testbeds/hello-linux">
           <img src="../assets/images/github-badge.svg" alt="GitHub">
@@ -63,6 +83,7 @@ This page includes some notes for instructors who want to use these materials in
           <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
         </a>
       </td>
+      <td>3 x <code>m1.medium</code></td>
       <td>
         <a href="https://github.com/teaching-on-testbeds/cloud-chi">
           <img src="../assets/images/github-badge.svg" alt="GitHub">
@@ -81,6 +102,7 @@ This page includes some notes for instructors who want to use these materials in
           <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
         </a>
       </td>
+      <td>3 x <code>m1.large</code></td>
       <td>
         <a href="https://github.com/teaching-on-testbeds/mlops-chi">
           <img src="../assets/images/github-badge.svg" alt="GitHub">
@@ -99,6 +121,7 @@ This page includes some notes for instructors who want to use these materials in
           <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
         </a>
       </td>
+      <td><code>m1.xlarge</code></td>
       <td>
         <a href="https://github.com/teaching-on-testbeds/data-platform-chi">
           <img src="../assets/images/github-badge.svg" alt="GitHub">
@@ -115,6 +138,7 @@ This page includes some notes for instructors who want to use these materials in
           <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
         </a>
       </td>
+      <td><code>m1.medium</code> (block), <code>m1.large</code> (object)</td>
       <td>
         <a href="https://github.com/teaching-on-testbeds/data-persist-chi">
           <img src="../assets/images/github-badge.svg" alt="GitHub">
@@ -123,75 +147,155 @@ This page includes some notes for instructors who want to use these materials in
     </tr>
 
     <!-- Week 5 -->
-    <tr>
-      <td>
+    <tr class="variant-continues">
+      <td rowspan="2">
         <a href="https://teaching-on-testbeds.github.io/llm-chi/">Large-scale model training on Chameleon</a>
         <div>(Model training at scale)</div>
       </td>
       <td>
+        A100 Version:<br>
         <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/39a536c6-6070-4ccf-9e91-bc47be9a94af">
           <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
         </a>
       </td>
       <td>
+        A100 Version:<br>
+        <code>compute_gigaio</code> (single GPU), <code>gpu_a100_pcie</code> (multi-GPU)
+      </td>
+      <td rowspan="2">
         <a href="https://github.com/teaching-on-testbeds/llm-chi">
           <img src="../assets/images/github-badge.svg" alt="GitHub">
         </a>
       </td>
     </tr>
+    <tr class="variant-continuation">
+      <td>
+        H100 Version:<br>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/bd06bd6d-d94f-4297-ad5d-c9b7e1f02575">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        H100 Version:<br>
+        <code>g1.h100.pci.1</code> (single GPU), <code>g1.h100.pci.4</code> (multi-GPU)
+      </td>
+    </tr>
 
     <!-- Week 6 -->
-    <tr>
-      <td>
+    <tr class="variant-continues">
+      <td rowspan="3">
         <a href="https://teaching-on-testbeds.github.io/mlflow-chi/">ML experiment tracking with MLFlow</a>
         <div>(Model training infrastructure and platforms)</div>
       </td>
       <td>
+        NVIDIA GPU Version:<br>
         <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/aefd5288-b99c-455d-8a85-028d4aad3209">
           <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
         </a>
       </td>
       <td>
+        NVIDIA GPU Version:<br>
+        <code>compute_liqid</code> or <code>compute_gigaio</code>
+      </td>
+      <td rowspan="3">
         <a href="https://github.com/teaching-on-testbeds/mlflow-chi">
           <img src="../assets/images/github-badge.svg" alt="GitHub">
         </a>
       </td>
     </tr>
-
-
-    <tr>
+    <tr class="variant-continues variant-continuation">
       <td>
+        AMD GPU Version:<br>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/9955458e-49b8-47b7-92e3-a6a84a70e0e4">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        AMD GPU Version:<br>
+        <code>gpu_mi100</code>
+      </td>
+    </tr>
+    <tr class="variant-continuation">
+      <td>
+        NVIDIA VM Version:<br>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/0f7d4c62-a65a-4571-9b45-16b692af3ee2">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        NVIDIA VM Version:<br>
+        <code>g1.h100.pci.1</code>
+      </td>
+    </tr>
+
+
+    <tr class="variant-continues">
+      <td rowspan="2">
         <a href="https://teaching-on-testbeds.github.io/mltrain-chi/">Building a model training cluster with Ray</a>
         <div>(Model training infrastructure and platforms)</div>
       </td>
       <td>
+        NVIDIA GPU Version:<br>
         <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/b4578c82-e84a-4353-83d2-fbecf153eefd">
           <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
         </a>
       </td>
       <td>
+        NVIDIA GPU Version:<br>
+        <code>compute_liqid</code>, with 2 GPUs
+      </td>
+      <td rowspan="2">
         <a href="https://github.com/teaching-on-testbeds/mltrain-chi">
           <img src="../assets/images/github-badge.svg" alt="GitHub">
         </a>
       </td>
     </tr>
+    <tr class="variant-continuation">
+      <td>
+        AMD GPU Version:<br>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/d48d7684-cf6d-4c33-bcd6-5504266bc3d4">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        AMD GPU Version:<br>
+        <code>gpu_mi100</code>, with 2 GPUs
+      </td>
+    </tr>
 
 
     <!-- Week 7 -->
-    <tr>
-      <td>
+    <tr class="variant-continues">
+      <td rowspan="2">
         <a href="https://teaching-on-testbeds.github.io/serve-model-chi/">Model optimizations for serving</a>
         <div>(Model serving)</div>
       </td>
       <td>
+        NVIDIA GPU Version:<br>
         <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/f5acccf8-f2cb-4d1e-8918-4c8fd97bfc32">
           <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
         </a>
       </td>
       <td>
+        NVIDIA GPU Version:<br>
+        <code>compute_liqid</code> or <code>compute_gigaio</code>
+      </td>
+      <td rowspan="2">
         <a href="https://github.com/teaching-on-testbeds/serve-model-chi">
           <img src="../assets/images/github-badge.svg" alt="GitHub">
         </a>
+      </td>
+    </tr>
+    <tr class="variant-continuation">
+      <td>
+        AMD GPU Version:<br>
+        <a href="https://trovi.chameleoncloud.org/dashboard/artifacts/c6c0c3b6-ca57-475c-924b-9c248a0055f2">
+          <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
+        </a>
+      </td>
+      <td>
+        AMD GPU Version:<br>
+        <code>gpu_mi100</code>
       </td>
     </tr>
     <tr>
@@ -204,6 +308,7 @@ This page includes some notes for instructors who want to use these materials in
           <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
         </a>
       </td>
+      <td><code>rpi5</code></td>
       <td>
         <a href="https://github.com/teaching-on-testbeds/serve-edge-chi">
           <img src="../assets/images/github-badge.svg" alt="GitHub">
@@ -220,6 +325,7 @@ This page includes some notes for instructors who want to use these materials in
           <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
         </a>
       </td>
+      <td><code>gpu_p100</code></td>
       <td>
         <a href="https://github.com/teaching-on-testbeds/serve-system-chi">
           <img src="../assets/images/github-badge.svg" alt="GitHub">
@@ -238,6 +344,7 @@ This page includes some notes for instructors who want to use these materials in
           <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
         </a>
       </td>
+      <td><code>m1.medium</code></td>
       <td>
         <a href="https://github.com/teaching-on-testbeds/eval-offline-chi">
           <img src="../assets/images/github-badge.svg" alt="GitHub">
@@ -254,6 +361,7 @@ This page includes some notes for instructors who want to use these materials in
           <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
         </a>
       </td>
+      <td><code>m1.medium</code></td>
       <td>
         <a href="https://github.com/teaching-on-testbeds/eval-online-chi">
           <img src="../assets/images/github-badge.svg" alt="GitHub">
@@ -270,6 +378,7 @@ This page includes some notes for instructors who want to use these materials in
           <img src="../assets/images/run-on-chameleon-badge.svg" alt="Run on Chameleon">
         </a>
       </td>
+      <td><code>m1.medium</code></td>
       <td>
         <a href="https://github.com/teaching-on-testbeds/eval-loop-chi">
           <img src="../assets/images/github-badge.svg" alt="GitHub">
@@ -288,10 +397,10 @@ This page includes some notes for instructors who want to use these materials in
 | Cloud computing | [Chapter 2](https://ffund.github.io/ml-sys-ops-notes/chapters/02-cloud-computing/) |
 | DevOps and continuous X for ML systems | [Chapter 3](https://ffund.github.io/ml-sys-ops-notes/chapters/03-mlops/) |
 | Large scale data systems | [Chapter 4](https://ffund.github.io/ml-sys-ops-notes/chapters/04-large-scale-data/) |
-| Model serving | [Chapter 7](https://ffund.github.io/ml-sys-ops-notes/chapters/07-model-serving/) |
 | Model training at scale | [Chapter 5](https://ffund.github.io/ml-sys-ops-notes/chapters/05-large-model-training/) |
 | Model training infrastructure and platforms | [Chapter 6](https://ffund.github.io/ml-sys-ops-notes/chapters/06-training-infra-platforms/) |
-| Monitoring and evaluating ML systems | TBD |
+| Model serving | [Chapter 7](https://ffund.github.io/ml-sys-ops-notes/chapters/07-model-serving/) |
+| Monitoring and evaluating ML systems | [Chapter 8](https://ffund.github.io/ml-sys-ops-notes/chapters/08-evaluation-monitoring/) |
 
 
 ## Things that are known to be broken
@@ -321,94 +430,20 @@ Create an account on Chameleon Cloud, and create a project for the course.
 
 From the project page, click "Add multiple users" and then copy the "request to join" link which you can distribute to your students.
 
-#### Increase project quota
-
-Use the "Help Desk" feature on Chameleon to request a quota increase for KVM@TACC for your project.
-
-For network access:
-
-* request unlimited private networks and subnets,
-* "floating IPs" increased to 1.5x the expected enrollment,
-*  and 50 security groups.
-
-If you are using "Cloud computing" and/or "MLOps Pipeline" labs, you need the quota to permit up to **3** `m1.medium` instances per student at a time:
-
- * The "number of instances" quota should be increased to 3x the expected enrollment
- * "number of cores" should be increased to 6x the expected enrollment
- * "RAM" should be increased to 4GB x 3 x expected enrollment
- * "number of routers" increased to 1x the expected enrollment.
-
- If you are not using "Cloud computing" or "MLOps Pipeline" labs, but you *are* using "Persistent data", you need the quota to permit 1 `m1.large` instances per student at a time:
-
- * The "number of instances" quota should be increased to 1x the expected enrollment
- * "number of cores" should be increased to 4x the expected enrollment
- * "RAM" should be increased to 8GB x expected enrollment
-
- If you are using "Persistent data", you **also** need one 2GB block storage volume per student at a time:
-
- * "number of block storage volumes" should be increased to the expected enrollment, and total block storage should be increased to 2GB x expected enrollment. 
-
- If you are not using "Cloud computing", "MLOps Pipeline," or "Persistent data", labs, but you are using "Evaluation and Monitoring," you need the quota to permit 1 `m1.medium` instances per student at a time:
-
- * The "number of instances" quota should be increased to 1x the expected enrollment
- * "number of cores" should be increased to 2x the expected enrollment
- * "RAM" should be increased to 4GB x expected enrollment
-
-If students will develop open-ended projects, you may need to request additional quota increases depending on their needs. However, you can do this later on an as-needed basis, if you keep an eye on usage.
-
 #### Reserve GPU nodes
 
-To ensure that your students will be able to access GPU resources as needed, you will pre-reserve the bare metal hosts you need leading up to the relevant due dates for labs. The following table shows the GPU types and expected number of hours per student for each lab:
+{: .warning }
+> Certain node types, especially <code>gpu_a100_pcie</code>, may be fully reserved far in advance. Make your reservations well before you will need the resources.
 
-<table>
-  <thead>
-    <tr>
-      <th>Assignment</th>
-      <th>Instance Type(s)</th>
-      <th>Number of Hours per Student</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Train at Scale (Multi GPU)</td>
-      <td><code>gpu_a100_pcie</code>, <code>gpu_v100</code></td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td>Train at Scale (One GPU)</td>
-      <td><code>compute_gigaio</code> at CHI@UC only (needs A100 80GB)</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td>Training in a Cluster (Multi GPU)</td>
-      <td><code>gpu_mi100</code></td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>Experiment Tracking (One GPU)</td>
-      <td><code>compute_liqid</code> at CHI@TACC or <code>compute_gigaio</code> at CHI@UC</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>Model Serving Optimizations</td>
-      <td><code>compute_liqid</code> at CHI@TACC or <code>compute_gigaio</code> at CHI@UC</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>Serving from the Edge</td>
-      <td><code>rpi5</code> on CHI@Edge (you may need to BYOD)</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td>System Serving Optimizations</td>
-      <td><code>gpu_p100</code></td>
-      <td>3</td>
-    </tr>
-  </tbody>
-</table>
+Some resources on Chameleon, especially certain types of bare-metal GPU nodes, are heavily utilized. To ensure capacity for your course, so that your students do not have to contend with other Chameleon users for scarce resources near a deadline, you should pre-reserve these scarce resources for the time intervals in which your class will need them.
 
+You should anticipate roughly 3 hours of use per student for each lab assignment. Then, use the table above, with information about compute instance types, and your enrollment numbers to determine how many of each bare-metal instance type you will need, and for which time intervals.
 
-Then, use the "Help Desk" feature on Chameleon. Give the list of reservations you have made, and ask for these resources to be allocated for exclusive use for your course during the times you have reserved.
+Make an advance reservation yourself for these resources at the times your class will need them, to block reservations by other Chameleon users.
+
+Then, use the "Help Desk" feature on Chameleon. Give the list of reservations you have made and the project number associated with your course, and ask for these resources to be allocated for exclusive use for your course during the times you have reserved.
+
+At the beginning of each reservation, confirm via the Help Desk that the resources have been allocated for exclusive use by your project. Then, you can delete the "placeholder" reservations you made, and your students will be able to make their own reservations.
 
 If students will do open-ended projects that require GPU, you may want to make additional advance reservations to support this.
 
@@ -417,6 +452,7 @@ If students will do open-ended projects that require GPU, you may want to make a
 #### Communication to students
 
 * Give students explicit instructions about expected resource usage, and what they can expect to happen if they ignore these instructions (e.g "if you make a reservation that is longer than 4 hours for X resource, course staff will delete it"). Also remind students that the infrastructure cannot support all of them doing the assignment at the same time in the last few hours before the deadline. 
+* It is strongly encouraged to give students a preliminary deadline for each lab assignment by which they must have made a reservation for the resources required for that lab. This helps avoid students waiting until the day before the lab is due and then not having resources available.
 * If you have a large class, you may want to assign days to smooth peak usage for lab assignments, e.g. "if your student ID ends in an even number you can use the infrastructure on Monday, Wednesday, Friday, or Saturday; if your student ID ends in an odd number you can use the infrastructure on Tuesday, Thursday, Friday, or Sunday".
 
 
