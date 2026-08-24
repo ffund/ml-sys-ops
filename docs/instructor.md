@@ -430,6 +430,12 @@ Create an account on Chameleon Cloud, and create a project for the course.
 
 From the project page, click "Add multiple users" and then copy the "request to join" link which you can distribute to your students.
 
+#### Set up security groups
+
+Some lab assignments assume that certain security groups are already configured within the project. These lab assignments have an `x_security_groups.ipynb` notebook as part of the lab materials.
+
+When you are reviewing each lab that you plan to assign in preparation for use by students, you can run that notebook to configure the necessary security groups within your course project.
+
 #### Reserve GPU nodes
 
 {: .warning }
